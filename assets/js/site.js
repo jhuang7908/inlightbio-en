@@ -60,7 +60,8 @@ if(feed){
 }
 
 /* ---------- Conferences (sort toggle, time range in calendar button, region dropdown beside it, ended hidden) ---------- */
-const CONFS=window.CONFS;
+const CONF_HORIZON='2027-04-30';
+const CONFS=(window.CONFS||[]).filter(x=>x.dates&&x.dates!=='TBA'&&x.dates.split(' to ')[0]<=CONF_HORIZON);
 if(CONFS&&$('#conflist')){
   let kind='all',order='asc',range='all',region='all';
   /* v8: region filter (compact dropdown next to the calendar button); ?region=us|europe|japan|apac */
