@@ -1,0 +1,305 @@
+{
+ "checked": "2026-10-11",
+ "deals": [
+  {
+   "newco": "Sentivera",
+   "licensor": "Haisco Pharmaceutical",
+   "asset": "Undisclosed preclinical small molecule (type 2 inflammation)",
+   "investors": "ARCH Venture Partners, Population Health Partners (founders); $83M committed capital",
+   "upfront": "$40M cash + 17.5% equity (~$75.9M combined)",
+   "total": "Up to $1.46B milestones + royalties (>$1.5B)",
+   "date": "2026-08",
+   "outcome": "",
+   "src": [
+    {
+     "name": "Haisco / PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/haisco-enters-into-exclusive-license-agreement-with-new-us-venture-founded-by-population-health-partners-and-arch-venture-partners-302859307.html"
+    },
+    {
+     "name": "Fierce Biotech",
+     "url": "https://www.fiercebiotech.com/biotech/founded-metsera-backers-sentivera-emerges-15b-inflammatory-disease-deal"
+    }
+   ]
+  },
+  {
+   "newco": "Avere Therapeutics",
+   "licensor": "Hansoh Pharma",
+   "asset": "AVR-001 (HS-20118), oral IL-23R antagonist",
+   "investors": "$320M private placement led by Fairmount and Hansoh; reverse merger with NextCure (Nasdaq: AVRX)",
+   "upfront": "$120M",
+   "total": "Up to $2.18B milestones + royalties",
+   "date": "2026-07",
+   "outcome": "",
+   "src": [
+    {
+     "name": "Fierce Biotech",
+     "url": "https://www.fiercebiotech.com/biotech/avere-launches-trifecta-chinese-license-reverse-merger-and-320m-advance-oral-inflammatory"
+    },
+    {
+     "name": "Hansoh",
+     "url": "https://www.hspharm.com/news/news-detail-513485.htm"
+    }
+   ]
+  },
+  {
+   "newco": "R1 Therapeutics",
+   "licensor": "Alebund Pharmaceuticals",
+   "asset": "AP306, pan-phosphate transporter inhibitor (hyperphosphatemia in dialysis)",
+   "investors": "$77.5M Series A co-led by Abingworth, DaVita Venture Group, F-Prime; with Curie.Bio, SymBiosis, US Renal Care",
+   "upfront": "Not disclosed (Alebund receives equity)",
+   "total": "Milestones up to low triple-digit $M + low double-digit royalties",
+   "date": "2026-03",
+   "outcome": "",
+   "src": [
+    {
+     "name": "AllSci",
+     "url": "https://allsci.com/news/licensing-deals/r1-therapeutics-licenses-alebunds-pan-phosphate-transporter-inhibitor-alongside-series-a-launch/"
+    }
+   ]
+  },
+  {
+   "newco": "Braveheart Bio",
+   "licensor": "Jiangsu Hengrui",
+   "asset": "HRS-1893 / BHB-1893, cardiac myosin inhibitor (HCM)",
+   "investors": "$185M Series A led by a16z Bio + Health, Forbion, OrbiMed; with Enavate Sciences, Frazier Life Sciences",
+   "upfront": "$65M ($32.5M cash + $32.5M shares) + up to $10M near-term",
+   "total": "Up to $1.013B milestones + royalties",
+   "date": "2025-09",
+   "outcome": "",
+   "src": [
+    {
+     "name": "Hengrui",
+     "url": "https://www.hengrui.com/en/media/detail-834.html"
+    },
+    {
+     "name": "Braveheart",
+     "url": "https://www.braveheart.bio/news/braveheart-bio-launches"
+    }
+   ]
+  },
+  {
+   "newco": "Vor Bio (recapitalized, NewCo-style)",
+   "licensor": "RemeGen",
+   "asset": "Telitacicept (BLyS/APRIL fusion protein)",
+   "investors": "$175M private placement (PIPE); existing Nasdaq company rebuilt around the asset",
+   "upfront": "$45M cash + $80M in warrants",
+   "total": "Up to $4.105B milestones + tiered royalties",
+   "date": "2025-06",
+   "outcome": "",
+   "src": [
+    {
+     "name": "Vor Bio 8-K, SEC",
+     "url": "https://www.sec.gov/Archives/edgar/data/1817229/000119312525147339/d27026d8k.htm"
+    },
+    {
+     "name": "RemeGen HKEX",
+     "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0626/2025062600025.pdf"
+    }
+   ]
+  },
+  {
+   "newco": "Ollin Biosciences",
+   "licensor": "VelaVigo",
+   "asset": "VBS-102 / OLN102, TSHR×IGF-1R bispecific (thyroid eye disease)",
+   "investors": "$100M launch led by ARCH Venture Partners, Mubadala Capital, Monograph Capital",
+   "upfront": "Not disclosed (cash + equity)",
+   "total": "Up to ~$440M incl. upfront + royalties",
+   "date": "2025-04",
+   "outcome": "Launched publicly Sept 2025",
+   "src": [
+    {
+     "name": "VelaVigo / PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/velavigo-announces-second-out-licensing-deal-of-a-first-in-class-bi-specific-antibody-further-validating-its-innovative-discovery-platform-and-sustainable-bdvc-business-model-302431714.html"
+    },
+    {
+     "name": "BioPharma Dive",
+     "url": "https://www.biopharmadive.com/news/ollin-biosciences-ophthalmology-startup-vabysmo-tepezza/760182/"
+    }
+   ]
+  },
+  {
+   "newco": "Windward Bio",
+   "licensor": "Harbour BioMed & Kelun-Biotech",
+   "asset": "HBM9378/SKB378 (WIN378), long-acting anti-TSLP antibody",
+   "investors": "$200M Series A led by OrbiMed, Novo Holdings, Blue Owl; with SR One, Omega, RTW, Qiming, Quan Capital, Pivotal",
+   "upfront": "$45M upfront + near-term (cash + parent equity)",
+   "total": "Up to $970M incl. upfront + royalties",
+   "date": "2025-01",
+   "outcome": "",
+   "src": [
+    {
+     "name": "Harbour BioMed / PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/harbour-biomed-announces-license-agreement-with-windward-bio-for-hbm9378skb378-an-anti-tslp-fully-human-antibody-for-immunological-diseases-302347962.html"
+    },
+    {
+     "name": "Windward Bio",
+     "url": "https://www.globenewswire.com/news-release/2025/01/10/3007703/0/en/Windward-Bio-Launches-With-200-Million-Series-A-Financing-to-Develop-Phase-2-Ready-Long-Acting-Anti-TSLP-Antibody-With-Best-in-Class-Potential-in-Asthma-and-COPD.html"
+    }
+   ]
+  },
+  {
+   "newco": "Verdiva Bio",
+   "licensor": "Sciwind Biosciences",
+   "asset": "Oral ecnoglutide (XW004, weekly oral GLP-1) + 2 amylin agonists",
+   "investors": "$411M Series A co-led by Forbion, General Atlantic; with RA Capital, OrbiMed, Logos, Lilly Asia Ventures, LYFE",
+   "upfront": "~$70M",
+   "total": ">$2.4B milestones + royalties",
+   "date": "2025-01",
+   "outcome": "",
+   "src": [
+    {
+     "name": "Sciwind",
+     "url": "https://www.sciwindbio.com/portal/index/cooperation_detail/id/31.html"
+    },
+    {
+     "name": "BioPharma Dive",
+     "url": "https://www.biopharmadive.com/news/verdiva-obesity-biotech-startup-launch-sciwind-china/736880/"
+    }
+   ]
+  },
+  {
+   "newco": "Timberlyne Therapeutics",
+   "licensor": "Keymed Biosciences",
+   "asset": "CM313, anti-CD38 antibody",
+   "investors": "$180M Series A co-led by Abingworth, Bain Capital Life Sciences, Venrock HCP; with Boyu, Lilly Asia Ventures, Braidwell, 3H; formed by Mountainfield VP",
+   "upfront": "$30M upfront + near-term + equity",
+   "total": "Up to $337.5M milestones + royalties",
+   "date": "2025-01",
+   "outcome": "",
+   "src": [
+    {
+     "name": "Keymed HKEX",
+     "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0110/2025011000036.pdf"
+    },
+    {
+     "name": "Timberlyne / PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/timberlyne-therapeutics-launches-with-a-180-million-series-a-financing-to-advance-cm313-a-potentially-best-in-class-anti-cd38-monoclonal-antibody-for-diseases-of-high-unmet-medical-needs-302347636.html"
+    }
+   ]
+  },
+  {
+   "newco": "Ouro Medicines",
+   "licensor": "Keymed Biosciences",
+   "asset": "CM336 / OM336, BCMA×CD3 T-cell engager",
+   "investors": "Monograph Capital (42% at closing)",
+   "upfront": "$16M upfront + near-term + minority equity (~15%)",
+   "total": "Up to $610M milestones + royalties",
+   "date": "2024-11",
+   "outcome": "Acquired by Gilead (closed Jun 2026): $1.675B upfront + up to $500M; Keymed received ~$257M",
+   "src": [
+    {
+     "name": "Keymed HKEX 2024",
+     "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2024/1117/2024111700005.pdf"
+    },
+    {
+     "name": "Keymed HKEX 2026",
+     "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0605/2026060500277.pdf"
+    }
+   ]
+  },
+  {
+   "newco": "Belenos Biosciences",
+   "licensor": "Keymed Biosciences",
+   "asset": "CM512 and CM536, bispecific antibodies",
+   "investors": "Funds affiliated with OrbiMed (50.26% at closing)",
+   "upfront": "$15M upfront + near-term + 30.01% equity",
+   "total": "Up to $170M milestones + royalties",
+   "date": "2024-07",
+   "outcome": "",
+   "src": [
+    {
+     "name": "Keymed HKEX",
+     "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0709/2024070900068.pdf"
+    }
+   ]
+  },
+  {
+   "newco": "Kailera Therapeutics (Hercules CM NewCo)",
+   "licensor": "Jiangsu Hengrui",
+   "asset": "GLP-1 portfolio incl. HRS9531 (GLP-1/GIP) and HRS-7535 (oral GLP-1)",
+   "investors": "Bain Capital Life Sciences, Atlas Venture, RTW, Lyra Capital ($400M)",
+   "upfront": "$110M upfront + near-term + 19.9% equity",
+   "total": "Up to $200M dev./reg. + $5.725B sales milestones + royalties (~$6.0B)",
+   "date": "2024-05",
+   "outcome": "$400M Series A (Oct 2024); Nasdaq IPO 2026",
+   "src": [
+    {
+     "name": "Cooley",
+     "url": "https://www.cooley.com/news/coverage/2024/2024-05-17-jiangsu-hengrui-pharmaceuticals-out-licenses-glp-1-portfolio"
+    },
+    {
+     "name": "Kailera",
+     "url": "https://investors.kailera.com/news-releases/news-release-details/kailera-therapeutics-launches-400-million-series-financing"
+    },
+    {
+     "name": "J.P. Morgan (IPO)",
+     "url": "https://www.jpmorgan.com/about-us/events-conferences/health-care-conference"
+    }
+   ]
+  },
+  {
+   "newco": "Avenzo Therapeutics",
+   "licensor": "Allorion Therapeutics",
+   "asset": "AVZO-021 (ARTS-021), CDK2 inhibitor + option on a second program",
+   "investors": "$150M Series A-1 (Mar 2024) led by NEA, Deep Track, Sofinnova Investments, Sands Capital",
+   "upfront": "$40M",
+   "total": ">$1B potential (both programs) + royalties",
+   "date": "2024-01",
+   "outcome": "",
+   "src": [
+    {
+     "name": "Avenzo / PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/avenzo-therapeutics-announces-global-license-of-avzo-021-arts-021-a-potentially-best-in-class-clinical-stage-cdk2-inhibitor-from-allorion-therapeutics-302025962.html"
+    },
+    {
+     "name": "Avenzo financing",
+     "url": "https://avenzotx.com/press-releases/avenzo-therapeutics-announces-150-million-oversubscribed-financing-to-advance-emerging-oncology-pipeline/"
+    }
+   ]
+  },
+  {
+   "newco": "Aiolos Bio",
+   "licensor": "Jiangsu Hengrui",
+   "asset": "SHR-1905 / AIO-001, long-acting anti-TSLP antibody",
+   "investors": "$245M Series A co-led by Atlas, Bain Capital Life Sciences, Forbion, Sofinnova Investments; with RA Capital",
+   "upfront": "$25M upfront + near-term (reported)",
+   "total": "Up to ~$1B milestones + royalties (reported)",
+   "date": "2023-08",
+   "outcome": "Acquired by GSK (Jan 2024): $1B upfront + up to $400M",
+   "src": [
+    {
+     "name": "Business Wire",
+     "url": "https://www.businesswire.com/news/home/20231024577944/en/Aiolos-Bio-Launches-with-%24245-Million-Series-A-Investment-to-Advance-Development-of-Novel-Phase-2-Ready-TSLP-Antibody"
+    },
+    {
+     "name": "GSK",
+     "url": "https://www.gsk.com/en-gb/media/press-releases/gsk-enters-agreement-to-acquire-aiolos-bio/"
+    },
+    {
+     "name": "VCBeat",
+     "url": "https://www.vcbeathealth.com/article/17695"
+    }
+   ]
+  },
+  {
+   "newco": "ArriVent Biopharma",
+   "licensor": "Allist Pharmaceuticals",
+   "asset": "Furmonertinib, EGFR TKI (NSCLC)",
+   "investors": "Up to $150M Series A led by Hillhouse; with Lilly Asia Ventures, OrbiMed, Octagon, Boyu/Zoo, Lyra",
+   "upfront": "$40M + equity",
+   "total": "Up to $765M milestones + up to double-digit royalties",
+   "date": "2021-06",
+   "outcome": "",
+   "src": [
+    {
+     "name": "ArriVent / GlobeNewswire",
+     "url": "https://www.globenewswire.com/news-release/2021/06/30/2255493/0/en/ArriVent-Biopharma-Launches-with-Up-To-150M-in-Series-A-Financing-and-Strategic-Licensing-Agreement-for-Clinical-Stage-Oncology-Asset.html"
+    },
+    {
+     "name": "Allist",
+     "url": "https://www.allist.com.cn/en/newsd/102/6.html"
+    }
+   ]
+  }
+ ]
+}
