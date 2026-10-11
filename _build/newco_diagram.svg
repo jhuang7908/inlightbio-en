@@ -1,0 +1,50 @@
+<svg viewBox="0 0 960 400" role="img" aria-labelledby="ncd-t ncd-d" xmlns="http://www.w3.org/2000/svg">
+<title id="ncd-t">NewCo model</title>
+<desc id="ncd-d">A China licensor grants ex-China rights to a US NewCo in return for upfront cash or equity, milestones and royalties. Investors fund the NewCo with a Series A; a US management team runs it; the NewCo exits through pharma M&amp;A or IPO.</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2E6B4F"/></marker>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C0492F"/></marker></defs>
+<g font-size="14" fill="#1f2a24">
+<!-- licensor -->
+<rect x="20" y="140" width="210" height="120" rx="14" fill="#EEF4F0" stroke="#2E6B4F" stroke-width="2"/>
+<text x="125" y="178" text-anchor="middle" font-weight="700" font-size="16">China licensor</text>
+<text x="125" y="202" text-anchor="middle" fill="#5b6b62">Originator biotech/pharma</text>
+<text x="125" y="224" text-anchor="middle" fill="#5b6b62">Keeps Greater China rights</text>
+<text x="125" y="246" text-anchor="middle" fill="#5b6b62">+ NewCo equity stake</text>
+<!-- newco -->
+<rect x="375" y="125" width="210" height="150" rx="14" fill="#2E6B4F"/>
+<text x="480" y="170" text-anchor="middle" font-weight="700" font-size="20" fill="#fff">US NewCo</text>
+<text x="480" y="196" text-anchor="middle" fill="#e3efe8">Delaware company</text>
+<text x="480" y="218" text-anchor="middle" fill="#e3efe8">Ex-China rights</text>
+<text x="480" y="240" text-anchor="middle" fill="#e3efe8">Global development</text>
+<!-- investors -->
+<rect x="375" y="10" width="210" height="70" rx="12" fill="#fff" stroke="#24456e" stroke-width="2"/>
+<text x="480" y="40" text-anchor="middle" font-weight="700" font-size="15">Investors / VCs</text>
+<text x="480" y="62" text-anchor="middle" fill="#5b6b62">Series A and later rounds</text>
+<!-- management -->
+<rect x="375" y="320" width="210" height="70" rx="12" fill="#fff" stroke="#24456e" stroke-width="2"/>
+<text x="480" y="350" text-anchor="middle" font-weight="700" font-size="15">US management team</text>
+<text x="480" y="372" text-anchor="middle" fill="#5b6b62">CEO, CMO, BD</text>
+<!-- exit -->
+<rect x="730" y="140" width="210" height="120" rx="14" fill="#fff" stroke="#C0492F" stroke-width="2"/>
+<text x="835" y="180" text-anchor="middle" font-weight="700" font-size="16">Exit / value event</text>
+<text x="835" y="206" text-anchor="middle" fill="#5b6b62">Pharma acquisition</text>
+<text x="835" y="228" text-anchor="middle" fill="#5b6b62">IPO or later financing</text>
+<text x="835" y="250" text-anchor="middle" fill="#5b6b62">Pharma partnership</text>
+<!-- arrows licensor -> newco -->
+<path d="M232 182H370" stroke="#2E6B4F" stroke-width="2.4" marker-end="url(#ar)"/>
+<text x="301" y="172" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2E6B4F">License (ex-China)</text>
+<path d="M372 222H236" stroke="#C0492F" stroke-width="2.4" marker-end="url(#arr)"/>
+<text x="303" y="242" text-anchor="middle" font-size="12" fill="#C0492F">Upfront (cash/equity)</text>
+<text x="303" y="258" text-anchor="middle" font-size="12" fill="#C0492F">milestones, royalties</text>
+<!-- investors -> newco -->
+<path d="M480 82V121" stroke="#24456e" stroke-width="2.4" marker-end="url(#ar)"/>
+<text x="490" y="106" font-size="12" fill="#24456e">capital</text>
+<!-- management -> newco -->
+<path d="M480 318V279" stroke="#24456e" stroke-width="2.4" marker-end="url(#ar)"/>
+<text x="490" y="302" font-size="12" fill="#24456e">leads</text>
+<!-- newco -> exit -->
+<path d="M587 200H726" stroke="#C0492F" stroke-width="2.4" marker-end="url(#arr)"/>
+<text x="656" y="190" text-anchor="middle" font-size="12.5" font-weight="700" fill="#C0492F">Value realized</text>
+<text x="656" y="222" text-anchor="middle" font-size="12" fill="#5b6b62">shared by investors</text>
+<text x="656" y="238" text-anchor="middle" font-size="12" fill="#5b6b62">and licensor (equity)</text>
+</g></svg>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /_build/
+Disallow: /_work/
+Disallow: /_shots/
+
+Sitemap: https://inlightbio.com/sitemap.xml

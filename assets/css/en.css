@@ -1,0 +1,111 @@
+/* ===== InLight Bio (English edition) overrides =====
+   Base rules are copied verbatim from the Chinese edition (base-from-zh.css).
+   Same palette, layout and components; only fonts, single-column shell and new
+   English-edition components are added here. */
+:root{--display:"Noto Serif",Georgia,"Times New Roman",serif;--body:"Noto Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--blue:#24456e;--red:#C0492F}
+html{scroll-behavior:smooth}
+/* No ad rails in the EN edition: keep one centred column at every width */
+.shell,.navshell,.footshell{max-width:1180px;margin:0 auto}
+@media (min-width:1440px){.shell,.navshell,.footshell{display:block;max-width:1180px;padding:0 10px}.navshell>*,.footshell>*{padding-left:0;padding-right:0}}
+@media (min-width:1100px){.wrap{padding-left:10px;padding-right:10px}}
+.brand .bn{font-size:20px;letter-spacing:.005em}
+.brand .bs{letter-spacing:.14em}
+.qy-made span{font-size:13px}
+@media (min-width:1440px){.qy-made{position:static;transform:none;border-right:1px solid var(--line);margin-right:10px}}
+/* Body text justified (owner rule); English uses no first-line indent */
+.textpage .panel p,.pv-art .sec p,.feed-details-panel p:not(.msline),.just{text-align:justify;text-justify:inter-word;text-indent:0;hyphens:auto;-webkit-hyphens:auto}
+.panel li{text-align:justify;hyphens:auto}
+.hero p{max-width:92ch;text-align:justify;hyphens:auto}
+/* Compact top-right filter button (same pattern as the Chinese conference calendar button) */
+.sechead .confcal{margin-left:auto}
+.calpop{width:236px}
+.calpop .calk:not(:first-child){border-top:1px solid var(--line);padding-top:8px;margin-top:8px}
+.calpop .calk+div{display:grid}
+/* Home: two-up row */
+.two{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:14px}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.mini-conf{display:grid;gap:8px}
+.mini-conf a{display:grid;grid-template-columns:86px minmax(0,1fr);gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 12px;color:var(--fg)}
+.mini-conf a:hover{border-color:color-mix(in srgb,var(--blue) 45%,var(--line))}
+.mini-conf .md{font-weight:700;color:var(--blue);font-size:12.5px;line-height:1.35}
+.mini-conf b{font-family:var(--display);font-size:14px;line-height:1.35;display:block}
+.mini-conf span{font-size:12px;color:var(--muted)}
+.ncta{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;display:grid;gap:8px}
+.ncta .k{font-size:11px;letter-spacing:.1em;font-weight:700;color:var(--accent)}
+.ncta h2{font-size:clamp(18px,2.2vw,22px)}
+.ncta p{font-size:14px;color:var(--muted);max-width:none;text-align:justify;hyphens:auto}
+.ncta .cta{margin-top:2px}
+/* Compact NewCo deal table */
+.dealtbl table{min-width:980px;font-size:12.5px}
+.dealtbl td b{font-family:var(--display);font-size:13.5px;color:var(--fg)}
+.dealtbl td .tn{display:block;margin-top:2px}
+.dealtbl td.m{color:var(--red);font-weight:700;font-variant-numeric:tabular-nums}
+.dealtbl td.src a{display:block;font-size:11.5px;white-space:nowrap}
+.dealtbl td.out{font-size:12px;color:var(--accent)}
+.dealtbl tr:hover td{background:color-mix(in srgb,var(--accent) 4%,var(--surface))}
+.dealtbl.short table{min-width:640px}
+/* NewCo page */
+.aud{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.aud{grid-template-columns:1fr}}
+.audc{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:11px;padding:15px 17px;display:grid;gap:8px;align-content:start}
+.audc .k{font-size:11px;letter-spacing:.1em;font-weight:700;color:var(--accent);text-transform:uppercase}
+.audc h3{font-size:17px}
+.audc ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:13.5px;line-height:1.6}
+.audc li{text-align:justify;hyphens:auto}
+.audc .btn{justify-self:start;margin-top:4px;font-size:13px;padding:7px 14px}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:12px}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram text{font-family:var(--body)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;counter-reset:st}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:st;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px 12px 50px;position:relative;font-size:13.5px;line-height:1.6;text-align:justify;hyphens:auto}
+.steps li::before{content:counter(st);position:absolute;left:13px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center}
+.steps li b{display:block;font-family:var(--display);font-size:14.5px;margin-bottom:2px}
+.tiers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:900px){.tiers{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.tiers{grid-template-columns:1fr}}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:6px;align-content:start;position:relative}
+.tier .lv{font-size:11px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--accent);border-radius:999px;padding:1px 9px;justify-self:start}
+.tier:nth-child(2) .lv{background:#3d7a5d}.tier:nth-child(3) .lv{background:var(--blue)}.tier:nth-child(4) .lv{background:var(--red)}
+.tier h3{font-size:15px}
+.tier p{font-size:13px;line-height:1.6;color:var(--muted);max-width:none;text-align:justify;hyphens:auto}
+.tier .gate{font-size:12px;font-weight:700;color:var(--fg)}
+.needs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.needs{grid-template-columns:1fr}}
+.warnbox{border:1px solid color-mix(in srgb,var(--red) 40%,var(--line));background:color-mix(in srgb,var(--red) 5%,var(--surface));border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.65;text-align:justify}
+.warnbox b{color:var(--red)}
+.fieldlist2{columns:2;column-gap:24px;margin:0;padding-left:20px;font-size:13.5px;line-height:1.7}
+@media (max-width:720px){.fieldlist2{columns:1}}
+.phb{display:inline-block;font-size:11px;font-weight:700;color:var(--red);border:1px dashed var(--red);border-radius:6px;padding:0 6px;margin-left:4px}
+.bigcta{background:var(--accent);color:#fff;border-radius:12px;padding:18px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.bigcta h2{font-size:19px;color:#fff}
+.bigcta p{font-size:14px;opacity:.92;max-width:none;margin-top:3px}
+.bigcta .btn{background:#fff;color:var(--accent);margin-left:auto}
+.bigcta .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.7);margin-left:0}
+@media (max-width:720px){.bigcta .btn{margin-left:0}}
+/* News article page */
+.npage .ahead h1{font-family:var(--display);font-size:clamp(20px,2.6vw,27px);font-weight:800;line-height:1.35}
+.npage .pv-hero img{max-height:340px}
+.npage .meta.side2 .sbox .money{font-size:14px;font-weight:700;color:var(--red)}
+.npage .zhnote{font-size:12.5px;color:var(--muted)}
+/* Conferences: kind tag tint + TBA badge */
+.confrow .tbabadge{display:inline-block;font-size:11px;font-weight:800;color:#b0412e;border:1px solid #b0412e;border-radius:999px;padding:0 8px;margin-left:6px;vertical-align:middle}
+.confdate.tba{color:#b0412e}
+.conftags .ok{color:var(--accent);font-size:12px;font-weight:700}
+/* Home hero stats spacing on mobile */
+@media (max-width:620px){.hb-stats{gap:10px}}
+.footcols{display:flex;gap:28px;flex-wrap:wrap}
+.footcols p{font-size:13px;color:var(--muted)}
+/* mobile fixes */
+.two>*{min-width:0}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+.trkcard,.trkcard .cbody{min-width:0}
+@media (max-width:640px){.dealtbl.short table{min-width:0;font-size:12px}.dealtbl.short td,.dealtbl.short th{padding:7px 8px}}
+@media (max-width:640px){.dealtbl.short tr>*:nth-child(4){display:none}}
+@media (max-width:640px){.trkcard.art{grid-template-columns:52px minmax(0,1fr);gap:9px;padding:8px 10px 8px 8px;min-height:0}.trkcard.art b{font-size:14.5px}.trkcard.art .cbody>span{display:none}}
+@media (max-width:640px){.trkcard.art .artthumb{width:52px;height:52px;border-radius:9px}}
+@media (max-width:640px){.diagram{overflow-x:auto;-webkit-overflow-scrolling:touch}.diagram svg{min-width:680px}}
+.aud.aud2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.aud.aud2{grid-template-columns:minmax(0,1fr)}}
+.audc h3{overflow-wrap:anywhere}
