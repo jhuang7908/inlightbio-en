@@ -86,7 +86,7 @@ if(CONFS&&$('#conflist')){
     const now=new Date(), today=ymd(now);
     const limit=m=>{const d=new Date(now);d.setMonth(d.getMonth()+m);return ymd(d);};
     const upcoming=CONFS.filter(x=>isTbd(x)||endOf(x)>=today);
-    const RANGES=[['1','Next month',1],['3','Next 3 months',3],['6','Next 6 months',6],['12','Next 12 months',12],['all','All upcoming',0]];
+    const RANGES=[['1','Next month',1],['3','Next 3 months',3],['all','Next 6 months',0]];
     const inRange=(x,r)=>{if(r==='all')return true; if(isTbd(x))return false; return x.dates.split(' to ')[0]<=limit(RANGES.find(z=>z[0]===r)[2]);};
     const byKind=x=>kind==='all'||x.kind===kind;
     const byReg=(x,r)=>r==='all'||x.region===regOf(r)[2];
@@ -140,6 +140,10 @@ if(CONFS&&$('#conflist')){
     const im=e.target; if(!im||im.tagName!=='IMG'||!im.closest('.conflogo')) return;
     const box=im.closest('.conflogo'); box.classList.add('tile'); box.setAttribute('aria-hidden','true'); box.innerHTML=`<b>${esc(im.dataset.abbr||'')}</b>`;
   },true);
+  /* v10: wide logos get a wider box so they stay readable */
+  const markWide=im=>{if(im.naturalWidth&&im.naturalWidth/im.naturalHeight>2.6){const r=im.closest('.confrow');if(r)r.classList.add('wl');}};
+  $('#conflist').addEventListener('load',e=>{const im=e.target;if(im&&im.tagName==='IMG'&&im.closest('.conflogo'))markWide(im);},true);
+  const _r=render; render=function(){_r.apply(this,arguments);$$('#conflist .conflogo img').forEach(im=>{if(im.complete)markWide(im);});};
   render();
 }
 
