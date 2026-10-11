@@ -465,3 +465,14 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 @media (max-width:1100px){.nav-tabs .nl{display:none}}
 @media (min-width:1101px){.nav-tabs a{white-space:nowrap}}
 .nav-tabs .nl{margin-left:.3em}
+/* v16: taller top bar and bolder section names */
+.nav-in a{font-weight:600;color:color-mix(in srgb,var(--fg) 78%,var(--muted))}
+.nav-in a.on{color:var(--bg)}
+@media (min-width:641px){
+  nav,.navshell,.nav-in{height:68px!important;max-height:68px!important;box-sizing:border-box}
+  .nav-in{padding:0 16px}
+  .nav-in .nav-tabs a{font-size:14.5px;height:42px;min-height:42px;padding:0 16px;border-radius:21px;font-weight:650;letter-spacing:.005em}
+  .nav-in .bmark,.nav-in .bmark-wrap{width:40px;height:40px}
+  .rail{top:80px;max-height:calc(100vh - 96px)}
+}
+@media (max-width:640px){.nav-in .nav-tabs a{font-weight:600}}
