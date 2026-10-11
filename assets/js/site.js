@@ -1,10 +1,10 @@
-/* InLight Bio (EN) — small vanilla JS, adapted from the Chinese edition's index.html:
+/* InLight Bio — small vanilla JS:
    deal-card details panel, compact top-right filter (news), conference list (sort / range / type). */
 (function(){
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=t=>String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-/* ---------- Deal cards: inline details panel after the row (same behaviour as zh feed) ---------- */
+/* ---------- Deal cards: inline details panel after the row ---------- */
 const NEWS=window.NEWS||[]; const KINDS=window.KINDS||{};
 let activePanel=null,activeCard=null,activeBtn=null;
 function cols(grid){return getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length;}
@@ -59,7 +59,7 @@ if(feed){
   render();
 }
 
-/* ---------- Conferences (same features as zh: sort toggle, time range in calendar button, ended hidden) ---------- */
+/* ---------- Conferences (sort toggle, time range in calendar button, ended hidden) ---------- */
 const CONFS=window.CONFS;
 if(CONFS&&$('#conflist')){
   let kind='all',order='asc',range='all';
@@ -99,7 +99,7 @@ if(CONFS&&$('#conflist')){
       const place=[x.city,x.venue].filter(Boolean).map(esc).join(' · ');
       return `<article class="confrow"><div class="conftop"><span class="conflogo ph"><img src="/img/tiles/conf_bluelight_v4.jpg" alt="" loading="lazy"></span><div class="confdate${tbd?' tba':''}">${fmt(x)}</div></div><div>
         <h3>${esc(x.name)}${tbd?'<span class="tbabadge">TBA</span>':''}</h3>
-        <div class="confmeta">${[place,x.organizer?'Organizer: '+esc(x.organizer):''].filter(Boolean).join('　')}</div>
+        <div class="confmeta">${[place,x.organizer?'Organizer: '+esc(x.organizer):''].filter(Boolean).join(' · ')}</div>
         <p class="confsum">${esc(x.sum)}</p>
         <div class="conftags"><span class="tag">${esc(x.kind)}</span><a href="${esc(x.url)}" target="_blank" rel="noopener">Official site</a>${flag}</div></div></article>`;
     }).join('')||'<div class="empty">No events in this range.</div>';

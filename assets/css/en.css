@@ -1,22 +1,19 @@
-/* ===== InLight Bio (English edition) overrides =====
-   Base rules are copied verbatim from the Chinese edition (base-from-zh.css).
-   Same palette, layout and components; only fonts, single-column shell and new
-   English-edition components are added here. */
+/* ===== InLight Bio site overrides =====
+   Base rules live in the base stylesheet; fonts, single-column shell and
+   site-specific components are added here. */
 :root{--display:"Noto Serif",Georgia,"Times New Roman",serif;--body:"Noto Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--blue:#24456e;--red:#C0492F}
 html{scroll-behavior:smooth}
-/* No ad rails in the EN edition: keep one centred column at every width */
+/* No ad rails: keep one centred column at every width */
 .shell,.navshell,.footshell{max-width:1180px;margin:0 auto}
 @media (min-width:1440px){.shell,.navshell,.footshell{display:block;max-width:1180px;padding:0 10px}.navshell>*,.footshell>*{padding-left:0;padding-right:0}}
 @media (min-width:1100px){.wrap{padding-left:10px;padding-right:10px}}
 .brand .bn{font-size:20px;letter-spacing:.005em}
 .brand .bs{letter-spacing:.14em}
-.qy-made span{font-size:13px}
-@media (min-width:1440px){.qy-made{position:static;transform:none;border-right:1px solid var(--line);margin-right:10px}}
 /* Body text justified (owner rule); English uses no first-line indent */
 .textpage .panel p,.pv-art .sec p,.feed-details-panel p:not(.msline),.just{text-align:justify;text-justify:inter-word;text-indent:0;hyphens:auto;-webkit-hyphens:auto}
 .panel li{text-align:justify;hyphens:auto}
 .hero p{max-width:92ch;text-align:justify;hyphens:auto}
-/* Compact top-right filter button (same pattern as the Chinese conference calendar button) */
+/* Compact top-right filter button (same pattern as the conference calendar button) */
 .sechead .confcal{margin-left:auto}
 .calpop{width:236px}
 .calpop .calk:not(:first-child){border-top:1px solid var(--line);padding-top:8px;margin-top:8px}
@@ -111,7 +108,7 @@ html{scroll-behavior:smooth}
 .audc h3{overflow-wrap:anywhere}
 
 /* ===== v2 (Oct 2026): Science section, science-led home, Services ===== */
-/* Field tags use the per-field colours from the Chinese edition's field table */
+/* Field tags use per-field colours */
 .ftags{display:flex;gap:5px;flex-wrap:wrap;min-width:0}
 .ftag{display:inline-block;font-size:11px;line-height:18px;padding:0 8px;border-radius:999px;border:1px solid var(--fc,#2f5d46);color:var(--fc,#2f5d46);background:color-mix(in srgb,var(--fc,#2f5d46) 7%,#fff);font-weight:700;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
 .ftag.pre{--fc:#5f5f5f;border-style:dashed;background:#f3f3f3}
@@ -174,3 +171,17 @@ html{scroll-behavior:smooth}
 /* Services */
 .svccard .cta{display:flex;gap:10px;flex-wrap:wrap}
 a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
+
+/* ===== v3 (Oct 2026): justified prose everywhere (owner rule) =====
+   Intros, deks, card text and article bodies are justified with hyphenation
+   (pages carry lang="en"). Headings, buttons, tags, captions, nav and card
+   titles keep their normal alignment. */
+.hb-text p,.hero p,.subblock p,.ncta p,.svccard p,.panel p,.panel li,.audc li,.tier p,.steps li,
+.spage .dek,.qlook p,.amain p,.amain li,.spage .sbox p,.art-sub p,.just{
+  text-align:justify;text-justify:inter-word;text-indent:0;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.citebox .cite{text-align:left!important;hyphens:manual}
+.svcline{text-align:center}
+.brand .bs{white-space:nowrap}
+.fco{font-size:13px;color:var(--muted)}
+/* Very narrow screens: the narrowest card text falls back to left alignment to avoid wide gaps */
+@media (max-width:419px){.steps li,.tier p{text-align:left}}
