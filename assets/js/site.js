@@ -31,6 +31,18 @@ document.addEventListener('click',e=>{
   window.scrollBy(0,item.getBoundingClientRect().top-top);
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&activePanel)closePanel(true);});
+/* v12: list caps. Filters run first; then the first ~16/20 matches show (rounded up to full grid rows),
+   with a "View all" button for the rest. ?cap=N overrides the base (QA). */
+const CAPQ=+(new URLSearchParams(location.search).get('cap'))||0;
+function applyCap(grid,items,btn,expanded,noun){
+  const base=CAPQ||+grid.dataset.cap||16, c=Math.max(1,cols(grid)), cap=Math.ceil(base/c)*c;
+  items.forEach((el,i)=>{el.hidden=!expanded&&i>=cap;});
+  if(!btn) return;
+  const more=items.length>cap;
+  btn.hidden=!more;
+  btn.textContent=expanded?'Show fewer':`View all ${items.length} ${noun}`;
+  btn.setAttribute('aria-expanded',String(!!expanded));
+}
 /* close any open <details class="confcal"> when clicking outside */
 document.addEventListener('click',e=>{$$('details.confcal[open]').forEach(d=>{if(!d.contains(e.target))d.open=false;});});
 
@@ -39,23 +51,26 @@ const feed=$('#newsfeed');
 if(feed){
   const groups=[['all','All items'],['lic','Licensing'],['newco','NewCo'],['acq','M&A'],['clin','Clinical'],['inv','Financing']];
   const china=[['all','All companies'],['cn','China-linked only']];
-  let g='all', cn='all';
+  let g='all', cn='all', nexp=false;
   const q=new URLSearchParams(location.search); if(q.get('type')&&groups.some(x=>x[0]===q.get('type'))) g=q.get('type');
   function render(){
     const match=x=>(g==='all'||x.kinds.includes(g))&&(cn==='all'||x.china);
-    let n=0; $$('#newsfeed .item').forEach(el=>{const x=NEWS.find(v=>v.slug===el.dataset.slug); const ok=match(x); el.hidden=!ok; if(ok)n++;});
     closePanel(false);
+    const vis=[]; $$('#newsfeed .item').forEach(el=>{const x=NEWS.find(v=>v.slug===el.dataset.slug); const ok=match(x); el.hidden=!ok; if(ok)vis.push(el);});
+    const n=vis.length; applyCap(feed,vis,$('#newsmore'),nexp,'items');
     const cnt=k=>NEWS.filter(x=>(k==='all'||x.kinds.includes(k))&&(cn==='all'||x.china)).length;
     $('#nf-type').innerHTML=groups.map(([k,l])=>`<button type="button" data-g="${k}"${g===k?' aria-pressed="true"':''}><span>${l}</span><em>${cnt(k)}</em></button>`).join('');
     $('#nf-cn').innerHTML=china.map(([k,l])=>`<button type="button" data-c="${k}"${cn===k?' aria-pressed="true"':''}><span>${l}</span></button>`).join('');
-    $$('#nf-type button').forEach(b=>b.onclick=()=>{g=b.dataset.g;$('#nfcal').open=false;history.replaceState(null,'',g==='all'?location.pathname:'?type='+g);render();});
-    $$('#nf-cn button').forEach(b=>b.onclick=()=>{cn=b.dataset.c;$('#nfcal').open=false;render();});
+    $$('#nf-type button').forEach(b=>b.onclick=()=>{g=b.dataset.g;nexp=false;$('#nfcal').open=false;history.replaceState(null,'',g==='all'?location.pathname:'?type='+g);render();});
+    $$('#nf-cn button').forEach(b=>b.onclick=()=>{cn=b.dataset.c;nexp=false;$('#nfcal').open=false;render();});
     const lab=(groups.find(x=>x[0]===g)||groups[0])[1]+(cn==='cn'?' · China':'');
     $('#nflabel').textContent=g==='all'&&cn==='all'?'Filter':lab;
     $('#newscount').textContent=`${n} item${n===1?'':'s'}, newest first`;
     $$('.trkcard[data-g]').forEach(t=>t.setAttribute('aria-current',String(t.dataset.g===g)));
   }
-  $$('.trkcard[data-g]').forEach(t=>t.addEventListener('click',ev=>{ev.preventDefault();g=t.dataset.g;history.replaceState(null,'','?type='+g);render();$('#newsfeedsec').scrollIntoView({block:'start'});}));
+  $$('.trkcard[data-g]').forEach(t=>t.addEventListener('click',ev=>{ev.preventDefault();g=g===t.dataset.g?'all':t.dataset.g;nexp=false;history.replaceState(null,'',g==='all'?location.pathname:'?type='+g);render();$('#newsfeedsec').scrollIntoView({block:'start'});}));
+  $('#newsmore').addEventListener('click',()=>{nexp=!nexp;render();if(!nexp)$('#newsfeedsec').scrollIntoView({block:'start'});});
+  let nw=innerWidth; addEventListener('resize',()=>{if(innerWidth!==nw){nw=innerWidth;render();}});
   render();
 }
 
@@ -63,7 +78,7 @@ if(feed){
 const CONF_WIN=(()=>{const f=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');const n=new Date(),a=new Date(n),b=new Date(n);a.setDate(a.getDate()+7);b.setMonth(b.getMonth()+6);return [f(a),f(b)];})();
 const CONFS=(window.CONFS||[]).filter(x=>{if(!x.dates||x.dates==='TBA')return false;const s=x.dates.split(' to ')[0];return s>=CONF_WIN[0]&&s<=CONF_WIN[1];});
 if(CONFS&&$('#conflist')){
-  let kind='all',order='asc',range='all',region='all';
+  let kind='all',order='asc',range='all',region='all',cexp=false;
   /* v8: region filter (compact dropdown next to the calendar button); ?region=us|europe|japan|apac */
   const REGIONS=[['all','All regions'],['us','United States','United States'],['europe','Europe','Europe'],['japan','Japan','Japan'],['apac','Asia-Pacific','Asia-Pacific']];
   const regOf=k=>(REGIONS.find(z=>z[0]===k)||REGIONS[0]);
@@ -94,10 +109,10 @@ if(CONFS&&$('#conflist')){
     $('#confkind').innerHTML=KINDS2.map(([,k])=>{k=k==='All types'?'all':k;return `<button type="button" data-k="${k}"${kind===k?' aria-pressed="true"':''}><span>${k==='all'?'All types':k}</span><em>${upcoming.filter(x=>inRange(x,range)&&(k==='all'||x.kind===k)&&byReg(x,region)).length}</em></button>`;}).join('');
     $('#confsort').innerHTML=[['asc','Soonest first'],['desc','Latest first']].map(([k,l])=>`<button type="button" data-o="${k}"${order===k?' aria-pressed="true"':''}><span>${l}</span></button>`).join('');
     $('#confregion').innerHTML=REGIONS.map(([k,l])=>`<button type="button" data-g="${k}"${region===k?' aria-pressed="true"':''}><span>${l}</span><em>${upcoming.filter(x=>inRange(x,range)&&byKind(x)&&byReg(x,k)).length}</em></button>`).join('');
-    $$('#confregion button').forEach(b=>b.onclick=()=>{region=b.dataset.g;$('#confreg').open=false;syncUrl();render();});
+    $$('#confregion button').forEach(b=>b.onclick=()=>{region=b.dataset.g;cexp=false;$('#confreg').open=false;syncUrl();render();});
     $('#confreglabel').textContent=regOf(region)[1];
-    $$('#confrange button').forEach(b=>b.onclick=()=>{range=b.dataset.r;$('#confcal').open=false;render();});
-    $$('#confkind button').forEach(b=>b.onclick=()=>{kind=b.dataset.k;$('#conftype').open=false;syncUrl();render();});
+    $$('#confrange button').forEach(b=>b.onclick=()=>{range=b.dataset.r;cexp=false;$('#confcal').open=false;render();});
+    $$('#confkind button').forEach(b=>b.onclick=()=>{kind=b.dataset.k;cexp=false;$('#conftype').open=false;syncUrl();render();});
     {const SHORT={'CRO & outsourcing':'CRO','Manufacturing & CMC':'CMC','Digital Health & AI':'Digital & AI','Market Access & HEOR':'Access & HEOR'};
      const narrow=window.matchMedia&&matchMedia('(max-width:520px)').matches;
      $('#conftypelabel').textContent=kind==='all'?'All types':(narrow&&SHORT[kind])||kind; $('#conftype summary').title=kind==='all'?'All types':kind;}
@@ -107,6 +122,9 @@ if(CONFS&&$('#conflist')){
     const dated=list.filter(x=>!isTbd(x)).sort((a,b)=>a.dates<b.dates?-1:a.dates>b.dates?1:0); if(order==='desc') dated.reverse();
     const rows=[...dated,...list.filter(isTbd)];
     $('#confcount').textContent=`${rows.length} event${rows.length===1?'':'s'}`;
+    /* v12: type tiles mirror the type filter; counts follow the current time range + region */
+    $$('#ctiles .ctile').forEach(t=>{const k=t.dataset.k,n=upcoming.filter(x=>inRange(x,range)&&x.kind===k&&byReg(x,region)).length;
+      t.setAttribute('aria-current',String(kind===k)); t.classList.toggle('nil',!n); const em=t.querySelector('em'); if(em) em.textContent=`${n} event${n===1?'':'s'}`;});
     $('#conflist').innerHTML=rows.map(x=>{
       const tbd=isTbd(x);
       const place=[x.city,x.venue].filter(Boolean).map(esc).join(' · ');
@@ -118,6 +136,7 @@ if(CONFS&&$('#conflist')){
         <p class="confsum" lang="en">${esc(x.sum)}</p>
         <div class="conftags"><span class="tag">${esc(x.kind)}</span>${x.region?`<span class="tag reg">${esc(x.region)}</span>`:''}<a href="${esc(x.url)}" target="_blank" rel="noopener">Official site</a></div></div></article>`;
     }).join('')||'<div class="empty">No events match these filters.</div>';
+    applyCap($('#conflist'),$$('#conflist .confrow'),$('#confmore'),cexp,'events');
   }
   /* v7: one-line date for the card body, e.g. "Oct 23–27, 2026" */
   function fmtLine(x){
@@ -144,22 +163,31 @@ if(CONFS&&$('#conflist')){
   const markWide=im=>{if(im.naturalWidth&&im.naturalWidth/im.naturalHeight>2.6){const r=im.closest('.confrow');if(r)r.classList.add('wl');}};
   $('#conflist').addEventListener('load',e=>{const im=e.target;if(im&&im.tagName==='IMG'&&im.closest('.conflogo'))markWide(im);},true);
   const _r=render; render=function(){_r.apply(this,arguments);$$('#conflist .conflogo img').forEach(im=>{if(im.complete)markWide(im);});};
+  $$('#ctiles .ctile').forEach(t=>t.addEventListener('click',ev=>{ev.preventDefault();kind=kind===t.dataset.k?'all':t.dataset.k;cexp=false;syncUrl();render();$('#confsec').scrollIntoView({block:'start'});}));
+  $('#confmore').addEventListener('click',()=>{cexp=!cexp;render();if(!cexp)$('#confsec').scrollIntoView({block:'start'});});
+  let cw=innerWidth; addEventListener('resize',()=>{if(innerWidth!==cw){cw=innerWidth;render();}});
   render();
 }
 
 /* ---------- Science index: one compact field filter, top-right ---------- */
 const sgrid=$('#scigrid');
 if(sgrid){
-  const FIELDS=window.FIELDS||{}; let f='all';
+  const FIELDS=window.FIELDS||{}; let f='all', sexp=false;
   const q=new URLSearchParams(location.search); if(q.get('field')&&FIELDS[q.get('field')]) f=q.get('field');
   function render(){
-    let n=0; $$('#scigrid .scard').forEach(el=>{const ok=f==='all'||el.dataset.f===f; el.hidden=!ok; if(ok)n++;});
+    const vis=[]; $$('#scigrid .scard').forEach(el=>{const ok=f==='all'||el.dataset.f===f; el.hidden=!ok; if(ok)vis.push(el);});
+    const n=vis.length; applyCap(sgrid,vis,$('#scimore'),sexp,'articles');
+    $$('#ftiles .ftile').forEach(t=>t.setAttribute('aria-current',String(t.dataset.f===f)));
     $$('#sf-field button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.f===f)));
     $('#sflabel').textContent=f==='all'?'All fields':FIELDS[f];
     $('#scicount').textContent=`${n} article${n===1?'':'s'}, newest first`;
     $('#sciempty').hidden=n>0;
   }
-  $$('#sf-field button').forEach(b=>b.addEventListener('click',()=>{f=b.dataset.f;$('#sfcal').open=false;history.replaceState(null,'',f==='all'?location.pathname:'?field='+f);render();}));
+  const setF=k=>{f=k;sexp=false;history.replaceState(null,'',f==='all'?location.pathname:'?field='+f);render();};
+  $$('#ftiles .ftile').forEach(t=>t.addEventListener('click',ev=>{ev.preventDefault();setF(f===t.dataset.f?'all':t.dataset.f);$('#scisec').scrollIntoView({block:'start'});}));
+  $('#scimore').addEventListener('click',()=>{sexp=!sexp;render();if(!sexp)$('#scisec').scrollIntoView({block:'start'});});
+  let sw=innerWidth; addEventListener('resize',()=>{if(innerWidth!==sw){sw=innerWidth;render();}});
+  $$('#sf-field button').forEach(b=>b.addEventListener('click',()=>{f=b.dataset.f;sexp=false;$('#sfcal').open=false;history.replaceState(null,'',f==='all'?location.pathname:'?field='+f);render();}));
   render();
 }
 })();
