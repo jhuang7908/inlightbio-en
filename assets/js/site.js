@@ -123,8 +123,11 @@ if(CONFS&&$('#conflist')){
     const rows=[...dated,...list.filter(isTbd)];
     $('#confcount').textContent=`${rows.length} event${rows.length===1?'':'s'}`;
     /* v12: type tiles mirror the type filter; counts follow the current time range + region */
-    $$('#ctiles .ctile').forEach(t=>{const k=t.dataset.k,n=upcoming.filter(x=>inRange(x,range)&&x.kind===k&&byReg(x,region)).length;
-      t.setAttribute('aria-current',String(kind===k)); t.classList.toggle('nil',!n); const em=t.querySelector('em'); if(em) em.textContent=`${n} event${n===1?'':'s'}`;});
+    /* v13: each tile also shows the next upcoming event of its type; the "All conferences" tile (data-k=all) resets the type */
+    $$('#ctiles .ctile').forEach(t=>{const k=t.dataset.k,xs=upcoming.filter(x=>inRange(x,range)&&(k==='all'||x.kind===k)&&byReg(x,region)),n=xs.length;
+      t.setAttribute('aria-current',String(kind===k)); t.classList.toggle('nil',!n); const em=t.querySelector('em'); if(em) em.textContent=`${n} event${n===1?'':'s'}`;
+      const nx=xs.filter(x=>!isTbd(x)).sort((a,b)=>a.dates<b.dates?-1:1)[0], el=t.querySelector('.nx');
+      if(el){ if(nx){const p=nx.dates.split(' to ')[0].split('-'); el.textContent=`Next: ${abbrName(nx)} · ${MON[+p[1]-1]} ${+p[2]}`;} else el.textContent='No upcoming event in this view'; }});
     $('#conflist').innerHTML=rows.map(x=>{
       const tbd=isTbd(x);
       const place=[x.city,x.venue].filter(Boolean).map(esc).join(' · ');
@@ -154,6 +157,7 @@ if(CONFS&&$('#conflist')){
     if(/^[A-Z]{2,6}$/.test(first.replace(/[^A-Za-z]/g,''))) return first.replace(/[^A-Za-z]/g,'');
     return w.slice(0,3).map(t=>t[0].toUpperCase()).join('');
   }
+  function abbrName(x){return x.abbr||String(x.name).replace(/\s*\(.*?\)\s*/g,' ').replace(/\s+\d{4}$/,'').trim();}
   function tile(x){return `<span class="conflogo tile" aria-hidden="true"><b>${esc(abbr(x))}</b></span>`;}
   $('#conflist').addEventListener('error',e=>{
     const im=e.target; if(!im||im.tagName!=='IMG'||!im.closest('.conflogo')) return;
