@@ -879,11 +879,12 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .sechead .confctl #conftype .calpop{width:min(252px,calc(100vw - 24px))}
 }
 /* v10: wide logos get a wider box; phone nav fits without swiping */
-.confrow.wl{grid-template-columns:168px minmax(0,1fr)}
-.confrow.wl .conflogo{width:168px;height:64px;padding:4px 6px}
+/* one logo column width for every card so titles line up */
+.confrow,.confrow.wl{grid-template-columns:150px minmax(0,1fr)}
+.confrow .conflogo,.confrow.wl .conflogo{box-sizing:border-box;width:150px;height:64px;padding:5px 7px}
 @media (max-width:600px){
-  .confrow.wl{grid-template-columns:112px minmax(0,1fr)}
-  .confrow.wl .conflogo{width:112px;height:56px;padding:3px 4px}
+  .confrow,.confrow.wl{grid-template-columns:100px minmax(0,1fr)}
+  .confrow .conflogo,.confrow.wl .conflogo{width:100px;height:60px;padding:3px 4px}
 }
 @media (max-width:480px){
   .nav-in .brand{margin-right:0}
