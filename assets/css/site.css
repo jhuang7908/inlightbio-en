@@ -800,3 +800,11 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 .fco{font-size:13px;color:var(--muted)}
 /* Very narrow screens: the narrowest card text falls back to left alignment to avoid wide gaps */
 @media (max-width:419px){.steps li,.tier p{text-align:left}}
+
+/* ===== v4 (Oct 2026): English mechanism figures in science articles =====
+   Same pattern as the Chinese site (.fig / .fig-scroll): bordered image box,
+   caption tight underneath, justified like the prose. */
+.sfig{margin:0;display:grid;gap:6px;min-width:0}
+.sfig-img{overflow:hidden;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.sfig img{display:block;width:100%;max-width:100%;height:auto}
+.spage .sfigcap,.pv-art .amain .sfigcap{margin:0;max-width:none;font-size:13px;line-height:1.6;color:var(--muted);text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
