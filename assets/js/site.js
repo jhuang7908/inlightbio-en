@@ -60,8 +60,8 @@ if(feed){
 }
 
 /* ---------- Conferences (sort toggle, time range in calendar button, region dropdown beside it, ended hidden) ---------- */
-const CONF_HORIZON='2027-04-30';
-const CONFS=(window.CONFS||[]).filter(x=>x.dates&&x.dates!=='TBA'&&x.dates.split(' to ')[0]<=CONF_HORIZON);
+const CONF_WIN=(()=>{const f=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');const n=new Date(),a=new Date(n),b=new Date(n);a.setDate(a.getDate()+7);b.setMonth(b.getMonth()+6);return [f(a),f(b)];})();
+const CONFS=(window.CONFS||[]).filter(x=>{if(!x.dates||x.dates==='TBA')return false;const s=x.dates.split(' to ')[0];return s>=CONF_WIN[0]&&s<=CONF_WIN[1];});
 if(CONFS&&$('#conflist')){
   let kind='all',order='asc',range='all',region='all';
   /* v8: region filter (compact dropdown next to the calendar button); ?region=us|europe|japan|apac */
