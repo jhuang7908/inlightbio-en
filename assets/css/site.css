@@ -878,3 +878,18 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .sechead .confctl .confcal summary svg{width:15px;height:15px}
   .sechead .confctl #conftype .calpop{width:min(252px,calc(100vw - 24px))}
 }
+/* v10: wide logos get a wider box; phone nav fits without swiping */
+.confrow.wl{grid-template-columns:168px minmax(0,1fr)}
+.confrow.wl .conflogo{width:168px;height:64px;padding:4px 6px}
+@media (max-width:600px){
+  .confrow.wl{grid-template-columns:112px minmax(0,1fr)}
+  .confrow.wl .conflogo{width:112px;height:56px;padding:3px 4px}
+}
+@media (max-width:480px){
+  .nav-in .brand{margin-right:0}
+  .nav-in .bmark,.nav-in .bmark-wrap{width:28px;height:28px}
+  .nav-in{padding:4px 4px}
+  .nav-tabs{gap:0;justify-content:space-between;overflow-x:visible}
+  .nav-in .nav-tabs a{padding:0 6px;font-size:12.5px;flex-shrink:1}
+}
+@media (max-width:400px){.nav-in .brand{display:none}}
