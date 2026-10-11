@@ -992,3 +992,74 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 .srlogo .n,.srline .n{min-width:0;background:none;padding:0;font-size:11px;color:var(--muted);text-align:right}
 .srlogo:hover .n{color:var(--accent)}
 .srlogo .cap{font-size:9.5px;margin-top:2px}
+
+/* ===== v13 (Oct 2026): tiles match the Deals tiles; source cards in the rails ===== */
+/* Science + Conferences tile grids (9 tiles): identical dimensions to the Deals type tiles.
+   3 columns on desktop, 2 on tablet/phone (the odd last tile spans the row), Deals' compact phone layout. */
+.trkgrid.tiles9{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;gap:8px}
+.trkgrid.tiles9 .trkcard.art{grid-template-columns:92px minmax(0,1fr);gap:14px;padding:10px 14px 10px 10px;min-height:112px;justify-items:stretch;text-align:left}
+.trkgrid.tiles9 .trkcard.art .artthumb{width:92px;height:92px;border-radius:12px}
+.trkgrid.tiles9 .trkcard.art b{font-size:16px;line-height:1.3}
+.trkgrid.tiles9 .trkcard.art .cbody>span{display:-webkit-box;font-size:12px}
+.trkgrid.tiles9 .trkcard b .lf{display:inline}.trkgrid.tiles9 .trkcard b .sf{display:none}
+.trkcard.ctile .artthumb{background:#F7F3EA}
+.trkcard.ctile .artthumb img{object-fit:contain;padding:4px;box-sizing:border-box}
+.trkcard .nx{display:block;font-style:normal;font-size:11.5px;line-height:1.35;color:var(--accent);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+@media (max-width:900px){.trkgrid.tiles9{grid-template-columns:repeat(2,minmax(0,1fr))}.trkgrid.tiles9>:last-child:nth-child(odd){grid-column:1/-1}}
+@media (max-width:640px){
+  .trkgrid.tiles9{gap:8px}
+  .trkgrid.tiles9 .trkcard.art{grid-template-columns:52px minmax(0,1fr);gap:9px;padding:8px 10px 8px 8px;min-height:0}
+  .trkgrid.tiles9 .trkcard.art .artthumb{width:52px;height:52px;border-radius:9px}
+  .trkgrid.tiles9 .trkcard.art b{font-size:14.5px}
+  .trkgrid.tiles9 .trkcard.art .cbody>span{display:none}
+  .trkgrid.tiles9 .trkcard b .lf{display:none}.trkgrid.tiles9 .trkcard b .sf{display:inline}
+  .trkcard .nx{font-size:11px}
+}
+/* Side rails: wider at >=1600, normal page flow (not sticky) so every source card is reachable */
+@media (min-width:1440px){
+  .shell{grid-template-columns:200px minmax(0,1fr) 200px}
+  .rail{position:static;height:auto;max-height:none;overflow:visible}
+}
+@media (min-width:1600px){.shell{grid-template-columns:232px minmax(0,1fr) 232px;max-width:1720px}.footshell{max-width:1720px}}
+@media (min-width:1800px){.shell{grid-template-columns:256px minmax(0,1180px) 256px;justify-content:center;max-width:1800px}.footshell{max-width:1800px}}
+.srclist{gap:8px}
+.srcard2{display:grid;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;color:var(--fg);min-width:0}
+.srcard2:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));box-shadow:0 2px 10px rgba(20,60,40,.07)}
+.srcard2 .lg{display:flex;align-items:center;justify-content:center;height:58px;padding:9px 14px;box-sizing:border-box;border-bottom:1px solid var(--line);background:#fff}
+.srcard2 .lg img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+.srcard2 .tx{display:grid;gap:2px;padding:7px 10px 8px;background:color-mix(in srgb,var(--accent) 3%,#fff)}
+.srcard2 b{font-family:var(--display);font-size:12.5px;line-height:1.3;font-weight:800}
+.srcard2 .d,.srline .d{font-size:11px;line-height:1.4;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.srcard2 .n{font-size:10.5px;font-weight:800;color:var(--accent);letter-spacing:.02em;margin-top:1px}
+.srline{align-items:flex-start;padding:8px 10px}
+.srline>span:first-child{display:grid;gap:2px}
+.srline b{font-family:var(--display);font-size:12.5px}
+.srline .n{font-size:11px;font-weight:800;color:var(--accent);background:none;padding:0}
+@media (min-width:1600px){.srcard2 .lg{height:66px}.srcard2 b{font-size:13px}.srcard2 .d{font-size:11.5px}}
+/* v13b: count + next event share one line (keeps Deals tile height); phone shows description like Deals */
+.trkcard .cmeta{display:flex;align-items:baseline;gap:0;min-width:0}
+.trkcard .cmeta em{flex:none}
+.trkcard .cmeta .nx{flex:1 1 auto}
+.trkcard .cmeta .nx:not(:empty)::before{content:"·";margin:0 6px;color:var(--muted)}
+.trkgrid.tiles9 .trkcard b{overflow-wrap:anywhere;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+@media (max-width:640px){
+  .trkgrid.tiles9 .trkcard.art .cbody>span{display:-webkit-box;font-size:12px;line-height:1.4}
+  .trkgrid.tiles9 .trkcard .nx{display:none}
+}
+/* v13c: Science field names wrap (up to two lines) with a one-line description, so tiles keep the Deals height;
+   conference titles stay on one line. Phone: same 103px tile height as the Deals tiles. */
+#ftiles .trkcard b{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.25}
+#ftiles .trkcard.art .cbody>span{-webkit-line-clamp:1}
+@media (max-width:640px){
+  .trkgrid.tiles9 .trkcard.art{min-height:103px}
+  .trkgrid.tiles9 .trkcard b{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.25;font-size:14px}
+  .trkgrid.tiles9 .trkcard.art .cbody>span{-webkit-line-clamp:2}
+  #ftiles .trkcard.art .cbody>span{-webkit-line-clamp:1}
+}
+@media (max-width:640px){.trkgrid.tiles9 .trkcard.art .cbody>span{-webkit-line-clamp:1}.trkgrid.tiles9 .trkcard.art .cbody{gap:3px}}
+@media (max-width:640px){.trkgrid.tiles9 .trkcard.art{box-sizing:border-box;min-height:103px}}
+@media (max-width:640px){#ctiles .trkcard.art .cbody>span{-webkit-line-clamp:2}}
+@media (max-width:380px){#ctiles .trkcard.art .cbody>span{-webkit-line-clamp:1}}
+
+/* v13b: phones show lists only, no category tiles */
+@media (max-width:640px){section.tilesec{display:none!important}}
