@@ -894,3 +894,101 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .nav-in .nav-tabs a{padding:0 6px;font-size:12.5px;flex-shrink:1}
 }
 @media (max-width:400px){.nav-in .brand{display:none}}
+
+/* ===== v12 (Oct 2026): side rails, field + conference-type tiles, list caps, full-width intros, footer ===== */
+/* Intros use the full content width; no one-word last lines */
+.hero p,.hb-text p,.textpage .hero p{max-width:none}
+.hero p,.hb-text p,.panel p,.ncta p,.subblock p,.just,.confrow p.confsum,.audc li,.panel li{text-wrap:pretty}
+/* Side rails: ad slots, falling back to the list of sources we cite. Desktop >=1440 only. */
+.rail{display:none}
+@media (min-width:1440px){
+  .shell{display:grid;grid-template-columns:172px minmax(0,1fr) 172px;gap:16px;max-width:1560px;padding:0 12px;align-items:start}
+  .shell>.col{min-width:0}
+  .rail{display:block;position:sticky;top:64px;max-height:calc(100vh - 80px);overflow-y:auto;scrollbar-width:thin;margin-top:16px;background:color-mix(in srgb,var(--surface) 60%,var(--bg));border-radius:12px;padding:10px;box-sizing:border-box}
+  .rail-l{border-right:1px solid var(--line)}
+  .rail-r{border-left:1px solid var(--line)}
+  .footshell{max-width:1560px;padding:0 12px}
+}
+@media (min-width:1640px){.shell{grid-template-columns:200px minmax(0,1180px) 200px;justify-content:center;max-width:1640px}.footshell{max-width:1640px}}
+.railin{display:grid;gap:10px;align-content:start}
+.ad-slot{display:block;min-width:0}
+.srclist{display:grid;gap:9px}
+.railhead{font-size:10.5px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.09em;padding:2px 0 6px;border-bottom:1px solid var(--line)}
+.srclist .railhead:not(:first-child){margin-top:6px}
+.srcard{display:grid;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:inherit;text-decoration:none;overflow:hidden;min-width:0}
+.srcard:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.srcard .wm{display:flex;align-items:center;justify-content:center;min-height:54px;padding:6px 8px;text-align:center;font-family:var(--display);font-weight:800;font-size:17px;line-height:1.15;color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,#fff);border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.srcard .srcbody{display:flex;justify-content:space-between;gap:6px;align-items:baseline;padding:6px 9px;min-width:0}
+.srcard em{font-size:10.5px;line-height:1.35;color:var(--muted);font-style:normal}
+.srcard i,.srgroup i{font-style:normal;font-size:10.5px;font-weight:700;color:var(--muted);white-space:nowrap}
+.srgroup{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:7px 9px 8px;display:grid;gap:4px;min-width:0}
+.srgroup .k{font-size:10px;letter-spacing:.07em;font-weight:800;color:var(--muted);text-transform:uppercase}
+.srgroup a,.srgroup .srline{display:flex;justify-content:space-between;gap:6px;align-items:baseline;font-size:11.5px;font-weight:700;line-height:1.3;min-width:0}
+.srgroup .srline{color:var(--fg);font-weight:500}
+.srgroup a span,.srgroup .srline span{min-width:0;overflow-wrap:anywhere}
+.srnote{display:block;border:1px dashed var(--line);border-radius:9px;padding:7px 9px;font-size:10.5px;line-height:1.45;color:var(--muted);text-decoration:none}
+.srnote:hover{color:var(--accent)}
+/* Footer: full content width, links on one line on desktop */
+.foot-in>*{max-width:none}
+.footnav{gap:6px 18px}
+@media (max-width:640px){.footnav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 12px}.footcols{gap:6px}}
+/* Tile grids (same card pattern as the Deals type tiles) */
+.trkgrid.tiles3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.trkgrid.tiles4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.trkgrid{gap:10px}
+.trkcard.art{cursor:pointer}
+.trkcard.art .cbody>span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.trkcard.ctile{min-height:0;grid-template-columns:64px minmax(0,1fr);padding:9px 12px 9px 9px;gap:12px}
+.trkcard.ctile .artthumb{width:64px;height:64px;border-radius:10px;background:#F7F3EA}
+.trkcard.ctile b{font-size:15px;line-height:1.3}
+.trkcard.nil{opacity:.55}
+@media (max-width:1100px){.trkgrid.tiles4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.trkgrid.tiles3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .trkgrid.tiles3 .trkcard.art{grid-template-columns:1fr;justify-items:center;text-align:center;padding:10px 8px;gap:6px;min-height:0}
+  .trkgrid.tiles3 .trkcard.art .artthumb{width:64px;height:64px}
+  .trkgrid.tiles3 .trkcard.art .cbody>span{display:none}
+  .trkgrid.tiles3 .trkcard.art b{font-size:13.5px;line-height:1.25}}
+@media (max-width:640px){
+  .trkgrid{gap:8px}
+  .trkgrid.tiles3 .trkcard.art{grid-template-columns:1fr;padding:8px 5px 9px;gap:5px}
+  .trkgrid.tiles3 .trkcard.art .artthumb{width:52px;height:52px;border-radius:9px}
+  .trkgrid.tiles3 .trkcard.art b{font-size:12px;hyphens:auto;overflow-wrap:anywhere}
+  .trkgrid.tiles3 .trkcard.art em{font-size:11px}
+  .trkcard.ctile{grid-template-columns:44px minmax(0,1fr);gap:9px;padding:7px 9px 7px 7px}
+  .trkcard.ctile .artthumb{width:44px;height:44px;border-radius:8px}
+  .trkcard.ctile b{font-size:13px}
+  .trkcard.ctile em{font-size:11px}
+}
+/* "View all" under capped lists */
+.morewrap{display:flex;justify-content:center;margin-top:14px}
+.morewrap:has(.morebtn[hidden]){display:none}
+.morebtn{font:inherit;font-size:13.5px;font-weight:700;color:var(--accent);background:var(--surface);border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:999px;padding:8px 22px;cursor:pointer}
+.morebtn:hover{background:color-mix(in srgb,var(--accent) 8%,var(--surface))}
+/* v12b: equal tile heights; short field labels on narrow screens; tidy phone footer */
+.trkgrid.tiles3,.trkgrid.tiles4{grid-auto-rows:1fr}
+.trkcard b i{font-style:normal}
+.trkcard b .sf{display:none}
+@media (max-width:900px){.trkgrid.tiles3 .trkcard b .lf{display:none}.trkgrid.tiles3 .trkcard b .sf{display:inline}.trkgrid.tiles3 .trkcard.art b{hyphens:manual}}
+@media (max-width:640px){.footnav{display:flex;flex-wrap:wrap;gap:8px 18px}.footnav a{white-space:nowrap}}
+/* v12b: rails use each source's official logo (uniform logo box) + a small count */
+.srclist{gap:5px}
+.srclist .railhead{margin-bottom:2px}
+.srclist .railhead:not(:first-child){margin-top:4px}
+.srk{font-size:9.5px;letter-spacing:.08em;font-weight:800;color:var(--muted);text-transform:uppercase;margin:5px 0 0}
+.srlogo{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"lg n" "cap cap";align-items:center;column-gap:8px;row-gap:1px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 8px;text-decoration:none;color:var(--fg);min-width:0}
+.srlogo:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.srlogo .lg{grid-area:lg;display:flex;align-items:center;justify-content:center;height:28px;min-width:0}
+.srlogo .lg img{display:block;width:100%;height:100%;max-width:none;object-fit:contain}
+.srlogo .n,.srline .n{grid-area:n;min-width:20px;text-align:center;font-size:10.5px;font-weight:800;line-height:18px;color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,#fff);border-radius:999px;padding:0 6px}
+.srlogo .cap{grid-area:cap;font-size:10px;line-height:1.3;color:var(--muted);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.srline{display:flex;justify-content:space-between;align-items:center;gap:6px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:5px 8px;font-size:11px;font-weight:700;color:var(--fg)}
+.srclist .srnote{margin-top:3px;padding:6px 8px;font-size:10px}
+/* v12b-2: wider rails at 1440+, logo box takes the row; count as compact figure on the right */
+@media (min-width:1440px){.shell{grid-template-columns:184px minmax(0,1fr) 184px}}
+@media (min-width:1640px){.shell{grid-template-columns:200px minmax(0,1180px) 200px}}
+.srlogo{grid-template-columns:minmax(0,1fr) 22px;column-gap:6px;padding:6px 7px 6px 9px}
+.srlogo .lg{height:26px;justify-content:center}
+.srlogo .lg img{width:auto;height:auto;max-width:100%;max-height:100%}
+.srlogo .n,.srline .n{min-width:0;background:none;padding:0;font-size:11px;color:var(--muted);text-align:right}
+.srlogo:hover .n{color:var(--accent)}
+.srlogo .cap{font-size:9.5px;margin-top:2px}
