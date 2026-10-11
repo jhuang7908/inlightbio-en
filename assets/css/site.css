@@ -731,3 +731,68 @@ html{scroll-behavior:smooth}
 .aud.aud2{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:900px){.aud.aud2{grid-template-columns:minmax(0,1fr)}}
 .audc h3{overflow-wrap:anywhere}
+
+/* ===== v2 (Oct 2026): Science section, science-led home, Services ===== */
+/* Field tags use the per-field colours from the Chinese edition's field table */
+.ftags{display:flex;gap:5px;flex-wrap:wrap;min-width:0}
+.ftag{display:inline-block;font-size:11px;line-height:18px;padding:0 8px;border-radius:999px;border:1px solid var(--fc,#2f5d46);color:var(--fc,#2f5d46);background:color-mix(in srgb,var(--fc,#2f5d46) 7%,#fff);font-weight:700;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.ftag.pre{--fc:#5f5f5f;border-style:dashed;background:#f3f3f3}
+.ftags.big .ftag{font-size:12.5px;line-height:22px;padding:0 10px}
+.fdot{display:inline-block;flex:none;width:9px;height:9px;border-radius:50%;margin-right:8px}
+/* Science card grid */
+.scigrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.scigrid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1000px){.scigrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.scigrid,.scigrid.three{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+.scard{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:border-color .15s,box-shadow .15s}
+.scard:hover{border-color:color-mix(in srgb,var(--blue) 40%,var(--line));box-shadow:0 3px 14px rgba(20,40,70,.08)}
+.scover{display:block;aspect-ratio:16/10;overflow:hidden;background:#F6F4EE}
+.scover img{display:block;width:100%;height:100%;max-width:none;object-fit:cover}
+.sbody{display:flex;flex-direction:column;gap:6px;padding:10px 12px 11px;flex:1 1 auto;min-width:0}
+.sbody h3{text-wrap:wrap;font-family:var(--display);font-size:15px;line-height:1.4;margin:0;display:-webkit-box;-webkit-line-clamp:4;line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.sbody h3 a{color:var(--fg)}
+.sbody h3 a:hover{color:var(--accent)}
+.scap{font-size:12.5px;line-height:1.5;color:var(--muted);margin:0;max-width:none;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.smeta{margin-top:auto;display:flex;gap:8px;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--muted);font-weight:700;min-width:0;padding-top:2px}
+.smeta .sj{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;font-style:italic}
+.smeta .sd{white-space:nowrap;flex:none}
+@media (max-width:560px){
+  .scigrid,.scigrid.three{grid-template-columns:minmax(0,1fr);gap:8px}
+  .scard{display:grid;grid-template-columns:116px minmax(0,1fr)}
+  .scover{aspect-ratio:auto;height:100%;min-height:100px}
+  .sbody{padding:8px 10px 9px;gap:4px}
+  .sbody h3{font-size:14px;line-height:1.38}
+  .scap{display:none}
+}
+.sfpop{width:300px;max-width:calc(100vw - 32px)}
+.sfpop button span{display:flex;align-items:center;text-align:left}
+/* Science article */
+.spage{max-width:880px;margin-left:auto;margin-right:auto}
+.spage article{display:grid;gap:18px}
+.spage .ahead{display:grid;gap:8px}
+.spage .ahead h1{font-family:var(--display);font-size:clamp(22px,3vw,30px);font-weight:800;line-height:1.3}
+.spage .dek{font-size:17px;line-height:1.7;color:var(--fg);text-align:justify;text-justify:inter-word;hyphens:auto;max-width:none;margin:0}
+.qlook{background:color-mix(in srgb,var(--accent) 5%,var(--surface));border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;display:grid;gap:6px}
+.qlook .k,.spage .sbox .k{font-size:11.5px;letter-spacing:.1em;font-weight:800;color:var(--accent);text-transform:uppercase}
+.qlook p{font-size:15px;line-height:1.75;text-align:justify;text-justify:inter-word;hyphens:auto;max-width:none;margin:0}
+.scihero{margin:0}
+.scihero img{max-height:460px;border-radius:6px}
+.spage .amain{display:grid;gap:22px}
+.spage .sec h3{font-family:var(--display);font-size:17px;margin-top:8px}
+.spage .datacard{gap:10px}
+.spage .datacard li{font-size:14.5px;line-height:1.7;text-align:justify;hyphens:auto}
+.spage .sbox{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:8px}
+.spage .sbox p{font-size:14px;line-height:1.7;margin:0;max-width:none;text-align:justify;text-justify:inter-word;hyphens:auto}
+.citebox .cite{overflow-wrap:anywhere;text-align:left!important}
+.citebox .topics{font-size:13px!important;color:var(--muted)}
+.prenote{border:1px dashed #8a8a8a;background:#f5f5f3;border-radius:10px;padding:10px 14px;font-size:14px;margin:0;max-width:none}
+.srel h2{font-size:17px;color:#2f5d46;margin:0 0 10px;font-family:var(--display)}
+@media (max-width:720px){.spage .dek{font-size:16px}.spage .ahead h1{font-size:22px}}
+/* Home */
+.mini-conf.wide{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1000px){.mini-conf.wide{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.mini-conf.wide{grid-template-columns:minmax(0,1fr)}}
+.svcline{font-size:14px;color:var(--muted);text-align:center;margin:0;max-width:none}
+/* Services */
+.svccard .cta{display:flex;gap:10px;flex-wrap:wrap}
+a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}

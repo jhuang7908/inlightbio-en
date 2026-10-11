@@ -106,4 +106,20 @@ if(CONFS&&$('#conflist')){
   }
   render();
 }
+
+/* ---------- Science index: one compact field filter, top-right ---------- */
+const sgrid=$('#scigrid');
+if(sgrid){
+  const FIELDS=window.FIELDS||{}; let f='all';
+  const q=new URLSearchParams(location.search); if(q.get('field')&&FIELDS[q.get('field')]) f=q.get('field');
+  function render(){
+    let n=0; $$('#scigrid .scard').forEach(el=>{const ok=f==='all'||el.dataset.f===f; el.hidden=!ok; if(ok)n++;});
+    $$('#sf-field button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.f===f)));
+    $('#sflabel').textContent=f==='all'?'All fields':FIELDS[f];
+    $('#scicount').textContent=`${n} article${n===1?'':'s'}, newest first`;
+    $('#sciempty').hidden=n>0;
+  }
+  $$('#sf-field button').forEach(b=>b.addEventListener('click',()=>{f=b.dataset.f;$('#sfcal').open=false;history.replaceState(null,'',f==='all'?location.pathname:'?field='+f);render();}));
+  render();
+}
 })();
