@@ -1075,3 +1075,8 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .trkgrid .trkcard.art .cbody>span,.trkgrid.tiles9 .trkcard.art .cbody>span{display:-webkit-box!important;-webkit-line-clamp:1!important;font-size:12px}
   .trkgrid .trkcard.art .cbody{gap:2px}
 }
+
+/* v15: long nav names on wide screens, short names on narrow screens */
+@media (max-width:1100px){.nav-tabs .nl{display:none}}
+@media (min-width:1101px){.nav-tabs a{white-space:nowrap}}
+.nav-tabs .nl{margin-left:.3em}
