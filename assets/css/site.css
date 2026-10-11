@@ -1063,3 +1063,15 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 
 /* v13b: phones show lists only, no category tiles */
 @media (max-width:640px){section.tilesec{display:none!important}}
+
+/* v14: source rails only on the homepage; other pages use a single centred column (ad slots added later) */
+@media (min-width:1280px){.shell.norail{grid-template-columns:minmax(0,1180px)!important;justify-content:center}}
+/* v14: compact desktop category tiles, same height on Science, Deals and Conferences */
+@media (min-width:641px){
+  .trkgrid .trkcard.art,.trkgrid.tiles9 .trkcard.art,.trkcard.ctile{grid-template-columns:60px minmax(0,1fr)!important;gap:12px!important;padding:8px 12px 8px 8px!important;min-height:0!important;height:78px;box-sizing:border-box;align-items:center;text-align:left;justify-items:stretch}
+  .trkgrid .trkcard.art .artthumb,.trkgrid.tiles9 .trkcard.art .artthumb,.trkcard.ctile .artthumb{width:60px!important;height:60px!important;border-radius:10px}
+  .trkgrid .trkcard.art b,.trkgrid.tiles9 .trkcard.art b{font-size:14.5px!important;line-height:1.25}
+  #ftiles .trkcard b{-webkit-line-clamp:1}
+  .trkgrid .trkcard.art .cbody>span,.trkgrid.tiles9 .trkcard.art .cbody>span{display:-webkit-box!important;-webkit-line-clamp:1!important;font-size:12px}
+  .trkgrid .trkcard.art .cbody{gap:2px}
+}
