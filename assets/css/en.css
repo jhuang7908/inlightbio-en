@@ -193,3 +193,73 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 .sfig-img{overflow:hidden;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
 .sfig img{display:block;width:100%;max-width:100%;height:auto}
 .spage .sfigcap,.pv-art .amain .sfigcap{margin:0;max-width:none;font-size:13px;line-height:1.6;color:var(--muted);text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+
+/* ===== v7 (Oct 2026): conference cards with per-event official logos =====
+   Desktop: two-column card grid, logo box on the left, text on the right.
+   Mobile (<=600px): each card is one horizontal row, 76px square logo box left.
+   Missing/broken logos fall back to a generated green tile with the acronym. */
+.conflist{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.confrow{display:grid;grid-template-columns:128px minmax(0,1fr);gap:16px;align-items:start;padding:16px 18px;min-width:0}
+.confrow .conflogo{width:128px;height:88px;padding:8px;border-radius:10px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;box-sizing:border-box}
+.confrow .conflogo img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain}
+.confrow .conflogo.tile{background:var(--accent);border-color:var(--accent);padding:6px}
+.confrow .conflogo.tile b{color:#fff;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:.02em;line-height:1;text-align:center;overflow-wrap:anywhere}
+.confbody{min-width:0;display:flex;flex-direction:column;gap:3px}
+.confrow .confdate{text-align:left;font-size:13px;font-weight:700;color:var(--accent);line-height:1.4}
+.confrow .confdate.tba{color:#b0412e}
+.confrow h3{margin:0;font-size:16px;line-height:1.4;overflow-wrap:break-word}
+.confrow .confmeta{font-size:12.5px;line-height:1.5;color:var(--muted);overflow-wrap:anywhere}
+.confrow p.confsum{margin:4px 0 6px;font-size:14px;line-height:1.65;max-width:none;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.confrow .conftags{margin-top:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+@media (max-width:820px){.conflist{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){
+  .conflist{gap:8px}
+  .confrow{grid-template-columns:76px minmax(0,1fr);gap:12px;padding:12px}
+  .confrow .conflogo{width:76px;height:76px;padding:5px;border-radius:9px}
+  .confrow .conflogo.tile b{font-size:16px}
+  .confrow h3{font-size:15px;line-height:1.35}
+  .confrow .confdate{font-size:12.5px}
+  .confrow .confmeta{font-size:12px}
+  .confrow p.confsum{font-size:13.5px;line-height:1.6}
+}
+/* v7b: compact conference cards — logo beside the title block; summary and tags run full width beneath */
+.confrow{grid-template-columns:104px minmax(0,1fr);grid-template-areas:"logo head" "sum sum" "tags tags";column-gap:14px;row-gap:0;padding:12px 14px;align-content:start}
+.confrow .conflogo{grid-area:logo;width:104px;height:64px;padding:6px;align-self:center}
+.confbody{display:contents}
+.confrow .confdate,.confrow h3,.confrow .confmeta{grid-column:2}
+.confrow .confdate{grid-row:1;align-self:start}
+.confrow .confhead{grid-area:head}
+.confrow p.confsum{grid-column:1/-1;margin:8px 0 6px;line-height:1.55}
+.confrow .conftags{grid-column:1/-1;margin-top:0}
+@media (max-width:600px){
+  .confrow{grid-template-columns:64px minmax(0,1fr);column-gap:10px;padding:10px 12px}
+  .confrow .conflogo{width:64px;height:64px;padding:4px}
+  .confrow p.confsum{margin:6px 0 5px;line-height:1.5}
+}
+/* v8: conference filters — region dropdown sits beside the calendar button, same pill style, one row */
+.sechead .confctl{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:nowrap}
+.sechead .confctl .confcal{margin-left:0}
+.calpop.regpop{width:200px}
+.confrow .conftags .tag.reg{--tc:#6b7a72}
+@media (max-width:520px){
+  .sechead .confctl{gap:6px}
+  .sechead .confctl .confcal summary{padding:5px 9px;gap:4px}
+  .sechead .confctl #confreg .calpop{right:auto;left:0}
+}
+
+/* v9: type filter as its own compact pill dropdown (left of region); one row of three pills */
+.calpop.typepop{width:252px}
+.sechead .confctl #conftype .calpop{right:auto;left:0}
+.sechead .confctl .confcal summary span{white-space:nowrap}
+@media(max-width:520px){
+  .sechead .confctl{width:100%;min-width:0}
+  .sechead .confctl .confcal{flex:0 1 auto;min-width:0}
+  .sechead .confctl .confcal summary{max-width:100%;box-sizing:border-box}
+  .sechead .confctl .confcal summary span{overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .sechead .confctl .confcal summary svg{flex:none}
+  .sechead .confctl .confcal summary>svg:last-child{display:none}
+  .sechead .confctl .confcal summary{padding:5px 8px}
+  .sechead .confctl .confcal summary span{font-size:12.5px}
+  .sechead .confctl .confcal summary svg{width:15px;height:15px}
+  .sechead .confctl #conftype .calpop{width:min(252px,calc(100vw - 24px))}
+}

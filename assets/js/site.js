@@ -1,5 +1,5 @@
 /* InLight Bio — small vanilla JS:
-   deal-card details panel, compact top-right filter (news), conference list (sort / range / type). */
+   deal-card details panel, compact top-right filter (news), conference list (sort / range / type / region). */
 (function(){
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=t=>String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -59,10 +59,18 @@ if(feed){
   render();
 }
 
-/* ---------- Conferences (sort toggle, time range in calendar button, ended hidden) ---------- */
+/* ---------- Conferences (sort toggle, time range in calendar button, region dropdown beside it, ended hidden) ---------- */
 const CONFS=window.CONFS;
 if(CONFS&&$('#conflist')){
-  let kind='all',order='asc',range='all';
+  let kind='all',order='asc',range='all',region='all';
+  /* v8: region filter (compact dropdown next to the calendar button); ?region=us|europe|japan|apac */
+  const REGIONS=[['all','All regions'],['us','United States','United States'],['europe','Europe','Europe'],['japan','Japan','Japan'],['apac','Asia-Pacific','Asia-Pacific']];
+  const regOf=k=>(REGIONS.find(z=>z[0]===k)||REGIONS[0]);
+  /* v9: type filter moved to its own compact pill dropdown (same style) left of the region pill; ?type=<slug> */
+  const KINDS2=[['all','All types'],['partnering','Partnering'],['investor','Investor'],['scientific','Scientific'],['cro','CRO & outsourcing'],['regulatory','Regulatory'],['cmc','Manufacturing & CMC'],['digital','Digital Health & AI'],['access','Market Access & HEOR']];
+  const kindOf=k=>(KINDS2.find(z=>z[1]===k)||KINDS2[0]);
+  {const u=new URLSearchParams(location.search),q=u.get('region'),t=u.get('type'); if(q&&REGIONS.some(z=>z[0]===q)) region=q; const kk=KINDS2.find(z=>z[0]===t); if(kk&&kk[0]!=='all') kind=kk[1];}
+  const syncUrl=()=>{const u=new URLSearchParams(); if(kind!=='all') u.set('type',kindOf(kind)[0]); if(region!=='all') u.set('region',region); const q=u.toString(); history.replaceState(null,'',q?'?'+q:location.pathname);};
   const pad=n=>String(n).padStart(2,'0'), ymd=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
   const isTbd=x=>!x.dates||x.dates==='TBA';
   const endOf=x=>{const p=x.dates.split(' to ');return p[1]||p[0];};
@@ -79,31 +87,58 @@ if(CONFS&&$('#conflist')){
     const upcoming=CONFS.filter(x=>isTbd(x)||endOf(x)>=today);
     const RANGES=[['1','Next month',1],['3','Next 3 months',3],['6','Next 6 months',6],['12','Next 12 months',12],['all','All upcoming',0]];
     const inRange=(x,r)=>{if(r==='all')return true; if(isTbd(x))return false; return x.dates.split(' to ')[0]<=limit(RANGES.find(z=>z[0]===r)[2]);};
-    const KINDS2=['all','Partnering','Investor','Scientific'];
     const byKind=x=>kind==='all'||x.kind===kind;
-    $('#confrange').innerHTML=RANGES.map(([k,l])=>`<button type="button" data-r="${k}"${range===k?' aria-pressed="true"':''}><span>${l}</span><em>${upcoming.filter(x=>inRange(x,k)&&byKind(x)).length}</em></button>`).join('');
-    $('#confkind').innerHTML=KINDS2.map(k=>`<button type="button" data-k="${k}"${kind===k?' aria-pressed="true"':''}><span>${k==='all'?'All types':k}</span><em>${upcoming.filter(x=>inRange(x,range)&&(k==='all'||x.kind===k)).length}</em></button>`).join('');
+    const byReg=(x,r)=>r==='all'||x.region===regOf(r)[2];
+    $('#confrange').innerHTML=RANGES.map(([k,l])=>`<button type="button" data-r="${k}"${range===k?' aria-pressed="true"':''}><span>${l}</span><em>${upcoming.filter(x=>inRange(x,k)&&byKind(x)&&byReg(x,region)).length}</em></button>`).join('');
+    $('#confkind').innerHTML=KINDS2.map(([,k])=>{k=k==='All types'?'all':k;return `<button type="button" data-k="${k}"${kind===k?' aria-pressed="true"':''}><span>${k==='all'?'All types':k}</span><em>${upcoming.filter(x=>inRange(x,range)&&(k==='all'||x.kind===k)&&byReg(x,region)).length}</em></button>`;}).join('');
     $('#confsort').innerHTML=[['asc','Soonest first'],['desc','Latest first']].map(([k,l])=>`<button type="button" data-o="${k}"${order===k?' aria-pressed="true"':''}><span>${l}</span></button>`).join('');
+    $('#confregion').innerHTML=REGIONS.map(([k,l])=>`<button type="button" data-g="${k}"${region===k?' aria-pressed="true"':''}><span>${l}</span><em>${upcoming.filter(x=>inRange(x,range)&&byKind(x)&&byReg(x,k)).length}</em></button>`).join('');
+    $$('#confregion button').forEach(b=>b.onclick=()=>{region=b.dataset.g;$('#confreg').open=false;syncUrl();render();});
+    $('#confreglabel').textContent=regOf(region)[1];
     $$('#confrange button').forEach(b=>b.onclick=()=>{range=b.dataset.r;$('#confcal').open=false;render();});
-    $$('#confkind button').forEach(b=>b.onclick=()=>{kind=b.dataset.k;$('#confcal').open=false;render();});
+    $$('#confkind button').forEach(b=>b.onclick=()=>{kind=b.dataset.k;$('#conftype').open=false;syncUrl();render();});
+    {const SHORT={'CRO & outsourcing':'CRO','Manufacturing & CMC':'CMC','Digital Health & AI':'Digital & AI','Market Access & HEOR':'Access & HEOR'};
+     const narrow=window.matchMedia&&matchMedia('(max-width:520px)').matches;
+     $('#conftypelabel').textContent=kind==='all'?'All types':(narrow&&SHORT[kind])||kind; $('#conftype summary').title=kind==='all'?'All types':kind;}
     $$('#confsort button').forEach(b=>b.onclick=()=>{order=b.dataset.o;$('#confcal').open=false;render();});
-    const lab=[RANGES.find(z=>z[0]===range)[1]]; if(kind!=='all') lab.push(kind);
-    $('#confcallabel').textContent=lab.join(' · ');
-    const list=upcoming.filter(x=>inRange(x,range)&&byKind(x));
+    $('#confcallabel').textContent=RANGES.find(z=>z[0]===range)[1];
+    const list=upcoming.filter(x=>inRange(x,range)&&byKind(x)&&byReg(x,region));
     const dated=list.filter(x=>!isTbd(x)).sort((a,b)=>a.dates<b.dates?-1:a.dates>b.dates?1:0); if(order==='desc') dated.reverse();
     const rows=[...dated,...list.filter(isTbd)];
     $('#confcount').textContent=`${rows.length} event${rows.length===1?'':'s'}`;
     $('#conflist').innerHTML=rows.map(x=>{
       const tbd=isTbd(x);
-      const flag=tbd?`<span class="warn">${esc(x.note||'Dates TBA — not yet confirmed on the official site')}</span>`:(x.verified?`<span class="ok">✓ Dates checked on official site (${esc(window.CONF_CHECKED||'')})</span>`:'<span class="warn">Dates TBA</span>');
       const place=[x.city,x.venue].filter(Boolean).map(esc).join(' · ');
-      return `<article class="confrow"><div class="conftop"><span class="conflogo ph"><img src="/img/tiles/conf_bluelight_v4.jpg" alt="" loading="lazy"></span><div class="confdate${tbd?' tba':''}">${fmt(x)}</div></div><div>
+      const logo=x.logo?`<span class="conflogo"><img src="${esc(x.logo)}" alt="${esc(x.organizer||x.name)} logo" loading="lazy" decoding="async" data-abbr="${esc(abbr(x))}"></span>`:tile(x);
+      return `<article class="confrow" lang="en">${logo}<div class="confbody"><div class="confhead">
+        <div class="confdate${tbd?' tba':''}">${fmtLine(x)}</div>
         <h3>${esc(x.name)}${tbd?'<span class="tbabadge">TBA</span>':''}</h3>
-        <div class="confmeta">${[place,x.organizer?'Organizer: '+esc(x.organizer):''].filter(Boolean).join(' · ')}</div>
-        <p class="confsum">${esc(x.sum)}</p>
-        <div class="conftags"><span class="tag">${esc(x.kind)}</span><a href="${esc(x.url)}" target="_blank" rel="noopener">Official site</a>${flag}</div></div></article>`;
-    }).join('')||'<div class="empty">No events in this range.</div>';
+        <div class="confmeta">${[place,x.organizer?'Organizer: '+esc(x.organizer):''].filter(Boolean).join(' · ')}</div></div>
+        <p class="confsum" lang="en">${esc(x.sum)}</p>
+        <div class="conftags"><span class="tag">${esc(x.kind)}</span>${x.region?`<span class="tag reg">${esc(x.region)}</span>`:''}<a href="${esc(x.url)}" target="_blank" rel="noopener">Official site</a></div></div></article>`;
+    }).join('')||'<div class="empty">No events match these filters.</div>';
   }
+  /* v7: one-line date for the card body, e.g. "Oct 23–27, 2026" */
+  function fmtLine(x){
+    if(isTbd(x)) return 'Dates TBA · not yet announced';
+    const [a,b]=x.dates.split(' to '), pa=a.split('-'), pb=(b||a).split('-');
+    const m1=MON[+pa[1]-1], m2=MON[+pb[1]-1];
+    const span=(!b||a===b)?`${m1} ${+pa[2]}`:(pa[1]===pb[1]?`${m1} ${+pa[2]}–${+pb[2]}`:`${m1} ${+pa[2]} – ${m2} ${+pb[2]}`);
+    return pa[0]===pb[0]?`${span}, ${pa[0]}`:`${m1} ${+pa[2]}, ${pa[0]} – ${m2} ${+pb[2]}, ${pb[0]}`;
+  }
+  /* v7: generated fallback tile (site green + short acronym) when no logo is available or it fails to load */
+  function abbr(x){
+    if(x.abbr) return x.abbr;
+    const w=String(x.name).replace(/\(.*?\)/g,'').split(/[\s\-–]+/).filter(t=>/^[A-Za-z]/.test(t)&&!/^(of|the|and|for|annual|meeting|congress|conference|global|healthcare|health|care)$/i.test(t));
+    const first=w[0]||'';
+    if(/^[A-Z]{2,6}$/.test(first.replace(/[^A-Za-z]/g,''))) return first.replace(/[^A-Za-z]/g,'');
+    return w.slice(0,3).map(t=>t[0].toUpperCase()).join('');
+  }
+  function tile(x){return `<span class="conflogo tile" aria-hidden="true"><b>${esc(abbr(x))}</b></span>`;}
+  $('#conflist').addEventListener('error',e=>{
+    const im=e.target; if(!im||im.tagName!=='IMG'||!im.closest('.conflogo')) return;
+    const box=im.closest('.conflogo'); box.classList.add('tile'); box.setAttribute('aria-hidden','true'); box.innerHTML=`<b>${esc(im.dataset.abbr||'')}</b>`;
+  },true);
   render();
 }
 
