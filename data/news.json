@@ -2,6 +2,82 @@
  "built": "2026-10-11",
  "items": [
   {
+   "slug": "micurx-clearidebio-mrx-23",
+   "d": "2026-10",
+   "kinds": [
+    "lic"
+   ],
+   "img": "deal_23_v2.jpg",
+   "t": "MicuRx licenses MRX-23 ADC and grants STOPIN platform options to ClearideBio",
+   "m": "$1M upfront",
+   "ms": "MRX-23 milestones capped at a nominal $223M; up to 6 platform programs capped at $750M combined; plus sublicensing revenue share or sales royalties",
+   "why": "The CNINFO filing states that ClearideBio was founded in December 2025 and is still at an early stage, and that the milestone payments are theoretical maximums calculated under agreed conditions; they do not constitute a deal valuation, a contractually fixed amount or expected company revenue. MicuRx is granting exclusive global development, manufacturing and commercialization rights to MRX-23, plus options on up to 6 targets or target combinations from its in-house STOPIN ADC platform; ClearideBio obtains exclusive global rights to a program only after exercising the option and paying the exercise fee. MicuRx keeps the platform's core intellectual property and contingent economic interests, while ClearideBio bears subsequent global development. Apart from the upfront, all payments depend on whether options are exercised and milestones are actually reached.",
+   "src": "MicuRx announcement, CNINFO (2026-10-10)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-10-10/1225599947.PDF",
+   "china": true
+  },
+  {
+   "slug": "asieris-theramex-apl-1702",
+   "d": "2026-10",
+   "kinds": [
+    "lic"
+   ],
+   "img": "deal_24_v2.jpg",
+   "t": "Asieris grants Theramex exclusive rights to APL-1702 (CEVIRA) in Europe and other markets",
+   "m": "Over $250M total",
+   "ms": "$15M upfront + $11M near-term regulatory milestone + commercial milestones and tiered sales royalties; subject to conditions precedent",
+   "why": "APL-1702 (CEVIRA) is a photodynamic therapy product approved in China for histologically confirmed CIN2, and its marketing application has been accepted by the EMA. The exclusive regional license covers European countries plus Australia, New Zealand and Turkey; Asieris keeps rights in the rest of the world. Consideration comprises a $15 million upfront payment, an $11 million near-term regulatory milestone, commercial milestones and tiered sales royalties, for a total of more than $250 million. The upfront is payable only once conditions are met: signing a supply agreement, an audit of the manufacturing site, alignment of upstream licenses, and reaching clarification with the European Commission on the device's clinical value assessment. This ties commercial launch and compliance milestones to payment.",
+   "src": "Asieris announcement, CNINFO (2026-10-08)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-10-08/1225595361.PDF",
+   "china": true
+  },
+  {
+   "slug": "garden-bio-gz-lab-25hc-jv",
+   "d": "2026-10",
+   "kinds": [
+    "newco",
+    "lic"
+   ],
+   "img": "deal_25_v2.jpg",
+   "t": "Garden Bio and Guangzhou National Laboratory form a joint venture for 25-hydroxycholesterol broad-spectrum antivirals",
+   "m": "Undisclosed",
+   "ms": "New joint venture; Garden Bio leads operations and holds at least 51%; phased capital contributions and consolidation of IP",
+   "why": "The announcement describes the transaction as the two parties jointly establishing a joint venture to advance the research, registration, manufacturing and commercialization of 25-hydroxycholesterol and its prodrug-class broad-spectrum antiviral drugs. It specifies that the joint venture will be run by Garden Bio, which holds no less than 51%, with the rest held by an entity designated by Guangzhou National Laboratory, and sets out phased capital contributions and the consolidation of intellectual property. This fits the NewCo pattern of a new company, a development project and an equity arrangement. Garden Bio points to its vitamin D3 industry chain and manufacturing capabilities, while the laboratory contributes its earlier research. The project is still in early research, and the announcement states that its effect on current and future operating results cannot yet be quantified.",
+   "src": "Garden Bio announcement, CNINFO (2026-10-08)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-10-08/1225595392.PDF",
+   "china": true
+  },
+  {
+   "slug": "sino-biopharm-tqc3721-copd",
+   "d": "2026-10",
+   "kinds": [
+    "clin"
+   ],
+   "img": "deal_26_v2.jpg",
+   "t": "Sino Biopharm completes enrollment in Phase 3 registrational trial of inhaled TQC3721 for COPD",
+   "m": "Undisclosed",
+   "ms": "Pivotal registrational Phase 3 PACER-III in COPD maintenance treatment has completed enrollment of all participants",
+   "why": "TQC3721, a Class 1 innovative drug from Chia Tai Tianqing, is an inhaled suspension that targets both PDE3 and PDE4. It aims to relax airway smooth muscle and inhibit inflammatory-cell pathways at the same time, addressing the limited anti-inflammatory effect of existing LAMA/LABA therapy and the limited benefit of ICS in patients with low eosinophil counts. The pivotal registrational Phase 3 PACER-III has completed enrollment of all participants, a step closer to the primary endpoint readout. The company is also developing nebulized and dry-powder formulations for different patients and settings. Efficacy, safety and differentiation from current maintenance therapy still depend on the full data after unblinding, and completed enrollment should not be read as a sign that approval is near.",
+   "src": "Sino Biopharmaceutical announcement, HKEXnews (2026-10-08)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1008/2026100800670_c.pdf",
+   "china": true
+  },
+  {
+   "slug": "cspc-sys6002-cervical-cancer",
+   "d": "2026-10",
+   "kinds": [
+    "clin"
+   ],
+   "img": "deal_27_v2.jpg",
+   "t": "CSPC updates Phase 1 data for SYS6002 in advanced cervical cancer; 2.4 mg/kg regimen moves into Phase 3",
+   "m": "Undisclosed",
+   "ms": "Phase 1, 82 patients; ORR 35.9%/28.6%; DoR 8.2/10.3 months; PFS 4.1/4.3; OS 15.1/11.5; 2.4 mg/kg moved into Phase 3",
+   "why": "The voluntary HKEX announcement gives dose, patient-number and response and survival readouts that can be checked item by item. A nationwide multicenter Phase 1 enrolled 82 patients with previously treated advanced cervical cancer; the confirmed ORR was 35.9% with 2.4 mg/kg every 2 weeks and 28.6% with 3.6 mg/kg every 3 weeks, at a median follow-up of 16.1 months. Safety was generally manageable: ocular adverse events were the most common, but none was grade 3 or higher and none led to discontinuation; the rate of interstitial lung disease/non-infectious pneumonitis was 2.4%. The sponsor chose the 2.4 mg/kg every-2-weeks regimen for Phase 3 (NCT07230626), indicating that this dose offers the preferred balance of efficacy and risk; it still needs to be confirmed in further studies.",
+   "src": "CSPC announcement, HKEXnews (2026-10-08)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1008/2026100800914_c.pdf",
+   "china": true
+  },
+  {
    "slug": "novartis-abogen-abo2203",
    "d": "2026-10",
    "kinds": [
