@@ -1124,3 +1124,61 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .sgrid .citebox,.sgrid .authorbox{order:4}
   .sgrid .note{order:5}
 }
+
+/* ===== typography sample 2026-10-12 (Jing approved) ===== */
+/* Article body — scoped to .amain so sidebar Key data card (.sec.datacard) stays compact */
+.spage .amain,
+.pv-art .amain{
+  max-width:680px; /* ~68ch at 18px body */
+}
+.spage .amain p,
+.spage .amain li,
+.spage .amain .sec p,
+.spage .amain .sec li,
+.pv-art .amain .sec p,
+.pv-art .amain .sec li,
+.amain p,
+.amain li{
+  font-size:18px;
+  line-height:1.65;
+  max-width:68ch; /* ~680px */
+}
+/* Article H1 */
+.spage .ahead h1,
+.npage .ahead h1,
+.pv-art .ahead h1{
+  font-size:40px;
+  line-height:1.2;
+  letter-spacing:-0.01em;
+}
+/* Article H2 — main column only (not sidebar .side-card h2 / datacard) */
+.spage .amain .sec h2,
+.spage .amain h2,
+.pv-art .amain .sec h2,
+.amain .sec h2{
+  font-size:24px;
+  line-height:1.3;
+}
+/* Summaries / list blurbs */
+.scap,
+.hb-text p,
+.hero p,
+.confrow p.confsum,
+.spage .dek,
+.feed-details-panel p:not(.msline){
+  font-size:15px;
+  line-height:1.55;
+}
+/* Home H1 line-height only */
+.hb-text h1,
+.hero h1{
+  line-height:1.2;
+}
+@media (max-width:720px){
+  .spage .ahead h1,
+  .npage .ahead h1{font-size:28px;line-height:1.2;letter-spacing:-0.01em}
+  .spage .amain p,.spage .amain .sec p,.spage .amain .sec li,
+  .pv-art .amain .sec p,.pv-art .amain .sec li,
+  .amain p,.amain li{font-size:17px;line-height:1.65}
+  .spage .amain .sec h2,.amain .sec h2{font-size:22px}
+}
