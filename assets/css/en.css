@@ -476,3 +476,36 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .rail{top:80px;max-height:calc(100vh - 96px)}
 }
 @media (max-width:640px){.nav-in .nav-tabs a{font-weight:600}}
+
+/* v17 article aside
+   Science articles follow the Chinese site's article layout (.abody / .meta.side2):
+   desktop (>=861px) = two columns, a 300px left aside with Citation, About the authors and the
+   Key data card, 28px gap, main column (Quick look, body, mechanism figure) on the right; the aside is
+   not sticky (position:static, as on the Chinese site). <=860px (always on phones) = one column in the
+   Chinese mobile order: Quick look, Key data card, body, Citation / About the authors, note.
+   Header, Related science and the subscribe box stay full width. */
+.spage{max-width:none}
+.sgrid{display:grid;grid-template-columns:300px minmax(0,1fr);gap:28px;align-items:start}
+.sgrid>*{min-width:0}
+.saside{display:flex;flex-direction:column;gap:14px;position:static}
+.smain{display:grid;gap:18px;align-content:start}
+.smain .note{margin:0;max-width:none}
+@media (min-width:861px){
+  .saside .sbox p{font-size:13.5px;line-height:1.7}
+  .saside .citebox .topics{font-size:12.5px!important}
+  /* short metadata lines (topic list, corresponding author) stay left-aligned in the 300px aside; prose stays justified */
+  .saside .citebox .topics,.saside .authorbox .au{text-align:left;hyphens:manual;-webkit-hyphens:manual}
+  .saside .datacard{padding:14px 16px;gap:8px}
+  .saside .datacard h2{font-size:15px;margin-bottom:2px}
+  .saside .datacard p,.saside .datacard li{font-size:13px;line-height:1.65}
+  .saside .datacard ul{gap:5px}
+}
+@media (max-width:860px){
+  .sgrid{grid-template-columns:minmax(0,1fr);gap:18px}
+  .saside,.smain{display:contents}
+  .sgrid .qlook{order:1}
+  .sgrid .datacard{order:2}
+  .sgrid .amain{order:3}
+  .sgrid .citebox,.sgrid .authorbox{order:4}
+  .sgrid .note{order:5}
+}
