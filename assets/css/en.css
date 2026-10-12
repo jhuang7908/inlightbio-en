@@ -511,18 +511,17 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 }
 
 /* ===== typography sample 2026-10-12 (Jing approved) ===== */
-/* Article body */
+/* Article body — scoped to .amain so sidebar Key data card (.sec.datacard) stays compact */
 .spage .amain,
-.spage .amain .sec,
 .pv-art .amain{
   max-width:680px; /* ~68ch at 18px body */
 }
 .spage .amain p,
 .spage .amain li,
-.spage .sec p,
-.spage .sec li,
-.pv-art .sec p,
-.pv-art .sec li,
+.spage .amain .sec p,
+.spage .amain .sec li,
+.pv-art .amain .sec p,
+.pv-art .amain .sec li,
 .amain p,
 .amain li{
   font-size:18px;
@@ -537,11 +536,11 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   line-height:1.2;
   letter-spacing:-0.01em;
 }
-/* Article H2 */
-.spage .sec h2,
+/* Article H2 — main column only (not sidebar .side-card h2 / datacard) */
+.spage .amain .sec h2,
 .spage .amain h2,
-.pv-art .sec h2,
-.sec h2{
+.pv-art .amain .sec h2,
+.amain .sec h2{
   font-size:24px;
   line-height:1.3;
 }
@@ -563,7 +562,8 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 @media (max-width:720px){
   .spage .ahead h1,
   .npage .ahead h1{font-size:28px;line-height:1.2;letter-spacing:-0.01em}
-  .spage .amain p,.spage .sec p,.spage .sec li,.pv-art .sec p,.pv-art .sec li,
+  .spage .amain p,.spage .amain .sec p,.spage .amain .sec li,
+  .pv-art .amain .sec p,.pv-art .amain .sec li,
   .amain p,.amain li{font-size:17px;line-height:1.65}
-  .spage .sec h2,.sec h2{font-size:22px}
+  .spage .amain .sec h2,.amain .sec h2{font-size:22px}
 }
