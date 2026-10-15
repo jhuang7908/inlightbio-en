@@ -19,6 +19,40 @@
    "date": "2026-10-10"
   },
   {
+   "slug": "sino-biopharm-tqc3721-copd",
+   "d": "2026-10",
+   "kinds": [
+    "clin"
+   ],
+   "img": "deal_26_v2_t2.jpg",
+   "t": "Sino Biopharm completes enrollment in Phase 3 registrational trial of inhaled TQC3721 for COPD",
+   "m": "No deal value",
+   "ms": "PACER-III Phase 3 registrational enrollment complete for nebulised TQC3721 in COPD maintenance. HKEX announcement gives no n or endpoints; ClinicalTrials.gov NCT07147946 (CTTQ) lists estimated n=666, TQC3721 6 mg/2 ml BID for 24 weeks, primary endpoint mean change in FEV1 AUC from baseline to week 12",
+   "why": "TQC3721 is an inhaled dual PDE3/PDE4 inhibitor from Sino Biopharm's Chia Tai Tianqing (CTTQ). PDE3 is highly expressed in airway smooth muscle and PDE4 in inflammatory cells, so one molecule aims both to relax airways and damp inflammation; the company notes that LAMA/LABA bronchodilators do little for airway inflammation and that inhaled corticosteroids help less in patients with low blood eosinophils while raising pneumonia risk. The nebulised suspension has completed enrollment in PACER-III, the pivotal registrational Phase 3 for COPD maintenance, after Phase 2 PACER-II was published in Chest in 2026; a dry-powder formulation is advancing into Phase 2. A ClinicalTrials.gov record from CTTQ (NCT07147946) describes a randomized, double-blind, placebo-controlled Phase 3 of 6 mg/2 ml twice daily for 24 weeks in moderate-to-severe COPD, with an estimated 666 participants and a primary endpoint of mean change in FEV1 AUC from baseline to week 12 — but the HKEX announcement does not name that NCT or give trial size. CTTQ says TQC3721 could become the first domestically developed inhaled PDE3/4 inhibitor approved in China; the Phase 3 readout will test whether enrollment completion turns into a registrational win.",
+   "src": "Sino Biopharmaceutical HKEX English announcement (2026-10-08); ClinicalTrials.gov NCT07147946",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1008/2026100800669.pdf",
+   "china": true,
+   "v2": true,
+   "date": "2026-10-08"
+  },
+  {
+   "slug": "cspc-sys6002-cervical-cancer",
+   "d": "2026-10",
+   "kinds": [
+    "clin"
+   ],
+   "img": "deal_27_v2_t2.jpg",
+   "t": "CSPC updates Phase 1 data for SYS6002 in advanced cervical cancer; 2.4 mg/kg regimen moves into Phase 3",
+   "m": "No deal value",
+   "ms": "Phase 1, 82 patients; confirmed ORR 35.9% (2.4 mg/kg Q2W) and 28.6% (3.6 mg/kg Q3W); median DoR 8.2 and 10.3 months; median PFS 4.1 and 4.3 months; median OS 15.1 and 11.5 months; 2.4 mg/kg Q2W now in Phase 3 (NCT07230626)",
+   "why": "SYS6002 is a Nectin-4 antibody-drug conjugate that delivers the mitotic inhibitor MMAE. It uses enzyme-catalysed site-specific conjugation and a stable linker intended to concentrate toxin in the tumour while limiting systemic exposure. In a nationwide multicentre Phase 1 in China, 82 patients with previously treated advanced cervical cancer received 2.4 mg/kg, every 2 weeks (39 patients) or 3.6 mg/kg every 3 weeks (43 patients); at the 8 May 2026 cutoff (median follow-up 16.1 months), both regimens showed preliminary activity — confirmed ORR, median DoR, median PFS and median OS are in the side box, with PFS and OS reported in months. Treatment-related adverse events were mostly grade 1–2: ocular events were most common (none grade ≥3; no discontinuations for them); interstitial lung disease or non-infectious pneumonitis 2.4%; rash 20.7% (grade ≥3, 1.2%); peripheral neuropathy 12.2% (all grade 1–2); no treatment-related deaths. Data were a rapid oral at IGCS 2026. The 2.4 mg/kg Q2W regimen has entered Phase 3 (NCT07230626) after immunotherapy, which ClinicalTrials.gov lists as an estimated 412 patients randomized to SYS6002 versus investigator's-choice chemotherapy with overall survival as the primary endpoint. These are single-arm Phase 1 data; that head-to-head Phase 3 will show whether a response rate near 36% turns into a survival benefit.",
+   "src": "CSPC HKEX English announcement (2026-10-08); ClinicalTrials.gov NCT07230626",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1008/2026100800913.pdf",
+   "china": true,
+   "v2": true,
+   "date": "2026-10-08"
+  },
+  {
    "slug": "asieris-theramex-apl-1702",
    "d": "2026-10",
    "kinds": [
@@ -52,40 +86,6 @@
    "china": true,
    "v2": true,
    "date": "2026-10-07"
-  },
-  {
-   "slug": "sino-biopharm-tqc3721-copd",
-   "d": "2026-10",
-   "kinds": [
-    "clin"
-   ],
-   "img": "deal_26_v2_t2.jpg",
-   "t": "Sino Biopharm completes enrollment in Phase 3 registrational trial of inhaled TQC3721 for COPD",
-   "m": "No deal value",
-   "ms": "PACER-III Phase 3 registrational enrollment complete for nebulised TQC3721 in COPD maintenance. HKEX announcement gives no n or endpoints; ClinicalTrials.gov NCT07147946 (CTTQ) lists estimated n=666, TQC3721 6 mg/2 ml BID for 24 weeks, primary endpoint mean change in FEV1 AUC from baseline to week 12",
-   "why": "TQC3721 is an inhaled dual PDE3/PDE4 inhibitor from Sino Biopharm's Chia Tai Tianqing (CTTQ). PDE3 is highly expressed in airway smooth muscle and PDE4 in inflammatory cells, so one molecule aims both to relax airways and damp inflammation; the company notes that LAMA/LABA bronchodilators do little for airway inflammation and that inhaled corticosteroids help less in patients with low blood eosinophils while raising pneumonia risk. The nebulised suspension has completed enrollment in PACER-III, the pivotal registrational Phase 3 for COPD maintenance, after Phase 2 PACER-II was published in Chest in 2026; a dry-powder formulation is advancing into Phase 2. A ClinicalTrials.gov record from CTTQ (NCT07147946) describes a randomized, double-blind, placebo-controlled Phase 3 of 6 mg/2 ml twice daily for 24 weeks in moderate-to-severe COPD, with an estimated 666 participants and a primary endpoint of mean change in FEV1 AUC from baseline to week 12 — but the HKEX announcement does not name that NCT or give trial size. CTTQ says TQC3721 could become the first domestically developed inhaled PDE3/4 inhibitor approved in China; the Phase 3 readout will test whether enrollment completion turns into a registrational win.",
-   "src": "Sino Biopharmaceutical HKEX English announcement (2026-10-08); ClinicalTrials.gov NCT07147946",
-   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1008/2026100800669.pdf",
-   "china": true,
-   "v2": true,
-   "date": "2026-10-08"
-  },
-  {
-   "slug": "cspc-sys6002-cervical-cancer",
-   "d": "2026-10",
-   "kinds": [
-    "clin"
-   ],
-   "img": "deal_27_v2_t2.jpg",
-   "t": "CSPC updates Phase 1 data for SYS6002 in advanced cervical cancer; 2.4 mg/kg regimen moves into Phase 3",
-   "m": "No deal value",
-   "ms": "Phase 1, 82 patients; confirmed ORR 35.9% (2.4 mg/kg Q2W) and 28.6% (3.6 mg/kg Q3W); median DoR 8.2 and 10.3 months; median PFS 4.1 and 4.3 months; median OS 15.1 and 11.5 months; 2.4 mg/kg Q2W now in Phase 3 (NCT07230626)",
-   "why": "SYS6002 is a Nectin-4 antibody-drug conjugate that delivers the mitotic inhibitor MMAE. It uses enzyme-catalysed site-specific conjugation and a stable linker intended to concentrate toxin in the tumour while limiting systemic exposure. In a nationwide multicentre Phase 1 in China, 82 patients with previously treated advanced cervical cancer received 2.4 mg/kg, every 2 weeks (39 patients) or 3.6 mg/kg every 3 weeks (43 patients); at the 8 May 2026 cutoff (median follow-up 16.1 months), both regimens showed preliminary activity — confirmed ORR, median DoR, median PFS and median OS are in the side box, with PFS and OS reported in months. Treatment-related adverse events were mostly grade 1–2: ocular events were most common (none grade ≥3; no discontinuations for them); interstitial lung disease or non-infectious pneumonitis 2.4%; rash 20.7% (grade ≥3, 1.2%); peripheral neuropathy 12.2% (all grade 1–2); no treatment-related deaths. Data were a rapid oral at IGCS 2026. The 2.4 mg/kg Q2W regimen has entered Phase 3 (NCT07230626) after immunotherapy, which ClinicalTrials.gov lists as an estimated 412 patients randomized to SYS6002 versus investigator's-choice chemotherapy with overall survival as the primary endpoint. These are single-arm Phase 1 data; that head-to-head Phase 3 will show whether a response rate near 36% turns into a survival benefit.",
-   "src": "CSPC HKEX English announcement (2026-10-08); ClinicalTrials.gov NCT07230626",
-   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1008/2026100800913.pdf",
-   "china": true,
-   "v2": true,
-   "date": "2026-10-08"
   },
   {
    "slug": "novartis-abogen-abo2203",
