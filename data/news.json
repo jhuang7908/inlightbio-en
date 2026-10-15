@@ -15,7 +15,8 @@
    "src": "Fineline Cube (2026-10-10), reporting MicuRx's SSE announcement",
    "url": "https://flcube.com/micurx-pharmaceuticals-licenses-mrx-23-adc-and-stopin-platform-to-clearidebio-in-multi-asset-global-deal-worth-up-to-usd-973-million/",
    "china": true,
-   "v2": true
+   "v2": true,
+   "date": "2026-10-10"
   },
   {
    "slug": "asieris-theramex-apl-1702",
@@ -31,7 +32,8 @@
    "src": "Asieris press release via PR Newswire (2026-10-07)",
    "url": "https://www.prnewswire.com/news-releases/asieris-pharmaceuticals-enters-an-exclusive-licensing-agreement-with-theramex-for-cevira-subject-to-certain-conditions-advancing-the-global-development-and-commercialization-of-a-non-surgical-treatment-for-cervical-precancerous--302901215.html",
    "china": true,
-   "v2": true
+   "v2": true,
+   "date": "2026-10-07"
   },
   {
    "slug": "garden-bio-gz-lab-25hc-jv",
@@ -48,7 +50,8 @@
    "src": "VCBeat Health (2026-10-07); Longbridge/Zhitong English flash (2026-10-07)",
    "url": "https://www.vcbeathealth.com/article/63619",
    "china": true,
-   "v2": true
+   "v2": true,
+   "date": "2026-10-07"
   },
   {
    "slug": "sino-biopharm-tqc3721-copd",
@@ -64,7 +67,8 @@
    "src": "Sino Biopharmaceutical HKEX English announcement (2026-10-08); ClinicalTrials.gov NCT07147946",
    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1008/2026100800669.pdf",
    "china": true,
-   "v2": true
+   "v2": true,
+   "date": "2026-10-08"
   },
   {
    "slug": "cspc-sys6002-cervical-cancer",
@@ -80,7 +84,8 @@
    "src": "CSPC HKEX English announcement (2026-10-08); ClinicalTrials.gov NCT07230626",
    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1008/2026100800913.pdf",
    "china": true,
-   "v2": true
+   "v2": true,
+   "date": "2026-10-08"
   },
   {
    "slug": "novartis-abogen-abo2203",
@@ -95,7 +100,8 @@
    "why": "ABO2203 is not an in vivo CAR-T. It uses lipid nanoparticles to deliver mRNA encoding a CD19×CD3 T-cell engager, so that the patient's own cells “manufacture” the bispecific to clear B cells. It is in a Phase 1 study in refractory autoimmune disease; the first data made public cover 3 patients with refractory secondary immune thrombocytopenia. Novartis also receives an exclusive option on next-generation assets from Abogen's mRNA/LNP platform. Notably, a $575 million upfront is high for an early Phase 1 asset, suggesting big pharma is willing to bet early on “biologics generated in vivo”, and that mRNA companies have found a new outlet beyond vaccines in autoimmunity.",
    "src": "AllSci (2026-10-02)",
    "url": "https://allsci.com/news/licensing-and-partnerships/abogen-novartis-deal-secures-usd-575m-upfront/",
-   "china": true
+   "china": true,
+   "date": "2026-10-02"
   },
   {
    "slug": "gsk-chimagen-trispecific",
@@ -110,7 +116,8 @@
    "why": "GSK acquired global rights from Chimagen to a trispecific T-cell engager for multiple myeloma: one arm binds T cells and the other two bind two undisclosed tumor-associated antigens. It is still preclinical; GSK expects it to enter Phase 1 in 2027. The dual-antigen design targets the antigen loss and relapse commonly seen after single-target T-cell engagers (such as BCMA) and CAR-T. This is the second time GSK has bought an asset from Chimagen; the earlier CMG1A46 is a different molecule. Together with Roche's September in-licensing of Simcere Zaiming's CD79a×CD19×CD3, trispecifics are becoming a new deal hotspot in antibody engineering.",
    "src": "GSK Form 6-K, U.S. SEC (2026-09-15)",
    "url": "https://www.sec.gov/Archives/edgar/data/0001131399/000165495426008359/a6888u.htm",
-   "china": true
+   "china": true,
+   "date": "2026-09-15"
   },
   {
    "slug": "ivonescimab-harmoni-2-os",
@@ -125,7 +132,8 @@
    "why": "HARMONi-2 (AK112-303) is a Phase 3 study conducted in China in first-line PD-L1-positive locally advanced or metastatic non-small cell lung cancer, directly comparing ivonescimab (a PD-1×VEGF bispecific) monotherapy with pembrolizumab monotherapy. The primary endpoint, PFS, had already been met (HR 0.51, 95% CI 0.38–0.69); this pre-specified analysis shows a statistically significant improvement in overall survival as well, but the press release did not give the OS hazard ratio. A PFS win with OS unknown had been the key question over whether PD-1×VEGF bispecifics can displace Keytruda. Note that these are single-region data; the US and European markets covered by Summit still need support from global studies.",
    "src": "Summit Therapeutics press release (2026-09-02)",
    "url": "https://s206.q4cdn.com/652410165/files/doc_news/Ivonescimab-Monotherapy-Demonstrates-Statistically-Significant-Overall-Survival-Benefit-Compared-to-Pembrolizumab-Monotherapy-in-PD-L-S4V73.pdf",
-   "china": true
+   "china": true,
+   "date": "2026-09-02"
   },
   {
    "slug": "roche-simcere-sim0660",
@@ -140,7 +148,8 @@
    "why": "SIM0660 is a trispecific T-cell engager: one arm binds CD3 to recruit T cells, while the other two simultaneously bind the B-cell antigens CD79a and CD19. The design aims for potent B-cell depletion while keeping cytokine release low; dual-antigen coverage is also intended to serve patients previously treated with CD20 or CD19 therapies who may have antigen loss. Roche obtains exclusive global rights. The asset is still preclinical or early stage with no specific indication disclosed; the company describes it as aimed at both B-cell malignancies and autoimmune disease. It is another molecular design, after CD19×CD3, in the “T-cell engagers that deplete B cells to treat autoimmunity” theme.",
    "src": "BioPharm International (2026-09-01)",
    "url": "https://www.biopharminternational.com/view/simcere-zaiming-sim0660-roche-license-agreement",
-   "china": true
+   "china": true,
+   "date": "2026-09-01"
   },
   {
    "slug": "lilly-merida-graves",
@@ -155,7 +164,8 @@
    "why": "Merida's approach is to bind pathogenic autoantibodies directly and tag them for clearance, rather than broadly suppressing the immune system. Lead molecule MER511 targets Graves' disease and entered Phase 1 in late 2025, in combination with antithyroid drugs; Lilly also named thyroid eye disease. Merida was founded only in April 2025 with a $121 million Series A and was acquired a little over a year later. According to BioPharma Dive, this is Lilly's 12th company acquisition of 2026 and its 3rd in immunology (after Ventyx and Orna). If the precise “clear only the pathogenic antibodies” strategy holds up, it could avoid the side effects of FcRn inhibitors, which lower all IgG.",
    "src": "BioPharma Dive (2026-08-31)",
    "url": "https://www.biopharmadive.com/news/lilly-merida-acquire-deal-immune-drugs-graves-disease/829152/",
-   "china": false
+   "china": false,
+   "date": "2026-08-31"
   },
   {
    "slug": "haisco-sentivera-newco",
@@ -171,7 +181,8 @@
    "why": "ARCH Venture Partners and Population Health Partners co-founded the US company Sentivera, which takes exclusive rights outside Greater China to a Haisco immunology asset; Haisco keeps Greater China rights and holds equity in Sentivera. Neither the target nor the modality has been disclosed — only that it addresses type 2 inflammatory diseases, has just received a Chinese IND, and showed anti-inflammatory activity and good safety preclinically. This is the classic NewCo playbook: the Chinese side trades the asset for cash plus equity, while a top US VC builds the team to run overseas clinical development. Upfront and equity together are less than 5% of the headline total; most of the value depends on later milestones.",
    "src": "AllSci (2026-08-25)",
    "url": "https://allsci.com/news/licensing-and-partnerships/haisco-immunology-license-deal-licenses/",
-   "china": true
+   "china": true,
+   "date": "2026-08-25"
   },
   {
    "slug": "jnj-sail-in-vivo-car-t",
@@ -187,7 +198,8 @@
    "why": "Sail's platform engineers immune cells directly inside the patient to generate CAR-T, using its eRNA and nanoparticle delivery technology and skipping cell collection, ex vivo engineering and reinfusion. The collaboration first advances Sail's lead immune-mediated disease program (molecule not disclosed), aiming for an “immune reset” rather than long-term symptom control. J&J pays $785 million up front and holds an option to acquire the whole company; if exercised, the deal totals $2.58 billion. After AbbVie bought Capstan and Lilly bought Kelonia, in vivo CAR-T has become a standard big-pharma bet in autoimmunity.",
    "src": "BioXconomy (2026-07-31)",
    "url": "https://www.bioxconomy.com/partnering/j-j-secures-2-58bn-option-to-buy-in-vivo-car-t-firm-sail-biomedicines",
-   "china": false
+   "china": false,
+   "date": "2026-07-31"
   },
   {
    "slug": "argenx-forte-fb102",
@@ -203,7 +215,8 @@
    "why": "FB102 is a first-in-class anti-CD122 (IL-2/IL-15 receptor β chain) monoclonal antibody designed to suppress the activity of pathogenic T cells and NK cells. Phase 1b vitiligo data released on July 9 showed a statistically significant benefit; a Phase 1b in celiac disease was reported positive in 2025, Phase 2 data are expected in the second half of 2026, and alopecia areata is also a planned direction. The price represents a premium of about 86% to the volume-weighted average price after the vitiligo data. argenx built its business on the FcRn inhibitor Vyvgart; this deal extends its immunology footprint from B-cell/antibody-mediated diseases to T-cell-driven skin and gut diseases.",
    "src": "argenx press release via BioSpace (2026-07-27)",
    "url": "https://www.biospace.com/press-releases/argenx-to-acquire-forte-biosciences-inc-adding-first-in-class-anti-cd122-antibody-fb102-to-its-immunology-pipeline",
-   "china": false
+   "china": false,
+   "date": "2026-07-27"
   },
   {
    "slug": "gempharmatech-humlab",
@@ -218,7 +231,8 @@
    "why": "GemPharmatech is a leading Chinese genetically engineered mouse company and says it holds more than 30,000 knockout, conditional knockout, humanized and immunodeficient strains; Humlab is a Singapore-based developer of humanized mice. The agreement covers both companies' existing and newly developed humanized strains, including aging models, autoimmune and inflammatory models such as IBD and systemic lupus erythematosus, MASH metabolic models, oncology and infection models, and a new humanized-liver mouse. With the FDA pushing to reduce animal testing, growth for animal-model companies is shifting toward more “human-like” humanized models. Humlab's statements about engraftment efficiency are the company's own; the release did not include data.",
    "src": "BioSpace press release (2026-07-15)",
    "url": "https://www.biospace.com/press-releases/gempharmatech-and-humlab-global-sign-strategic-agreement-to-deliver-humanized-mouse-models-for-improved-clinical-translation",
-   "china": true
+   "china": true,
+   "date": "2026-07-15"
   },
   {
    "slug": "avere-hansoh-nextcure",
@@ -235,7 +249,8 @@
    "why": "Avere takes rights outside Greater China to Hansoh's oral IL-23 inhibitor AVR-001 and, at the same time, reverse-merges with NextCure to list on Nasdaq (ticker AVRX); NextCure's existing shareholders own just over 1% of the combined company. AVR-001 is positioned as an oral psoriasis drug with a longer dosing interval than J&J's daily oral IL-23 drug; Hansoh has started a Phase 2b in China and Avere has applied to begin US clinical trials. The team comes from Akero, which Novo Nordisk acquired for $4.7 billion. License, reverse merger and financing completed in one move — with Hansoh as both licensor and lead investor — is a new variant of the NewCo model.",
    "src": "BioPharma Dive (2026-07-14)",
    "url": "https://biopharmadive.com/news/avere-nextcure-merger-hansoh-china-il23-psoriasis/825151",
-   "china": true
+   "china": true,
+   "date": "2026-07-14"
   },
   {
    "slug": "astrazeneca-cspc-kidney-sirna",
@@ -250,7 +265,8 @@
    "why": "The two companies will jointly discover and develop small-interfering-RNA drugs against two undisclosed kidney-disease targets, using CSPC's siRNA discovery platform and delivery tools that can carry drugs to organs beyond the liver, plus CSPC's AI molecular-design models and automated high-throughput screening. AstraZeneca may choose global or ex-China exclusive rights; CSPC retains China rights to one of the assets. siRNA has so far been largely limited to liver targets (GalNAc conjugation), and kidney delivery is widely seen as the industry's next hurdle. With only $30 million up front, this is an early discovery deal whose value rests mainly on later stages.",
    "src": "Fierce Biotech (2026-07-03, citing CSPC's July 2 announcement)",
    "url": "https://fiercebiotech.com/biotech/astrazeneca-pays-go-chinese-partner-cspc-30m-form-kidney-drug-discovery-pact",
-   "china": true
+   "china": true,
+   "date": "2026-07-03"
   },
   {
    "slug": "insilico-takeda-ai-discovery",
@@ -265,7 +281,8 @@
    "why": "Insilico will use its Pharma.AI platform to discover molecules for Takeda that meet pre-agreed scientific and early-development criteria; Takeda is responsible for clinical validation and receives exclusive global development, manufacturing and commercialization rights to the selected molecules. The release does not limit therapeutic areas, saying only that it covers Takeda's therapeutic areas (Takeda's core areas include gastroenterology and inflammation, rare diseases, oncology, neuroscience and vaccines). Insilico is one of the few companies with an AI-discovered molecule in Phase 2; this deal shows big pharma–AI partnerships moving from “platform validation” to routine pay-per-program business.",
    "src": "Insilico Medicine press release (2026-07-02)",
    "url": "https://insilico.com/news/4ifuiaal01-insilico-medicine-announces-collaboratio",
-   "china": true
+   "china": true,
+   "date": "2026-07-02"
   },
   {
    "slug": "lilly-kelonia-in-vivo-car-t",
@@ -281,7 +298,8 @@
    "why": "Kelonia's iGPS platform uses engineered lentivirus-like particles to enter T cells in vivo, so the patient's body generates its own CAR-T. Lead program KLN-1010 is a single-IV-infusion gene therapy that generates anti-BCMA CAR-T for relapsed/refractory multiple myeloma; early Phase 1 data were presented in the plenary session of the 2025 ASH Annual Meeting. Lilly plans to extend the platform to other hematologic cancers, solid tumors and other serious diseases. The $3.25 billion upfront is a record in in vivo CAR-T and exceeds the total price of AbbVie's acquisition of Capstan, showing the approach has moved from proof of concept to big pharma competing for assets.",
    "src": "Lilly investor relations press release (2026-04-20)",
    "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-acquire-kelonia-therapeutics-advance-vivo-car-t-cell",
-   "china": false
+   "china": false,
+   "date": "2026-04-20"
   }
  ]
 }
