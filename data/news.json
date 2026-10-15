@@ -7,7 +7,7 @@
    "kinds": [
     "lic"
    ],
-   "img": "deal_23_v2.jpg",
+   "img": "deal_23_v2_t2.jpg",
    "t": "MicuRx licenses MRX-23 ADC and grants STOPIN platform options to ClearideBio",
    "m": "$1M upfront",
    "ms": "$1M non-refundable upfront; MRX-23 milestones capped at a nominal $223M; options on up to 6 STOPIN programs at up to $125M each ($750M if all are exercised); plus sublicensing revenue share or sales royalties",
@@ -24,7 +24,7 @@
    "kinds": [
     "lic"
    ],
-   "img": "deal_24_v2.jpg",
+   "img": "deal_24_v2_t2.jpg",
    "t": "Asieris grants Theramex exclusive rights to APL-1702 (CEVIRA) in Europe and other markets",
    "m": "Over $250M total",
    "ms": "$15M upfront + $11M near-term regulatory milestone + commercial milestones and tiered sales royalties; subject to conditions precedent",
@@ -42,7 +42,7 @@
     "newco",
     "lic"
    ],
-   "img": "deal_25_v2.jpg",
+   "img": "deal_25_v2_t2.jpg",
    "t": "Garden Bio and Guangzhou National Laboratory form a joint venture for 25-hydroxycholesterol broad-spectrum antivirals",
    "m": "Undisclosed",
    "ms": "New joint venture run by Garden Biopharma with at least 51%; the rest held by an entity the laboratory designates; phased capital contributions and transfer of IP; no amounts disclosed",
@@ -59,7 +59,7 @@
    "kinds": [
     "clin"
    ],
-   "img": "deal_26_v2.jpg",
+   "img": "deal_26_v2_t2.jpg",
    "t": "Sino Biopharm completes enrollment in Phase 3 registrational trial of inhaled TQC3721 for COPD",
    "m": "No deal value",
    "ms": "PACER-III Phase 3 registrational enrollment complete for nebulised TQC3721 in COPD maintenance. HKEX announcement gives no n or endpoints; ClinicalTrials.gov NCT07147946 (CTTQ) lists estimated n=666, TQC3721 6 mg/2 ml BID for 24 weeks, primary endpoint mean change in FEV1 AUC from baseline to week 12",
@@ -76,7 +76,7 @@
    "kinds": [
     "clin"
    ],
-   "img": "deal_27_v2.jpg",
+   "img": "deal_27_v2_t2.jpg",
    "t": "CSPC updates Phase 1 data for SYS6002 in advanced cervical cancer; 2.4 mg/kg regimen moves into Phase 3",
    "m": "No deal value",
    "ms": "Phase 1, 82 patients; confirmed ORR 35.9% (2.4 mg/kg Q2W) and 28.6% (3.6 mg/kg Q3W); median DoR 8.2 and 10.3 months; median PFS 4.1 and 4.3 months; median OS 15.1 and 11.5 months; 2.4 mg/kg Q2W now in Phase 3 (NCT07230626)",
@@ -93,7 +93,7 @@
    "kinds": [
     "lic"
    ],
-   "img": "deal_01.jpg",
+   "img": "deal_01_t2.jpg",
    "t": "Novartis takes global rights to Abogen's in vivo mRNA T-cell engager ABO2203",
    "m": "$575M upfront; up to ~$7.8B total",
    "ms": "$575M upfront + up to ~$7.2B in milestones (including all option exercises) + sales royalties",
@@ -109,7 +109,7 @@
    "kinds": [
     "acq"
    ],
-   "img": "deal_04.jpg",
+   "img": "deal_04_t2.jpg",
    "t": "GSK buys Chimagen's trispecific T-cell engager for up to $750M",
    "m": "Up to $750M total",
    "ms": "Upfront undisclosed + development and commercial milestones (up to $750M combined)",
@@ -125,7 +125,7 @@
    "kinds": [
     "clin"
    ],
-   "img": "deal_06.jpg",
+   "img": "deal_06_t2.jpg",
    "t": "Ivonescimab monotherapy beats pembrolizumab on overall survival in HARMONi-2",
    "m": "No deal value",
    "ms": "Phase 3 OS secondary endpoint met with statistical significance",
@@ -141,7 +141,7 @@
    "kinds": [
     "lic"
    ],
-   "img": "deal_07.jpg",
+   "img": "deal_07_t2.jpg",
    "t": "Simcere Zaiming licenses CD79a×CD19×CD3 trispecific SIM0660 to Roche",
    "m": "Up to $1.53B total",
    "ms": "$75M upfront + development, regulatory and commercial milestones (up to $1.53B total) + tiered double-digit royalties",
@@ -157,7 +157,7 @@
    "kinds": [
     "acq"
    ],
-   "img": "deal_08.jpg",
+   "img": "deal_08_t2.jpg",
    "t": "Lilly to acquire Merida Biosciences for up to $2.9B, entering Graves' disease",
    "m": "Up to ~$2.88B total",
    "ms": "Upfront undisclosed, milestones included; expected to close by end of 2026",
@@ -174,7 +174,7 @@
     "newco",
     "lic"
    ],
-   "img": "deal_09.jpg",
+   "img": "deal_09_t2.jpg",
    "t": "Haisco immunology asset goes into ARCH-founded NewCo Sentivera",
    "m": "Over $1.5B total",
    "ms": "Upfront and equity combined $75.89M + milestones up to $1.46B + mid-single-digit to low-double-digit royalties",
@@ -191,7 +191,7 @@
     "lic",
     "inv"
    ],
-   "img": "deal_11.jpg",
+   "img": "deal_11_t2.jpg",
    "t": "J&J locks up Sail Biomedicines' in vivo CAR-T with an equity stake and an acquisition option",
    "m": "$2.58B total if the acquisition option is exercised",
    "ms": "$785M up front in total (incl. $465M equity investment) + up to $140M development milestones + acquisition option",
@@ -208,7 +208,7 @@
     "acq",
     "clin"
    ],
-   "img": "deal_12.jpg",
+   "img": "deal_12_t2.jpg",
    "t": "argenx to acquire Forte for $2.2B, adding anti-CD122 antibody FB102",
    "m": "~$2.2B in cash",
    "ms": "$77 per share cash tender offer, no milestones; expected to close in Q3 2026",
@@ -224,7 +224,7 @@
    "kinds": [
     "lic"
    ],
-   "img": "deal_13.jpg",
+   "img": "deal_13_t2.jpg",
    "t": "GemPharmatech and Humlab partner on global distribution of humanized mouse models",
    "m": "Undisclosed",
    "ms": "Global distribution agreement; financial terms, duration and exclusivity not disclosed",
@@ -242,7 +242,7 @@
     "lic",
     "inv"
    ],
-   "img": "deal_14.jpg",
+   "img": "deal_14_t2.jpg",
    "t": "Avere in-licenses Hansoh's oral IL-23 drug, lists via NextCure reverse merger and raises $320M",
    "m": "License up to $2.3B; concurrent $320M private placement",
    "ms": "License: $120M upfront + up to $2.18B milestones + royalties; private placement led by Fairmount and Hansoh",
@@ -258,7 +258,7 @@
    "kinds": [
     "lic"
    ],
-   "img": "deal_16.jpg",
+   "img": "deal_16_t2.jpg",
    "t": "AstraZeneca and CSPC partner on kidney-disease siRNA",
    "m": "~$1.77B total",
    "ms": "$30M upfront + $540M development milestones + $1.2B sales milestones",
@@ -274,7 +274,7 @@
    "kinds": [
     "lic"
    ],
-   "img": "deal_17.jpg",
+   "img": "deal_17_t2.jpg",
    "t": "Insilico Medicine and Takeda sign AI drug discovery collaboration",
    "m": "~$600M total",
    "ms": "Project initiation fee, near-term payments and milestones of ~$60M + later success milestones (~$600M total) + tiered royalties",
@@ -291,7 +291,7 @@
     "acq",
     "clin"
    ],
-   "img": "deal_20.jpg",
+   "img": "deal_20_t2.jpg",
    "t": "Lilly to acquire in vivo CAR-T company Kelonia for up to $7B",
    "m": "Up to $7B in cash",
    "ms": "$3.25B upfront + ~$3.75B in clinical, regulatory and commercial milestones; expected to close in H2 2026",
