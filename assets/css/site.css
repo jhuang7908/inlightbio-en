@@ -1261,3 +1261,34 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 }
 /* 2026-10-16: source rails back on the homepage; keep the "Sponsor this space" note hidden */
 .rail .srnote[href="/sponsor/"]{display:none}
+
+/* ===== 2026-10-16 (Jing): subscribe in the hero's bottom-right corner, never over the illustration; hero as short as possible =====
+   Desktop: the illustration no longer fills the hero; it sits in its own box (cell cluster only, edges faded) at the top right,
+   above the subscribe block, which is anchored bottom-right. Hero height comes from the text alone. */
+@media (min-width:860px){
+  .hero-band{align-items:stretch;background:linear-gradient(100deg,var(--surface) 0%,var(--surface) 55%,color-mix(in srgb,var(--accent) 5%,var(--surface)) 100%)}
+  .hero-band::after{display:none}
+  .hb-text{grid-template-columns:minmax(0,1fr) 300px;column-gap:28px;row-gap:4px;padding:12px 20px 12px}
+  .hb-text>.hb-sub{grid-column:2;grid-row:1 / span 5;align-self:end;justify-self:end;width:300px;margin:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none}
+  .hb-sub .subform input[type=email]{height:34px}
+  .hb-sub .subform .btn{height:34px;min-height:34px;padding:0 14px}
+  .hb-text p.subhint{font-size:11px;line-height:1.35;margin-top:3px}
+  .hb-art{inset:auto;top:8px;right:40px;bottom:86px;width:auto;aspect-ratio:596/720;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent),linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent),linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
+  .hb-art svg{display:none}
+  .hb-art img{inset:auto;top:0;right:auto;left:-102.35%;width:auto;height:100%;max-width:none;object-fit:fill;object-position:0 0}
+}
+/* 769-859px: no room for a right column; subscribe flows under the buttons, illustration in its own box on the right */
+@media (min-width:769px) and (max-width:859px){
+  .hero-band{align-items:stretch;background:var(--surface)}
+  .hero-band::after{display:none}
+  .hb-text{grid-template-columns:minmax(0,1fr);padding:12px 170px 12px 20px}
+  .hb-text>.hb-sub{grid-column:1;grid-row:auto;align-self:start;margin:2px 0 0;padding:0;border:0;background:none;box-shadow:none}
+  .hb-art{inset:auto;top:10px;bottom:auto;right:24px;height:130px;width:auto;aspect-ratio:596/720;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent),linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent),linear-gradient(180deg,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
+  .hb-art svg{display:none}
+  .hb-art img{inset:auto;top:0;right:auto;left:-102.35%;width:auto;height:100%;max-width:none;object-fit:fill;object-position:0 0}
+}
+@media (max-width:768px){
+  .hb-text{padding:8px 12px}
+  .hb-stats{gap:2px 5px;font-size:9.5px}
+  .hb-stats b{font-size:12px}
+}
