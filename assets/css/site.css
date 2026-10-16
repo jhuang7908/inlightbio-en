@@ -1262,43 +1262,31 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 /* 2026-10-16: source rails back on the homepage; keep the "Sponsor this space" note hidden */
 .rail .srnote[href="/sponsor/"]{display:none}
 
-/* ===== 2026-10-16 (Jing, re-layout): the illustration is back at its original size, filling the right side of the hero
-   (same scale as before, only shifted ~8% right so the cells sit in the right ~42%). Text column ~58% on the left; the subscribe
-   form sits at the bottom-right of the text column, level with the buttons and stats, just left of the illustration. ===== */
+/* ===== 2026-10-16 (Jing): hero shows only kicker, title, paragraph and the subscribe form (the Latest science / Deals buttons and the
+   stats line were removed; the top nav already links there). Subscribe sits bottom-left under the paragraph. The illustration keeps its
+   original size, filling the right side (same scale, shifted ~8% right so the cells sit in the right ~42%); no overlap. ===== */
 @media (min-width:769px){
-  .hero-band{min-height:228px;align-items:center;background:var(--surface)}
+  .hero-band{min-height:200px;align-items:center;background:var(--surface)}
   .hero-band::after{background:linear-gradient(95deg,rgba(255,255,255,.96) 8.1%,rgba(255,255,255,.92) 58.1%,rgba(255,255,255,.4) 100%)}
   .hb-art img{left:8.1%;right:auto;width:100%;object-fit:cover;object-position:50% 50%}
-  .hb-text{width:58%;max-width:58%;box-sizing:border-box;grid-template-columns:minmax(0,1fr) auto;column-gap:14px;row-gap:3px;padding:10px 20px}
+  .hb-text{width:58%;max-width:58%;box-sizing:border-box;grid-template-columns:minmax(0,1fr);row-gap:4px;padding:14px 20px}
   .hb-text p.just{font-size:13.5px;line-height:1.42}
-  .hb-text>*{grid-column:1 / -1}
-  .hb-text>.hb-cta{grid-column:1;grid-row:4;flex-wrap:nowrap}
-  .hb-text>.hb-sub{display:contents}
-  .hb-text>.hb-sub>.subform{grid-column:2;grid-row:4;justify-self:end;flex-wrap:nowrap;gap:6px;margin:0}
-  .hb-text>.hb-sub>p.subhint{grid-column:1 / -1;grid-row:5;justify-self:end;text-align:right!important;font-size:10.5px;line-height:1.35;margin:0}
-  .hb-text>.hb-stats{grid-column:1 / -1;grid-row:6}
-  .hb-sub .subform input[type=email]{flex:none;width:150px;max-width:none;height:34px;padding:0 10px;font-size:12.5px}
-  .hb-sub .subform .btn{height:34px;min-height:34px;padding:0 14px}
-  .hb-cta .btn{padding:0 12px;white-space:nowrap}
+  .hb-text>*{grid-column:1}
+  .hb-text>.hb-sub{grid-column:1;grid-row:auto;align-self:start;justify-self:start;width:auto;max-width:100%;margin:6px 0 0;padding:0;border:0;border-radius:0;background:none;box-shadow:none}
+  .hb-sub .subform{flex-wrap:nowrap;gap:6px}
+  .hb-sub .subform input[type=email]{flex:none;width:220px;max-width:none;height:34px}
+  .hb-sub .subform .btn{height:34px;min-height:34px;padding:0 16px}
+  .hb-text p.subhint{font-size:10.5px;line-height:1.35;margin-top:3px}
 }
-@media (min-width:1100px) and (max-width:1439px),(min-width:1700px){.hb-sub .subform input[type=email]{width:190px;padding:0 14px;font-size:13.5px}}
+@media (min-width:769px) and (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero-band::after{background:linear-gradient(100deg,rgba(17,23,21,.93) 8.1%,rgba(17,23,21,.8) 52.1%,rgba(17,23,21,.33) 100%)}}
+@media (min-width:769px){:root[data-theme="dark"] .hero-band::after{background:linear-gradient(100deg,rgba(17,23,21,.93) 8.1%,rgba(17,23,21,.8) 52.1%,rgba(17,23,21,.33) 100%)}}
 /* 1440-1699px: the side rails narrow the hero, so give the text column 60% and shift the (same-scale) illustration 10% right */
 @media (min-width:1440px) and (max-width:1699px){
   .hb-text{width:60%;max-width:60%}
   .hb-art img{left:10%}
   .hero-band::after{background:linear-gradient(95deg,rgba(255,255,255,.96) 10%,rgba(255,255,255,.92) 60%,rgba(255,255,255,.42) 100%)}
-  .hb-sub .subform input[type=email]{width:140px;padding:0 10px;font-size:12.5px}
-}
-@media (min-width:769px) and (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero-band::after{background:linear-gradient(100deg,rgba(17,23,21,.93) 8.1%,rgba(17,23,21,.8) 52.1%,rgba(17,23,21,.33) 100%)}}
-@media (min-width:769px){:root[data-theme="dark"] .hero-band::after{background:linear-gradient(100deg,rgba(17,23,21,.93) 8.1%,rgba(17,23,21,.8) 52.1%,rgba(17,23,21,.33) 100%)}}
-/* 769-1023px: not enough room for buttons + form side by side; the form goes under the buttons, still in the text column */
-@media (min-width:769px) and (max-width:1023px){
-  .hb-text>.hb-sub>.subform{grid-column:1 / -1;grid-row:5;justify-self:start}
-  .hb-text>.hb-sub>p.subhint{grid-row:6;justify-self:start;text-align:left!important}
-  .hb-text>.hb-stats{grid-row:7}
 }
 @media (max-width:768px){
-  .hb-text{padding:8px 12px}
-  .hb-stats{gap:2px 5px;font-size:9.5px}
-  .hb-stats b{font-size:12px}
+  .hb-text{padding:8px 12px 12px}
+  .hb-sub{margin-top:6px}
 }
