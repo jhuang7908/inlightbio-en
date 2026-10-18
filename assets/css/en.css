@@ -611,3 +611,14 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 @media (max-width:640px){.nav-in a.navsocial{display:none}}
 .footnav a.fsocial{display:inline-flex;align-items:center;gap:5px}
 .hb-text p.subhint,.art-sub p.subhint,.panel p.subhint{font-size:12px;line-height:1.5;text-align:left}
+
+/* 2026-10-18 快讯 / Briefs (collapsible, abstract-based) */
+.briefs{margin-top:4px}
+.briefs>summary{list-style:none;cursor:pointer}
+.briefs>summary::-webkit-details-marker{display:none}
+.briefs>summary h2::after{content:" ▸";color:var(--muted);font-size:13px}
+.briefs[open]>summary h2::after{content:" ▾"}
+.brieflist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.brieflist li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;display:grid;gap:5px}
+.brieflist h3{font-size:14.5px;margin:0}.brieflist p{font-size:13.5px;color:var(--muted);max-width:none;margin:0}
+.brieflist .blabel{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.03em}

@@ -1,6 +1,125 @@
 {
- "built": "2026-10-11",
+ "built": "2026-10-18",
  "items": [
+  {
+   "slug": "estuary-series-a",
+   "d": "2026-10",
+   "kinds": [
+    "inv"
+   ],
+   "img": "deal_28_20261018_v2.png",
+   "t": "Estuary Bio raises $103M to advance local AAV therapy for ADPKD",
+   "m": "$103M total",
+   "ms": "$93M Series A led by RA Capital plus a $10M seed co-led by 4BIO and GV; $103M in total",
+   "why": "Estuary is developing local AAV gene therapy for autosomal dominant polycystic kidney disease, from the Somlo and Caplan labs at Yale. EST-201 targets PKD2 and is slated for the clinic in 2027; EST-101 targets PKD1 and is slated for 2028. The $103 million total comprises a $93 million Series A led by RA Capital and a $10 million seed co-led by 4BIO and GV.",
+   "src": "Estuary Bio press release (2026-10-16)",
+   "url": "https://estuarybio.com/news/estuary-series-a",
+   "china": false,
+   "v2": true,
+   "date": "2026-10-16"
+  },
+  {
+   "slug": "astrazeneca-insitro-cardiometabolic",
+   "d": "2026-10",
+   "kinds": [
+    "lic"
+   ],
+   "img": "deal_29_20261018_v2.png",
+   "t": "AstraZeneca and insitro form a strategic collaboration in difficult-to-treat cardiometabolic disease",
+   "m": "$40M upfront",
+   "ms": "$40M upfront; up to about $1.46B in milestones; single-digit royalties; AstraZeneca takes exclusive worldwide rights to selected programmes",
+   "why": "The collaboration covers metabolic dysfunction-associated steatohepatitis (MASH) and cardiomyopathies and runs on insitro's Virtual Human platform. AstraZeneca pays $40 million up front, with up to about $1.46 billion in milestones and single-digit royalties, and takes exclusive worldwide rights to selected programmes. The milestone figure is a nominal cap tied to agreed conditions, not a valuation or expected revenue; everything beyond the upfront depends on programmes advancing.",
+   "src": "AstraZeneca press release (2026-10-15)",
+   "url": "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-announces-new-strategic-collaboration-with-insitro-for-difficult-to-treat-cardiometabolic-diseases.html",
+   "china": false,
+   "v2": true,
+   "date": "2026-10-15"
+  },
+  {
+   "slug": "omass-series-c",
+   "d": "2026-10",
+   "kinds": [
+    "inv"
+   ],
+   "img": "deal_30_20261018_v2.png",
+   "t": "OMass Therapeutics raises a $310M Series C",
+   "m": "$310M (GBP230M)",
+   "ms": "$310M (GBP230M) Series C, co-led by Bain Capital Life Sciences, Forbion and Novo Holdings",
+   "why": "The round funds a small-molecule portfolio in endocrinology and immunology: it will take OMS1620, an MC2R antagonist, through phase 2 development in congenital adrenal hyperplasia and ACTH-dependent Cushing's syndrome, and generate initial clinical data for an SLC15A4 inhibitor for lupus. The $310 million (GBP230 million) financing was co-led by Bain Capital Life Sciences, Forbion and Novo Holdings.",
+   "src": "OMass Therapeutics press release (2026-10-15)",
+   "url": "https://www.omass.com/2026/10/15/omass-therapeutics-announces-310-million-series-c-financing-to-advance-portfolio-of-small-molecule-therapeutics-in-endocrinology-and-immunology/",
+   "china": false,
+   "v2": true,
+   "date": "2026-10-15"
+  },
+  {
+   "slug": "city-therapeutics-ipo",
+   "d": "2026-10",
+   "kinds": [
+    "inv"
+   ],
+   "img": "deal_31_20261018_v3.png",
+   "t": "City Therapeutics prices upsized IPO at about $200M",
+   "m": "About $200M",
+   "ms": "11,111,111 shares at $18 for about $200M; expected to begin trading on Nasdaq as CTY on Oct 16, closing expected Oct 19",
+   "why": "The company sold 11,111,111 shares at $18 each for roughly $200 million in an upsized offering. The stock was expected to begin trading on Nasdaq under CTY on 16 October 2026, with closing expected on 19 October. The announcement names CITY-FXI, CITY-RBP4 and CITY-TFR2 among its programmes.",
+   "src": "City Therapeutics press release (2026-10-15)",
+   "url": "https://investors.citytx.com/news-releases/news-release-details/city-therapeutics-announces-pricing-upsized-initial-public",
+   "china": false,
+   "v2": true,
+   "date": "2026-10-15"
+  },
+  {
+   "slug": "cspc-sys6088-ind",
+   "d": "2026-10",
+   "kinds": [
+    "clin"
+   ],
+   "img": "deal_32_20261018_v2.png",
+   "t": "CSPC announces China IND for SYS6088, a PD-1/VEGFA/CTLA-4 trispecific",
+   "m": "No deal value",
+   "ms": "NMPA clinical trial approval in advanced or metastatic solid tumours; PD-1/VEGFA/CTLA-4 trispecific antibody with an engineered Fc",
+   "why": "CSPC's voluntary HKEX announcement describes SYS6088 as a PD-1/VEGFA/CTLA-4 trispecific antibody with an engineered Fc, and says China's NMPA has approved it for clinical trials in advanced or metastatic solid tumours. No deal value is attached; clinical benefit will depend on trial data still to come.",
+   "src": "CSPC voluntary announcement, HKEX (2026-10-15)",
+   "url": "https://doc.irasia.com/listco/hk/cspc/announcement/a261015a.pdf",
+   "china": true,
+   "v2": true,
+   "date": "2026-10-15"
+  },
+  {
+   "slug": "eton-aquestive-libervant",
+   "d": "2026-10",
+   "kinds": [
+    "lic"
+   ],
+   "img": "deal_33_20261018_v4.png",
+   "t": "Eton licenses US rights to Aquestive's Libervant (diazepam buccal film)",
+   "m": "$10M upfront",
+   "ms": "$10M upfront; up to $47.5M in milestones; mid-teens royalties; agreement dated 2026-10-13",
+   "why": "The agreement, dated 13 October 2026 and filed by Eton on Form 8-K, gives Eton exclusive US rights to Libervant (diazepam buccal film). Terms are $10 million up front, up to $47.5 million in milestones and mid-teens royalties. Launch is set for April 2027 subject to FDA action: VALTOCO's orphan-drug exclusivity expires on 10 January 2027, and the PDUFA date for ages 6-11 is 29 March 2027.",
+   "src": "Eton and Aquestive press release via GlobeNewswire (2026-10-14); Eton Form 8-K",
+   "url": "https://rss.globenewswire.com/news-release/2026/10/14/3380573/0/en/eton-pharmaceuticals-and-aquestive-therapeutics-announce-exclusive-u-s-licensing-agreement-for-libervant-diazepam-buccal-film.html",
+   "china": false,
+   "v2": true,
+   "date": "2026-10-14"
+  },
+  {
+   "slug": "hiteck-visara-ht006",
+   "d": "2026-10",
+   "kinds": [
+    "lic"
+   ],
+   "img": "deal_34_20261018_v2.png",
+   "t": "Hiteck licenses next-generation NGF eye drop HT006.2.2 to Visara outside Greater China",
+   "m": "$7M upfront and near-term",
+   "ms": "$7M in upfront and near-term payments; up to $104M in milestones; plus royalties; territory is outside Greater China",
+   "why": "Hiteck (300683) out-licenses its investigational next-generation nerve growth factor eye drop HT006.2.2 to Visara for neurotrophic keratitis outside Greater China; Visara is a majority-owned subsidiary of NovaBridge (NBP) and runs the asset as VIS-102. Terms are $7 million in upfront and near-term payments, up to $104 million in milestones, and royalties. In a phase 1b study in Chinese subjects with severe NK, 50% of the highest-dose cohort achieved complete corneal healing after a single 8-week course, compared with 14% on vehicle at week 4.",
+   "src": "Hiteck announcement via cninfo (2026-10-13); PR Newswire release",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-10-13/1225602615.PDF",
+   "china": true,
+   "v2": true,
+   "date": "2026-10-13"
+  },
   {
    "slug": "micurx-clearidebio-mrx-23",
    "d": "2026-10",
