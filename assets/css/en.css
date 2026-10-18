@@ -622,3 +622,12 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 .brieflist li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;display:grid;gap:5px}
 .brieflist h3{font-size:14.5px;margin:0}.brieflist p{font-size:13.5px;color:var(--muted);max-width:none;margin:0}
 .brieflist .blabel{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.03em}
+
+/* 2026-10-18 overflow guard: long URLs/DOIs in sidebar cards (Citation, About the authors,
+   Key data card) and article sections must wrap inside their box instead of widening the
+   grid track and spilling into the main column / causing horizontal scroll on phones.
+   Grid tracks are minmax(0,1fr) and grid/flex children may shrink; justified text is unchanged. */
+.sgrid>*,.saside>*,.smain>*,.amain>*,.sbox>*,.sec>*,.pv-card>*,.abody>*,.meta>*{min-width:0}
+.sbox,.sec,.meta{grid-template-columns:minmax(0,1fr)}
+.spage .sbox p,.spage .sbox li,.citebox .cite,.amain p,.amain li,.sec p,.sec li,.meta p,.side2 .sbox p,.side2 .small,.pv-card li,.sgrid a,.abody a{overflow-wrap:anywhere}
+@media (max-width:860px){.sgrid,.pv-art .abody{grid-template-columns:minmax(0,1fr)}}
