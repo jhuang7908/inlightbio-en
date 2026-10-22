@@ -371,20 +371,6 @@
    "note": "Dates TBA — check the official site"
   },
   {
-   "id": "dia-japan-2026",
-   "logo": "/img/conf/dia-japan-2026.png",
-   "name": "23rd DIA Japan Annual Meeting 2026",
-   "dates": "2026-10-18 to 2026-10-20",
-   "city": "Tokyo, Japan",
-   "venue": "Tokyo Big Sight",
-   "organizer": "DIA (Drug Information Association)",
-   "kind": "Regulatory",
-   "region": "Japan",
-   "sum": "Japan's main drug-development meeting for sponsors, CROs and regulators, with PMDA reviewers on the program committee.",
-   "url": "https://www.diaglobal.org/en/conference-listing/meetings/2026/10/the-23rd-dia-japan-annual-meeting-2026",
-   "verified": true
-  },
-  {
    "id": "jsco-2026",
    "logo": "/img/conf/jsco-2026.png",
    "name": "64th Annual Meeting of the Japan Society of Clinical Oncology (JSCO 2026)",
@@ -610,7 +596,7 @@
   },
   {
    "id": "biojapan-2027",
-   "logo": "",
+   "logo": "/img/conf/biojapan-2027.png",
    "abbr": "BJ",
    "name": "BioJapan 2027",
    "dates": "TBA",
@@ -622,7 +608,8 @@
    "sum": "Asia's long-running biotech partnering exhibition; the 2026 edition was held Oct 7–9 at PACIFICO Yokohama.",
    "url": "https://jcd-expo.jp/en/",
    "verified": false,
-   "note": "Dates TBA — check the official site"
+   "note": "Dates TBA — check the official site",
+   "logo_src": "https://jcd-expo.jp/img/common/logo_bj.webp"
   },
   {
    "id": "dia-rsidm-2027",
@@ -694,20 +681,6 @@
    "url": "https://www.diaglobal.org/en/conference-listing/meetings/2026/05/2026-dia-china-annual-meeting",
    "verified": false,
    "note": "Dates TBA — check the official site"
-  },
-  {
-   "id": "ispe-annual-2026",
-   "logo": "/img/conf/ispe-annual-2026.png",
-   "name": "ISPE Annual Meeting & Expo 2026",
-   "dates": "2026-10-18 to 2026-10-21",
-   "city": "Washington, DC area, USA",
-   "venue": "",
-   "organizer": "International Society for Pharmaceutical Engineering (ISPE)",
-   "kind": "Manufacturing & CMC",
-   "region": "United States",
-   "sum": "Pharmaceutical engineering and manufacturing conference covering facilities, quality, digital manufacturing and regulatory expectations, with a virtual option.",
-   "url": "https://ispe.org/conferences/2026-annual-meeting-expo",
-   "verified": true
   },
   {
    "id": "cmc-forum-japan-2026",
@@ -908,7 +881,7 @@
   },
   {
    "id": "htai-2027",
-   "logo": "",
+   "logo": "/img/conf/htai-2027.png",
    "abbr": "HTAi",
    "name": "HTAi 2027 Annual Meeting",
    "dates": "2027-06-12 to 2027-06-16",
@@ -919,7 +892,8 @@
    "region": "Europe",
    "sum": "International health technology assessment meeting, hosted with Belgium's KCE and RIZIV/INAMI.",
    "url": "https://htai.org/event/htai-2027-annual-meeting-2/",
-   "verified": true
+   "verified": true,
+   "logo_src": "https://htai.org/wp-content/uploads/2026/06/HTAi_AM27_social_save-the-date_red_1600x900-768x432.png (event mark cropped from official save-the-date)"
   }
  ]
 }
