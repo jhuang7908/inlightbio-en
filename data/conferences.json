@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-11",
+ "checked": "2026-10-26",
  "events": [
   {
    "id": "esmo-2026",
@@ -894,6 +894,76 @@
    "url": "https://htai.org/event/htai-2027-annual-meeting-2/",
    "verified": true,
    "logo_src": "https://htai.org/wp-content/uploads/2026/06/HTAi_AM27_social_save-the-date_red_1600x900-768x432.png (event mark cropped from official save-the-date)"
+  },
+  {
+   "id": "atmp-2026",
+   "logo": "",
+   "name": "ATMP 2026: 12th Advanced Therapies Innovation Summit",
+   "dates": "2026-12-02 to 2026-12-03",
+   "city": "Beijing, China",
+   "venue": "Wyndham Beijing Longcheng (Changping)",
+   "organizer": "Deliver Life Sciences",
+   "kind": "Scientific",
+   "region": "Asia-Pacific",
+   "sum": "Annual China summit on cell and gene therapy and regenerative medicine, spanning R&D, clinical development, manufacturing and investment; about 600-800 attendees, with limited free passes for qualifying professionals.",
+   "url": "https://www.bagevent.com/event/9245783",
+   "verified": true
+  },
+  {
+   "id": "nis-2026",
+   "logo": "",
+   "name": "NIS 2026: Small-Molecule Drug Innovation & Commercialization Conference",
+   "dates": "2026-12-03 to 2026-12-04",
+   "city": "Shanghai, China",
+   "venue": "",
+   "organizer": "Best Media",
+   "kind": "Scientific",
+   "region": "Asia-Pacific",
+   "sum": "Main forum plus five parallel tracks on AI-driven discovery, organoid models, degraders and molecular glues, AOC/PDC/SMDC conjugates, high-potency API process, solid form and impurities, and cross-border CMC filings.",
+   "url": "http://www.bestmediaworld.com/index/lists/detail/id/74.html",
+   "verified": true
+  },
+  {
+   "id": "esmo-asia-2026",
+   "logo": "/img/conf/esmo-asia-2026.png",
+   "name": "ESMO Asia Congress 2026",
+   "dates": "2026-12-04 to 2026-12-06",
+   "city": "Singapore",
+   "venue": "Suntec Singapore Convention & Exhibition Centre",
+   "organizer": "European Society for Medical Oncology",
+   "kind": "Scientific",
+   "region": "Asia-Pacific",
+   "sum": "ESMO's flagship Asia-Pacific oncology meeting and a frequent venue for clinical data from Chinese and other Asian sponsors; regular registration closes November 4, 2026.",
+   "url": "https://www.esmo.org/meeting-calendar/esmo-asia-congress-2026",
+   "verified": true
+  },
+  {
+   "id": "sabcs-2026",
+   "logo": "/img/conf/sabcs-2026.png",
+   "name": "San Antonio Breast Cancer Symposium 2026 (SABCS)",
+   "dates": "2026-12-08 to 2026-12-11",
+   "city": "San Antonio, TX, USA",
+   "venue": "Henry B. Gonzalez Convention Center",
+   "organizer": "UT Health San Antonio and the American Association for Cancer Research (AACR)",
+   "kind": "Scientific",
+   "region": "United States",
+   "sum": "The world's largest breast cancer meeting (11,000+ attendees from 100+ countries); a key December venue for breast cancer trial readouts.",
+   "url": "https://sabcs.org/",
+   "verified": true
+  },
+  {
+   "id": "icbai-2026",
+   "logo": "",
+   "name": "ICBAI 2026: World Conference on Biomedicine and Artificial Intelligence",
+   "dates": "2026-12-11 to 2026-12-13",
+   "city": "Shanghai, China",
+   "venue": "Shanghai Jiao Tong University (hybrid)",
+   "organizer": "ICBAI Organizing Committee",
+   "kind": "Digital Health & AI",
+   "region": "Asia-Pacific",
+   "sum": "Three tracks: AI-driven drug discovery and computational biology, AI for synthetic biology and bioengineering, and AI medical imaging and smart devices. Abstract and early-bird registration deadline November 20.",
+   "url": "https://worldbiomedai.org/conference2026/",
+   "verified": true
   }
  ]
 }
