@@ -268,7 +268,7 @@ a.tile .tk::after{content:" →";opacity:.55}
 .srnote:hover{color:var(--accent)}
 .ad-inline{min-height:110px}
 .adslot-mobile{display:grid;gap:14px;margin-top:6px}
-@media (min-width:1440px){.adslot-mobile{display:none}}
+@media (min-width:1280px){.adslot-mobile{display:none}}
 .srcrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 @media (min-width:640px){.srcrow{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .sponsored{border:1px solid var(--line);border-left:3px solid var(--c4);border-radius:10px;background:var(--surface);padding:13px 15px;display:grid;gap:5px}
@@ -1310,3 +1310,13 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 .sbox,.sec,.meta{grid-template-columns:minmax(0,1fr)}
 .spage .sbox p,.spage .sbox li,.citebox .cite,.amain p,.amain li,.sec p,.sec li,.meta p,.side2 .sbox p,.side2 .small,.pv-card li,.sgrid a,.abody a{overflow-wrap:anywhere}
 @media (max-width:860px){.sgrid,.pv-art .abody{grid-template-columns:minmax(0,1fr)}}
+/* 2026-10-31: show side rails from 1280px (narrower rails at 1280-1439); 1440+ unchanged */
+@media (min-width:1280px) and (max-width:1439px){
+  .shell{display:grid;grid-template-columns:160px minmax(0,1fr) 160px;gap:14px;max-width:1440px;padding:0 10px;align-items:start}
+  .shell>.col{min-width:0}
+  .rail{display:block;position:static;height:auto;max-height:none;overflow:visible;margin-top:16px;background:color-mix(in srgb,var(--surface) 60%,var(--bg));border-radius:12px;padding:8px;box-sizing:border-box}
+  .railin{display:grid;gap:10px;align-content:start}
+  .rail-l{border-right:1px solid var(--line)}
+  .rail-r{border-left:1px solid var(--line)}
+  .ad-tall{min-height:330px}.ad-med{min-height:165px}
+}
