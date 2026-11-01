@@ -8,6 +8,8 @@ Counts covered (each one is derived, never hand-edited):
                                                 next six months (same window as site.js)
   conferences/      static tile fallbacks     = same rule per type (site.js overwrites at runtime)
   index.html        "Sources · Science" cards = science/index.html cards per journal group
+  science/index.html field tiles ("N articles"), Field filter buttons, "All fields"
+                    and #scicount = <article class="scard" data-f=...> cards per field
 Run after every weekly assembly:  python3 tools/sync_counts.py   (--check: exit 1 on drift)
 """
 import re, json, sys, datetime as dt
@@ -78,6 +80,15 @@ hs = sub(hs, r'(<span class=d>)(\d+)( Nature Portfolio journals)', str(npj), 'NP
 total = sum(gc[n.replace('&amp;','&amp;')] for n in NAMES); hs = pre + hs + post
 if total != len(sci): drift.append(f'index.html: source cards sum {total} != {len(sci)} science articles')
 
+# ---- science page: field tiles + filter buttons + totals, from the article cards
+sf = R / 'science/index.html'; ss = sf.read_text()
+fc = Counter(re.findall(r'<article class="scard" data-f="([\w-]+)"', ss)); nsci = sum(fc.values())
+for k in re.findall(r'class="trkcard art ftile" href="\?field=[\w-]+" data-f="([\w-]+)"', ss):
+    ss = sub(ss, r'(class="trkcard art ftile" href="\?field=%s" data-f="%s">(?:(?!</a>).)*?<em>)([^<]*)(</em>)' % (k, k), plural(fc[k], 'article'), f'field tile {k}', 'science/index.html')
+for k in re.findall(r'<button type="button" data-f="([\w-]+)"', ss):
+    ss = sub(ss, r'(<button type="button" data-f="%s"[^>]*>(?:(?!</button>).)*?<em>)(\d+)(</em>)' % k, str(nsci if k == 'all' else fc[k]), f'field filter {k}', 'science/index.html')
+ss = sub(ss, r'(id="scicount">)(\d+ articles?)(, newest first)', plural(nsci, 'article'), 'scicount', 'science/index.html')
+
 print('\n'.join(drift) or 'counts in sync')
 if CHECK: sys.exit(1 if drift else 0)
-cf.write_text(cs); nf.write_text(ns); hf.write_text(hs)
+cf.write_text(cs); nf.write_text(ns); hf.write_text(hs); sf.write_text(ss)
