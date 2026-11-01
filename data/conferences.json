@@ -115,7 +115,7 @@
   },
   {
    "id": "ash-2026",
-   "logo": "/img/conf/ash-2026.png",
+   "logo": "/img/conf/ash-2026_web.webp",
    "name": "ASH Annual Meeting 2026 (68th)",
    "dates": "2026-12-12 to 2026-12-15",
    "city": "New Orleans, LA, USA",
@@ -229,7 +229,7 @@
   },
   {
    "id": "asgct-2027",
-   "logo": "/img/conf/asgct-2027.png",
+   "logo": "/img/conf/asgct-2027_web.webp",
    "name": "ASGCT 30th Annual Meeting",
    "dates": "2027-05-03 to 2027-05-07",
    "city": "Philadelphia, PA, USA",
@@ -257,7 +257,7 @@
   },
   {
    "id": "bio-2027",
-   "logo": "/img/conf/bio-2027.png",
+   "logo": "/img/conf/bio-2027_web.webp",
    "name": "BIO International Convention 2027",
    "dates": "2027-06-07 to 2027-06-10",
    "city": "Philadelphia, PA, USA",
@@ -386,7 +386,7 @@
   },
   {
    "id": "ena-2026",
-   "logo": "/img/conf/ena-2026.png",
+   "logo": "/img/conf/ena-2026_web.webp",
    "name": "ENA 2026: EORTC-NCI-AACR Symposium on Molecular Targets and Cancer Therapeutics",
    "dates": "2026-11-18 to 2026-11-20",
    "city": "Barcelona, Spain",
@@ -442,7 +442,7 @@
   },
   {
    "id": "lsx-investival-europe-2027",
-   "logo": "/img/conf/lsx-investival-europe-2027.png",
+   "logo": "/img/conf/lsx-investival-europe-2027_web.webp",
    "name": "LSX Investival Europe 2027",
    "dates": "2027-04-07 to 2027-04-08",
    "city": "Lyon, France",
@@ -470,7 +470,7 @@
   },
   {
    "id": "swiss-biotech-day-2027",
-   "logo": "/img/conf/swiss-biotech-day-2027.png",
+   "logo": "/img/conf/swiss-biotech-day-2027_web.webp",
    "name": "Swiss Biotech Day 2027",
    "dates": "2027-04-26 to 2027-04-27",
    "city": "Basel, Switzerland",
@@ -498,7 +498,7 @@
   },
   {
    "id": "bpi-europe-2027",
-   "logo": "/img/conf/bpi-europe-2027.png",
+   "logo": "/img/conf/bpi-europe-2027_web.webp",
    "name": "BioProcess International Europe 2027",
    "dates": "2027-04-27 to 2027-04-29",
    "city": "Hamburg, Germany",
@@ -582,7 +582,7 @@
   },
   {
    "id": "bpi-2027",
-   "logo": "/img/conf/bpi-2027.png",
+   "logo": "/img/conf/bpi-2027_web.webp",
    "name": "BioProcess International 2027",
    "dates": "2027-09-20 to 2027-09-23",
    "city": "Boston, MA, USA",
@@ -596,7 +596,7 @@
   },
   {
    "id": "biojapan-2027",
-   "logo": "/img/conf/biojapan-2027.png",
+   "logo": "/img/conf/biojapan-2027_web.webp",
    "abbr": "BJ",
    "name": "BioJapan 2027",
    "dates": "TBA",
@@ -712,7 +712,7 @@
   },
   {
    "id": "pda-annual-2027",
-   "logo": "/img/conf/pda-annual-2027.png",
+   "logo": "/img/conf/pda-annual-2027_web.webp",
    "name": "PDA Annual Meeting 2027",
    "dates": "2027-03-15 to 2027-03-17",
    "city": "Raleigh, NC, USA",
@@ -825,7 +825,7 @@
   },
   {
    "id": "amcp-nexus-2026",
-   "logo": "/img/conf/amcp-nexus-2026.png",
+   "logo": "/img/conf/amcp-nexus-2026_web.webp",
    "name": "AMCP Nexus 2026",
    "dates": "2026-10-26 to 2026-10-29",
    "city": "San Diego, CA, USA",
@@ -839,7 +839,7 @@
   },
   {
    "id": "ispor-europe-2026",
-   "logo": "/img/conf/ispor-europe-2026.png",
+   "logo": "/img/conf/ispor-europe-2026_web.webp",
    "name": "ISPOR Europe 2026",
    "dates": "2026-11-08 to 2026-11-11",
    "city": "Vienna, Austria",
@@ -853,7 +853,7 @@
   },
   {
    "id": "amcp-2027",
-   "logo": "/img/conf/amcp-2027.png",
+   "logo": "/img/conf/amcp-2027_web.webp",
    "name": "AMCP 2027 Annual Meeting",
    "dates": "2027-04-13 to 2027-04-16",
    "city": "San Francisco, CA, USA",
@@ -867,7 +867,7 @@
   },
   {
    "id": "ispor-2027",
-   "logo": "/img/conf/ispor-2027.png",
+   "logo": "/img/conf/ispor-2027_web.webp",
    "name": "ISPOR 2027",
    "dates": "2027-05-23 to 2027-05-26",
    "city": "Denver, CO, USA",
