@@ -9,3 +9,7 @@ InLight Bio is an independent biomedical science and biopharma deals publication
 - Preview: `python3 -m http.server 8000`
 - Science pages show the InLight generation date ("Generated: Mon D, YYYY" in the byline, JSON-LD `dateCreated`), distinct from the paper date. Dates live in `data/science_gen_dates.json`; after adding a new science page run `python3 tools/stamp_gen_dates.py` (new slugs get today's date; idempotent; `--check` reports pages missing it).
 - Email routing: bd@inlightbio.com = NewCo matters only; contact@inlightbio.com = newsletter, reports, corrections
+
+## Image weight
+
+After any site build, run `python3 tools/web_images.py --apply`: it creates compressed `<name>_web.webp` copies (originals kept) and points pages and data/*.json at them, adding `loading="lazy" decoding="async"` below the fold.
