@@ -50,7 +50,7 @@ document.addEventListener('click',e=>{$$('details.confcal[open]').forEach(d=>{if
 /* ---------- News page: one compact filter button, top-right ---------- */
 const feed=$('#newsfeed');
 if(feed){
-  const groups=[['all','All items'],['lic','Licensing'],['newco','NewCo'],['acq','M&A'],['clin','Clinical'],['inv','Financing']];
+  const groups=[['all','All items'],['lic','Licensing'],['newco','NewCo'],['acq','M&A'],['clin','Clinical'],['inv','Financing'],['policy','Regulatory']];
   const china=[['all','All companies'],['cn','China-linked only']];
   let g='all', cn='all', nexp=false;
   const q=new URLSearchParams(location.search); if(q.get('type')&&groups.some(x=>x[0]===q.get('type'))) g=q.get('type');
