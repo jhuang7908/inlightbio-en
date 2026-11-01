@@ -3,6 +3,7 @@
 
 Counts covered (each one is derived, never hand-edited):
   news/index.html   type tiles ("N items")  = items in window.NEWS with that kind
+                                                (every kind in NEWS must have a tile, incl. policy/Regulatory)
                     "#newscount" header       = len(window.NEWS)
                     Conferences tile          = window.CONFS events starting in the
                                                 next six months (same window as site.js)
@@ -51,6 +52,9 @@ NEWS = js(ns, 'NEWS')
 kc = Counter(k for x in NEWS for k in x['kinds'])
 for k in re.findall(r'class="trkcard art" href="\?type=(\w+)"', ns):
     ns = sub(ns, r'(href="\?type=%s\"(?:(?!</a>).)*?<em>)([^<]*)(</em>)' % k, plural(kc[k], 'item'), f'type tile {k}', 'news/index.html')
+tiles = set(re.findall(r'class="trkcard art" href="\?type=(\w+)"', ns))
+for k in sorted(set(kc) - tiles):
+    drift.append(f'news/index.html: kind {k!r} has {kc[k]} item(s) but no type tile')
 ns = sub(ns, r'(id="newscount">)(\d+ items?)(, newest first)', plural(len(NEWS), 'item'), 'newscount', 'news/index.html')
 ns = sub(ns, r'(href="/conferences/" style="--dc:var\(--accent\)"><span class="artthumb">(?:(?!</a>).)*?<span>)([^<]*)(</span>)', 'Partnering, investor, scientific, CRO, regulatory, CMC, digital and HEOR meetings, next six months', 'conf tile text', 'news/index.html')
 ns = sub(ns, r'(href="/conferences/" style="--dc:var\(--accent\)"><span class="artthumb">(?:(?!</a>).)*?<em>)([^<]*)(</em>)', plural(len(CONFS), 'event'), 'conf tile', 'news/index.html')
