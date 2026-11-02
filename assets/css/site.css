@@ -1320,3 +1320,14 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .rail-r{border-left:1px solid var(--line)}
   .ad-tall{min-height:330px}.ad-med{min-height:165px}
 }
+
+/* Home layout 2026-11-01: smaller titles, shorter science cards (3 rows), deals 2 rows */
+#homesci .scover{aspect-ratio:16/7}
+#homesci .sbody{gap:4px;padding:8px 10px 9px}
+#homesci .sbody h3{font-size:13.5px;line-height:1.35;-webkit-line-clamp:3;line-clamp:3}
+#homesci .scap{font-size:12px;-webkit-line-clamp:1;line-clamp:1}
+#homesci .ftag{font-size:10.5px}
+@media (max-width:560px){#homesci .scover{aspect-ratio:auto}#homesci .sbody h3{font-size:13.5px}#homesci>.scard:nth-child(n+9){display:none}}
+#homefeed>.item:nth-child(n+9){display:none!important}
+@media (max-width:1023px){#homefeed>.item:nth-child(n+7){display:none!important}}
+@media (max-width:768px){#homefeed>.item:nth-child(n+5){display:none!important}}
