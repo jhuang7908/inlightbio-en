@@ -25,7 +25,7 @@ document.addEventListener('click',e=>{
   const p=document.createElement('div'); p.className='feed-details-panel'; p.setAttribute('role','region'); p.setAttribute('aria-label',x.t);
   p.innerHTML=`<div class="panel-tags">${x.kinds.map(k=>`<span class="kind">${esc(KINDS[k]||k)}</span>`).join('')}</div>
     ${x.ms?`<p class="msline">${esc(x.ms)}</p>`:''}<p>${esc(x.why)}</p>
-    <p class="byline">By <a href="/about/#editorial" rel="author">Jing Huang, PhD</a>${x.date?` · <time datetime="${esc(x.date)}">${MON[+x.date.slice(5,7)-1]} ${+x.date.slice(8,10)}, ${x.date.slice(0,4)}</time>`:''}</p>
+    <p class="byline">By <a href="/about/#editorial" rel="author">InLight Editorial</a>${x.date?` · <time datetime="${esc(x.date)}">${MON[+x.date.slice(5,7)-1]} ${+x.date.slice(8,10)}, ${x.date.slice(0,4)}</time>`:''}</p>
     <div class="foot"><a href="${esc(x.url)}" target="_blank" rel="noopener">Source: ${esc(x.src)}</a><button class="close-btn" type="button">Close ↑</button></div>`;
   cards[end].after(p); activePanel=p; activeCard=item; activeBtn=b; item.classList.add('expanded');
   b.setAttribute('aria-expanded','true'); b.textContent='Close ↑';
@@ -50,7 +50,9 @@ document.addEventListener('click',e=>{$$('details.confcal[open]').forEach(d=>{if
 /* ---------- News page: one compact filter button, top-right ---------- */
 const feed=$('#newsfeed');
 if(feed){
-  const groups=[['all','All items'],['lic','Licensing'],['newco','NewCo'],['acq','M&A'],['clin','Clinical'],['inv','Financing'],['policy','Regulatory']];
+  const groups=[['all','All items'],['lic','Licensing'],['acq','M&A'],['clin','Clinical'],['inv','Financing'],['policy','Regulatory'],['upd','Milestone update'],['jv','Joint venture']];
+  /* 2026-11-03: NewCo deals live on /newco/ (data/newco_deals.json); ?type=newco goes there */
+  if(new URLSearchParams(location.search).get('type')==='newco'){location.replace('/newco/');}
   const china=[['all','All companies'],['cn','China-linked only']];
   let g='all', cn='all', nexp=false;
   const q=new URLSearchParams(location.search); if(q.get('type')&&groups.some(x=>x[0]===q.get('type'))) g=q.get('type');
@@ -67,10 +69,10 @@ if(feed){
     const lab=(groups.find(x=>x[0]===g)||groups[0])[1]+(cn==='cn'?' · China':'');
     $('#nflabel').textContent=g==='all'&&cn==='all'?'Filter':lab;
     $('#newscount').textContent=`${n} item${n===1?'':'s'}, newest first`;
-    $$('.trkcard[data-g]').forEach(t=>t.setAttribute('aria-current',String(t.dataset.g===g)));
+    $$('.trkcard[data-g]').forEach(t=>{t.setAttribute('aria-current',String(t.dataset.g===g)); const em=t.querySelector('em[data-latest]'); if(em){const k=t.dataset.g; em.textContent=`${NEWS.filter(x=>x.kinds.includes(k)).length} of latest ${NEWS.length}`;}});
   }
   $$('.trkcard[data-g]').forEach(t=>t.addEventListener('click',ev=>{ev.preventDefault();g=g===t.dataset.g?'all':t.dataset.g;nexp=false;history.replaceState(null,'',g==='all'?location.pathname:'?type='+g);render();$('#newsfeedsec').scrollIntoView({block:'start'});}));
-  $('#newsmore').addEventListener('click',()=>{nexp=!nexp;render();if(!nexp)$('#newsfeedsec').scrollIntoView({block:'start'});});
+  $('#newsmore')&&$('#newsmore').addEventListener('click',()=>{nexp=!nexp;render();if(!nexp)$('#newsfeedsec').scrollIntoView({block:'start'});});
   let nw=innerWidth; addEventListener('resize',()=>{if(innerWidth!==nw){nw=innerWidth;render();}});
   render();
 }
@@ -198,6 +200,11 @@ if(sgrid){
 /* ---------- Home info cards: only full rows (no orphan card on the last row) ----------
    For each card grid (#miniconf + any [data-fullrows]) hide the trailing visible cards so the visible
    count is a multiple of the current column count. Content stays in the HTML; re-evaluated on resize. */
+/* 2026-11-03: Conferences / NewCo tile counts computed from data files (same CONF_WIN filter as the /conferences/ list: start date between today+7d and today+6 months, TBA excluded) */
+{const ec=$$('[data-confcount]'), en=$$('[data-newcocount]');
+ if(ec.length) fetch('/data/conferences.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{const now=new Date(),p=n=>String(n).padStart(2,'0'),ymd=d=>`${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`,today=ymd(now),l=new Date(now);l.setMonth(l.getMonth()+6);const lim=ymd(l);
+   const n=(j.events||[]).filter(x=>{if(!x.dates||x.dates==='TBA')return false;const st=x.dates.split(' to ')[0];return st>=CONF_WIN[0]&&st<=CONF_WIN[1];}).length; ec.forEach(e=>e.textContent=`${n} event${n===1?'':'s'}`);}).catch(()=>{});
+ if(en.length) fetch('/data/newco_deals.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{const n=(j.deals||[]).length; en.forEach(e=>e.textContent=`${n} deal${n===1?'':'s'}`);}).catch(()=>{});}
 function fullRows(){
   $$('#miniconf,[data-fullrows]').forEach(g=>{
     const kids=[...g.children]; kids.forEach(k=>{if(k.dataset.rowtrim){k.hidden=false;delete k.dataset.rowtrim;}});
@@ -206,5 +213,8 @@ function fullRows(){
     vis.slice(Math.floor(vis.length/c)*c).forEach(k=>{k.hidden=true;k.dataset.rowtrim='1';});
   });
 }
+/* 2026-11-03: news "Browse by type" grid: a lone last tile spans the full row instead of leaving an orphan + gap */
+function spanLast(){$$('.tilesec .trkgrid').forEach(g=>{const vis=[...g.children].filter(k=>!k.hidden&&k.offsetParent!==null);vis.forEach(k=>k.style.gridColumn='');const c=Math.max(1,cols(g));if(c>1&&vis.length%c===1)vis[vis.length-1].style.gridColumn='1 / -1';});}
+const _fr=fullRows; fullRows=function(){_fr();spanLast();};
 fullRows(); let frw=innerWidth; addEventListener('resize',()=>{if(innerWidth!==frw){frw=innerWidth;fullRows();}});
 })();
