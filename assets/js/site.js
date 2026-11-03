@@ -195,4 +195,16 @@ if(sgrid){
   $$('#sf-field button').forEach(b=>b.addEventListener('click',()=>{f=b.dataset.f;sexp=false;$('#sfcal').open=false;history.replaceState(null,'',f==='all'?location.pathname:'?field='+f);render();}));
   render();
 }
+/* ---------- Home info cards: only full rows (no orphan card on the last row) ----------
+   For each card grid (#miniconf + any [data-fullrows]) hide the trailing visible cards so the visible
+   count is a multiple of the current column count. Content stays in the HTML; re-evaluated on resize. */
+function fullRows(){
+  $$('#miniconf,[data-fullrows]').forEach(g=>{
+    const kids=[...g.children]; kids.forEach(k=>{if(k.dataset.rowtrim){k.hidden=false;delete k.dataset.rowtrim;}});
+    const vis=kids.filter(k=>!k.hidden), c=Math.max(1,cols(g));
+    if(vis.length<=c) return;
+    vis.slice(Math.floor(vis.length/c)*c).forEach(k=>{k.hidden=true;k.dataset.rowtrim='1';});
+  });
+}
+fullRows(); let frw=innerWidth; addEventListener('resize',()=>{if(innerWidth!==frw){frw=innerWidth;fullRows();}});
 })();
