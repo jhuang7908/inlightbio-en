@@ -2,7 +2,8 @@
 """Recompute every static count on the EN site from the data it summarises.
 
 Counts covered (each one is derived, never hand-edited):
-  news/index.html   type tiles ("N items")  = items in window.NEWS with that kind
+  news/index.html   type tiles ("N of latest M") = items in window.NEWS with that kind
+                    NewCo tile ("N deals")    = data/newco_deals.json deals (tile links to /newco/)
                                                 (every kind in NEWS must have a tile, incl. policy/Regulatory)
                     "#newscount" header       = len(window.NEWS)
                     Conferences tile          = window.CONFS events starting in the
@@ -50,14 +51,19 @@ for k in re.findall(r'class="trkcard art ctile"[^>]*data-k="([^"]+)"', cs):
 nf = R / 'news/index.html'; ns = nf.read_text()
 NEWS = js(ns, 'NEWS')
 kc = Counter(k for x in NEWS for k in x['kinds'])
+# 2026-11-03: type tiles read "N of latest M" (window.NEWS is the rolling latest-M list)
 for k in re.findall(r'class="trkcard art" href="\?type=(\w+)"', ns):
-    ns = sub(ns, r'(href="\?type=%s\"(?:(?!</a>).)*?<em>)([^<]*)(</em>)' % k, plural(kc[k], 'item'), f'type tile {k}', 'news/index.html')
+    ns = sub(ns, r'(href="\?type=%s\"(?:(?!</a>).)*?<em data-latest>)([^<]*)(</em>)' % k, f'{kc[k]} of latest {len(NEWS)}', f'type tile {k}', 'news/index.html')
 tiles = set(re.findall(r'class="trkcard art" href="\?type=(\w+)"', ns))
-for k in sorted(set(kc) - tiles):
+NO_TILE = {'jv', 'upd'}   # joint ventures / milestone updates: listed under "All items" + filter, no tile
+for k in sorted(set(kc) - tiles - NO_TILE):
     drift.append(f'news/index.html: kind {k!r} has {kc[k]} item(s) but no type tile')
+# NewCo tile links to /newco/ and counts data/newco_deals.json
+nco = len(json.loads((R / 'data/newco_deals.json').read_text())['deals'])
+ns = sub(ns, r'(href="/newco/" data-newco(?:(?!</a>).)*?<em data-newcocount>)([^<]*)(</em>)', plural(nco, 'deal'), 'newco tile', 'news/index.html')
 ns = sub(ns, r'(id="newscount">)(\d+ items?)(, newest first)', plural(len(NEWS), 'item'), 'newscount', 'news/index.html')
 ns = sub(ns, r'(href="/conferences/" style="--dc:var\(--accent\)"><span class="artthumb">(?:(?!</a>).)*?<span>)([^<]*)(</span>)', 'Partnering, investor, scientific, CRO, regulatory, CMC, digital and HEOR meetings, next six months', 'conf tile text', 'news/index.html')
-ns = sub(ns, r'(href="/conferences/" style="--dc:var\(--accent\)"><span class="artthumb">(?:(?!</a>).)*?<em>)([^<]*)(</em>)', plural(len(CONFS), 'event'), 'conf tile', 'news/index.html')
+ns = sub(ns, r'(href="/conferences/" style="--dc:var\(--accent\)"><span class="artthumb">(?:(?!</a>).)*?<em data-confcount>)([^<]*)(</em>)', plural(len(CONFS), 'event'), 'conf tile', 'news/index.html')
 
 # ---- home: science sources
 GROUP = {'Nature': 'Nature', 'bioRxiv': 'bioRxiv', 'mAbs': 'Taylor &amp; Francis', 'J Clin Invest': 'JCI',
