@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-26",
+ "checked": "2026-11-02",
  "events": [
   {
    "id": "esmo-2026",
@@ -28,6 +28,21 @@
    "sum": "Cross-border licensing and NewCo-focused summit in Shanghai; organizers list “top China assets available for licensing or NewCos” among its themes.",
    "url": "https://conferences.biocentury.com/china-healthcare-summit-2026/schedule",
    "verified": true
+  },
+  {
+   "id": "pra-2026",
+   "logo": "/img/conf/pra-2026.png",
+   "name": "4th Pandemic Research Alliance (PRA) International Symposium 2026",
+   "dates": "2026-11-04 to 2026-11-06",
+   "city": "Beijing, China",
+   "venue": "Mong Man Wai Concert Hall, Tsinghua University",
+   "organizer": "Tsinghua Medicine, Tsinghua University",
+   "kind": "Scientific",
+   "region": "Asia-Pacific",
+   "sum": "Theme: “Insights into Infection and Immunity for Building a Great Wall against Pandemics.” English-language symposium (about 400 attendees expected) organized by Tsinghua’s School of Basic Medical Sciences, Institute for Immunology, Center for Infection Biology and Institute of Regulatory Science for Medical Products; sessions on pandemic preparedness and response, novel strategies for endemic and pandemic pathogens, and the 30th anniversary of HAART.",
+   "url": "https://pra2026.sciconf.cn/cn/web/index/39516",
+   "verified": true,
+   "logo_src": "self-drawn InLight emblem in the blue conference spec (no official mark copied)"
   },
   {
    "id": "sitc-2026",
