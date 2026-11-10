@@ -67,7 +67,10 @@ main.report-site{max-width:1040px;padding:24px 14px;margin:0 auto;display:grid;g
 .check label{font-size:11px;font-weight:400;line-height:1.4;margin:0}
 #wpform button{width:100%;margin-top:8px;padding:8px;background:var(--blue);color:white;border:0;border-radius:5px;font-size:13px;font-weight:700;cursor:pointer}
 #wpform button:disabled{opacity:.6;cursor:not-allowed}
-.delivery-pending{color:#71551b;background:#fff4db;padding:8px;border-radius:4px;font-size:11px}
+.form-status{padding:8px;border-radius:4px;font-size:11px;line-height:1.5}
+.form-status.success{color:#1a5c3a;background:#d4edda}
+.form-status.error{color:#8b2c2c;background:#f8d7da}
+.form-status.pending{color:#71551b;background:#fff4db}
 .report-ad{border-top:3px solid var(--coral)}
 .report-ad small{font-size:10px;color:var(--muted)}
 .report-ad p{font-size:11px}
@@ -130,27 +133,21 @@ summary{cursor:pointer;color:var(--blue)}
 <p>Appendices A–F: transaction records, agreement coding, milestone evidence and sources.</p>
 </nav>
 
-<form id="wpform" data-release-file="InLight_China_Outlicensing_NewCo_2026_en.pdf">
+<form id="wpform">
 <h3>Request the complete white paper</h3>
-<p>The complete English PDF (42 pages, 14 chapters and 6 appendices) will be emailed to the address you provide.</p>
+<p>The complete English PDF (42 pages, 14 chapters and 6 appendices) will be emailed automatically. Your download link is valid for 30 days.</p>
 <label for="wp-name">Name *</label>
-<input id="wp-name" name="name" required autocomplete="name">
+<input id="wp-name" name="name" required autocomplete="name" maxlength="120">
 <label for="wp-email">Email *</label>
-<input id="wp-email" name="email" type="email" required autocomplete="email">
+<input id="wp-email" name="email" type="email" required autocomplete="email" maxlength="254">
 <label for="wp-org">Organization *</label>
-<input id="wp-org" name="organization" required autocomplete="organization">
+<input id="wp-org" name="organization" required autocomplete="organization" maxlength="200">
 <label for="wp-interests">Areas of interest (optional)</label>
-<textarea id="wp-interests" name="interests"></textarea>
-<label for="wp-lang">Report language *</label>
-<select id="wp-lang" name="language">
-<option value="en">English</option>
-<option value="zh">中文</option>
-</select>
-<p class="delivery-pending" id="delivery-state">Form shown for review. English email delivery is pending activation; no information is submitted.</p>
+<textarea id="wp-interests" name="interests" maxlength="2000"></textarea>
 <div class="check"><input type="checkbox" id="wp-consent" name="consent" required><label for="wp-consent">I consent to InLight processing this information to deliver the report. We do not sell or share it with third parties; you may unsubscribe at any time.</label></div>
 <div class="check"><input type="checkbox" id="wp-subscribe" name="subscribe"><label for="wp-subscribe">Subscribe to report updates (optional)</label></div>
-<button type="button" disabled aria-describedby="delivery-state">Request the English PDF</button>
-<p id="form-status" hidden></p>
+<button type="submit" id="wp-submit">Request the English PDF</button>
+<p id="form-status" class="form-status" hidden></p>
 </form>
 
 <section class="report-box report-ad">
@@ -234,7 +231,7 @@ summary{cursor:pointer;color:var(--blue)}
 <p>Evaluate upfronts first, near-term development milestones second, and sales milestones and headlines last. Compare like development stages and territories; retained Greater China rights, regional licences and global licences are not interchangeable.</p>
 <p>The practical question is not simply whether a headline is large enough. Ask which development events trigger near-term payments, how much depends on eventual sales, and what termination notice and cost-sharing provisions protect the licensor. Those contract details determine how much of an attractive announcement can ultimately be realised.</p>
 <p><strong>Next: Part 2 examines why a nominal $1bn licence can have a risk-adjusted value of approximately $80m.</strong></p>
-<p><a href="#wpform">Request the complete English report</a>: 42 pages, 14 chapters and 6 appendices. The PDF will be emailed when delivery is activated.</p>
+<p><a href="#wpform">Request the complete English report</a>: 42 pages, 14 chapters and 6 appendices. The PDF will be emailed automatically.</p>
 <p><em>Original InLight research based on public disclosures; not investment advice. Reproduction or redistribution requires written permission.</em></p>
 
 <section class="report-refs">
@@ -367,7 +364,80 @@ summary{cursor:pointer;color:var(--blue)}
 </section>
 </main>
 
-<script>document.getElementById("wpform").addEventListener("submit",function(e){e.preventDefault();});</script>
+<script>
+(function(){
+  var form = document.getElementById('wpform');
+  var btn = document.getElementById('wp-submit');
+  var status = document.getElementById('form-status');
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    if (!document.getElementById('wp-consent').checked) {
+      showStatus('Please check the consent box to continue.', 'error');
+      return;
+    }
+    
+    var name = document.getElementById('wp-name').value.trim();
+    var email = document.getElementById('wp-email').value.trim();
+    var org = document.getElementById('wp-org').value.trim();
+    var interests = document.getElementById('wp-interests').value.trim();
+    
+    if (!name || !email || !org) {
+      showStatus('Please fill in all required fields.', 'error');
+      return;
+    }
+    if (name.length > 120 || email.length > 254 || org.length > 200 || interests.length > 2000) {
+      showStatus('Please check the fields and try again.', 'error');
+      return;
+    }
+    
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    showStatus('Submitting your request...', 'pending');
+    
+    var payload = {
+      name: name,
+      email: email,
+      organization: org,
+      language: 'en'
+    };
+    if (interests) payload.interests = interests;
+    
+    fetch('https://inlightbio.cn/api/whitepaper-request', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(res) {
+      if (res.status === 202) return res.json().then(function(d) { return { ok: true, data: d }; });
+      if (res.status === 429) return { ok: false, msg: 'Too many requests from this address. Please try again in an hour.' };
+      if (res.status === 400) return { ok: false, msg: 'Please check the fields and try again.' };
+      return { ok: false, msg: 'The service is temporarily unavailable. Please try again later or email contact@inlightbio.com.' };
+    })
+    .catch(function() {
+      return { ok: false, msg: 'The service is temporarily unavailable. Please try again later or email contact@inlightbio.com.' };
+    })
+    .then(function(result) {
+      if (result.ok && result.data && result.data.ok) {
+        showStatus(result.data.message || 'Request recorded. Please check your email (including spam) for your download link.', 'success');
+        btn.textContent = 'Request sent';
+        btn.disabled = true;
+      } else {
+        showStatus(result.msg, 'error');
+        btn.disabled = false;
+        btn.textContent = 'Request the English PDF';
+      }
+    });
+  });
+  
+  function showStatus(msg, type) {
+    status.textContent = msg;
+    status.className = 'form-status ' + type;
+    status.hidden = false;
+  }
+})();
+</script>
 
 <footer><div class="footshell"><div class="foot-in">
   <div class="fbrand"><b>InLight Bio</b>
