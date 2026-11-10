@@ -3,5 +3,6 @@ Allow: /
 Disallow: /_build/
 Disallow: /_work/
 Disallow: /_shots/
+Disallow: /u/
 
 Sitemap: https://inlightbio.com/sitemap.xml
