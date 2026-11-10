@@ -9,6 +9,8 @@
 <meta name="author" content="InLight Bio">
 <link rel="canonical" href="https://inlightbio.com/newco/report/">
 <link rel="alternate" hreflang="en" href="https://inlightbio.com/newco/report/">
+<link rel="alternate" hreflang="zh-Hans" href="https://inlightbio.cn/pages/newco-report.html">
+<link rel="alternate" hreflang="x-default" href="https://inlightbio.com/newco/report/">
 <meta property="og:site_name" content="InLight Bio">
 <meta property="og:title" content="China Biopharma Out-Licensing Deal Survey (2026) — InLight Bio">
 <meta property="og:description" content="InLight original research: 237 China-origin out-licensing deals, 25 agreements coded clause by clause. Deal structures, payment realization and value benchmarks.">
@@ -17,6 +19,12 @@
 <meta property="og:image" content="https://inlightbio.com/img/og-image-en_v2_web.webp">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="China Biopharma Out-Licensing Deal Survey (2026) — InLight Bio">
+<meta name="twitter:description" content="InLight original research: 237 China-origin out-licensing deals, 25 agreements coded clause by clause. Deal structures, payment realization and value benchmarks.">
+<meta name="twitter:image" content="https://inlightbio.com/img/og-image-en_v2_web.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Report","headline":"China Biopharma Out-Licensing Deal Survey (2026)","name":"China Biopharma Out-Licensing Deal Survey (2026)","description":"InLight original research: 237 China-origin out-licensing deals, 25 agreements coded clause by clause. Deal structures, payment realization and value benchmarks.","url":"https://inlightbio.com/newco/report/","inLanguage":"en","datePublished":"2026-11-09","dateModified":"2026-11-10","image":"https://inlightbio.com/img/og-image-en_v2_web.webp","author":{"@type":"Organization","name":"InLight Editorial","url":"https://inlightbio.com/"},"publisher":{"@type":"Organization","name":"InLight","url":"https://inlightbio.com/","logo":{"@type":"ImageObject","url":"https://inlightbio.com/img/og-image-en_v2_web.webp"}}}
+</script>
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_v2.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_v2_16.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon_v2_web.webp">
@@ -368,6 +376,30 @@ summary{cursor:pointer;color:var(--blue)}
 
 <script>
 (function(){
+  function getAttribution() {
+    var keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+    var stored = {};
+    try { stored = JSON.parse(sessionStorage.getItem('inlight_attr') || '{}'); } catch (e) { stored = {}; }
+    var first = {};
+    var i, k, v;
+    for (i = 0; i < keys.length; i++) {
+      k = keys[i];
+      if (typeof stored[k] === 'string' && stored[k]) first[k] = stored[k];
+    }
+    if (typeof stored.referrer === 'string' && stored.referrer) first.referrer = stored.referrer;
+    var params = null;
+    try { params = new URLSearchParams(window.location.search); } catch (e) { params = null; }
+    if (params) {
+      for (i = 0; i < keys.length; i++) {
+        k = keys[i];
+        v = params.get(k);
+        if (v && !first[k]) first[k] = String(v).slice(0, 200);
+      }
+    }
+    if (!first.referrer && document.referrer) first.referrer = String(document.referrer).slice(0, 500);
+    try { sessionStorage.setItem('inlight_attr', JSON.stringify(first)); } catch (e) {}
+    return first;
+  }
   var form = document.getElementById('wpform');
   var btn = document.getElementById('wp-submit');
   var status = document.getElementById('form-status');
@@ -402,9 +434,16 @@ summary{cursor:pointer;color:var(--blue)}
       name: name,
       email: email,
       organization: org,
-      language: 'en'
+      language: 'en',
+      source: 'newco-report-page'
     };
     if (interests) payload.interests = interests;
+    var attr = getAttribution();
+    var attrKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','referrer'];
+    for (var i = 0; i < attrKeys.length; i++) {
+      var key = attrKeys[i];
+      if (attr[key]) payload[key] = attr[key];
+    }
     
     fetch('https://inlightbio.cn/api/whitepaper-request', {
       method: 'POST',
