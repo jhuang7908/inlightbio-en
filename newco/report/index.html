@@ -104,6 +104,14 @@ summary{cursor:pointer;color:var(--blue)}
 @media(max-width:599px){.report-article p,.report-article li{text-align:left!important;hyphens:auto;-webkit-hyphens:auto}.report-refs p{text-align:left!important}}
 @media(max-width:420px){.report-hero{padding:22px 18px}.report-hero h1{font-size:20px}.report-hero .episode{font-size:17px}.report-article h1{font-size:21px}.report-series>ol>li{grid-template-columns:50px 1fr;gap:8px}}
 </style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VC7RP7LCXQ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VC7RP7LCXQ');
+</script>
 </head>
 <body>
 <nav><div class="navshell"><div class="nav-in">
@@ -464,6 +472,16 @@ summary{cursor:pointer;color:var(--blue)}
         showStatus(result.data.message || 'Request recorded. Please check your email (including spam) for your download link.', 'success');
         btn.textContent = 'Request sent';
         btn.disabled = true;
+        // GA4 generate_lead event on successful submission
+        if (typeof gtag === 'function') {
+          var eventParams = {
+            form_id: 'wpform',
+            language: 'en'
+          };
+          if (attr.utm_source) eventParams.utm_source = attr.utm_source;
+          if (attr.utm_campaign) eventParams.utm_campaign = attr.utm_campaign;
+          gtag('event', 'generate_lead', eventParams);
+        }
       } else {
         showStatus(result.msg, 'error');
         btn.disabled = false;
