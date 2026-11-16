@@ -1,0 +1,87 @@
+name: IndexNow ping
+
+# Runs after GitHub Pages finishes deploying main, and tells IndexNow
+# (Bing and partners) which sitemap URLs are new or changed in that deploy.
+# If no sitemap URL changed, it exits without sending anything.
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      base:
+        description: "Compare from this commit (default: commit of the previous successful Pages deploy)"
+        required: false
+      all:
+        description: "Submit every sitemap URL"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Print the URL list only, send nothing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Find the commit range of this deploy
+        id: range
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+          WF_ID: ${{ github.event.workflow_run.workflow_id }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          INPUT_BASE: ${{ github.event.inputs.base }}
+        run: |
+          set -euo pipefail
+          base="${INPUT_BASE:-}"
+          if [ -z "$base" ] && [ -n "${WF_ID:-}" ]; then
+            # head commit of the previous successful Pages deploy
+            base=$(gh api "repos/$REPO/actions/workflows/$WF_ID/runs?status=success&branch=main&per_page=20" \
+              --jq "[.workflow_runs[] | select(.id != ${RUN_ID:-0}) | select(.head_sha != \"$HEAD_SHA\")][0].head_sha // empty" || true)
+          fi
+          if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+            base=$(git rev-parse "$HEAD_SHA~1" 2>/dev/null || echo "$HEAD_SHA")
+          fi
+          echo "range=$base..$HEAD_SHA" >> "$GITHUB_OUTPUT"
+          echo "Deploy range: $base..$HEAD_SHA"
+
+      - name: Wait until the key file is live
+        run: |
+          set -euo pipefail
+          key=$(ls | grep -E '^[0-9a-f]{32}\.txt$' | head -1)
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            if curl -fsS "https://inlightbio.com/$key" -o /dev/null; then echo "Key file is live"; exit 0; fi
+            sleep 30
+          done
+          echo "Key file not reachable yet; IndexNow would reject the request." >&2
+          exit 1
+
+      - name: Ping IndexNow
+        env:
+          RANGE: ${{ steps.range.outputs.range }}
+          ALL: ${{ github.event.inputs.all }}
+          DRY: ${{ github.event.inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          args=(--host inlightbio.com)
+          if [ "${ALL:-false}" = "true" ]; then args+=(--all); else args+=(--git-range "$RANGE"); fi
+          if [ "${DRY:-false}" = "true" ]; then args+=(--dry-run); fi
+          python3 .github/scripts/indexnow_ping.py "${args[@]}"
