@@ -26,7 +26,7 @@ document.addEventListener('click',e=>{
   p.innerHTML=`<div class="panel-tags">${x.kinds.map(k=>`<span class="kind">${esc(KINDS[k]||k)}</span>`).join('')}</div>
     ${x.ms?`<p class="msline">${esc(x.ms)}</p>`:''}<p>${esc(x.why)}</p>
     <p class="byline">By <a href="/about/#editorial" rel="author">InLight Editorial</a>${x.date?` · <time datetime="${esc(x.date)}">${MON[+x.date.slice(5,7)-1]} ${+x.date.slice(8,10)}, ${x.date.slice(0,4)}</time>`:''}</p>
-    <div class="foot"><a href="${esc(x.url)}" target="_blank" rel="noopener">Source: ${esc(x.src)}</a><button class="close-btn" type="button">Close ↑</button></div>`;
+    <div class="foot"><a href="${esc(x.url)}" target="_blank" rel="noopener">Source: ${esc(x.src)}</a>${x.page?`<a href="${esc(x.page)}">Read the briefing →</a>`:''}<button class="close-btn" type="button">Close ↑</button></div>`;
   cards[end].after(p); activePanel=p; activeCard=item; activeBtn=b; item.classList.add('expanded');
   b.setAttribute('aria-expanded','true'); b.textContent='Close ↑';
   window.scrollBy(0,item.getBoundingClientRect().top-top);
