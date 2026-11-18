@@ -29,18 +29,18 @@ set -uo pipefail
 # the same when run as a file or piped to bash.
 # Defaults are the production values. Env vars override them for a sandbox
 # dry run only; unset env on the server leaves this behavior unchanged.
-: "${CDN_BASE:=https://cdn.jsdelivr.net/gh/jhuang7908/inlightbio-en@b3ba08c993540bd839b3ecf0afbb1f1926de50b9}"
+CDN_BASE="${CDN_BASE:-https://cdn.jsdelivr.net/gh/jhuang7908/inlightbio-en@b3ba08c993540bd839b3ecf0afbb1f1926de50b9}"
 PRE_PAGE_SHA="f360b32c5921731102bf856dad5101109a1d093d935d683d39a6177f4ecf4ae5"
 AFTER_PAGE_SHA="ab4d220f634bdf543965e0b0f4b7831b08396fdb37fdfd0e8b9ca8aa76478a9d"
 PRE_WEEKLY_SHA="8f9d585d7da376c9dc783d2713a52227ee1c32ee8b2a77a2170e4a2f6837f5c2"
 AFTER_WEEKLY_SHA="bf8b4e8029d913dbe758f1264b2388b424350c7620d0d6da29bbffe592405e4c"
 ARTICLE_SHA="0335c6fb05eee1860362e23501948dc498613f8d05ef881be290034d4d353278"
-: "${VHOST_CONF:=/www/server/panel/vhost/nginx/inlightbio.cn.conf}"
-: "${EXPECTED_OLD_ROOT:=/www/wwwroot/inlightbio_cn_rel_20261118_4e713f9_news}"
-: "${NEW_REL_DIR:=/www/wwwroot/inlightbio_cn_rel_20261118_bb63ee0_covers_v3}"
-: "${LOG:=/var/log/inlightbio_cn_deploy_20261118_covers_v3.log}"
-: "${SITE_ORIGIN:=https://inlightbio.cn}"
-: "${ALLOW_NON_ROOT:=}"
+VHOST_CONF="${VHOST_CONF:-/www/server/panel/vhost/nginx/inlightbio.cn.conf}"
+EXPECTED_OLD_ROOT="${EXPECTED_OLD_ROOT:-/www/wwwroot/inlightbio_cn_rel_20261118_4e713f9_news}"
+NEW_REL_DIR="${NEW_REL_DIR:-/www/wwwroot/inlightbio_cn_rel_20261118_bb63ee0_covers_v3}"
+LOG="${LOG:-/var/log/inlightbio_cn_deploy_20261118_covers_v3.log}"
+SITE_ORIGIN="${SITE_ORIGIN:-https://inlightbio.cn}"
+ALLOW_NON_ROOT="${ALLOW_NON_ROOT:-}"
 # CURL_RESOLVE: if unset, use the production --resolve. Set to empty to disable.
 if [[ "${CURL_RESOLVE-__unset__}" == "__unset__" ]]; then
   CURL_RESOLVE="inlightbio.cn:443:127.0.0.1"
