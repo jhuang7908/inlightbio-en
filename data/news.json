@@ -1,6 +1,160 @@
 {
-  "built": "2026-11-15",
+  "built": "2026-11-18",
   "items": [
+    {
+      "slug": "pfizer-starna-invivo-cart",
+      "date": "2026-11-18",
+      "kinds": [
+        "lic"
+      ],
+      "china": true,
+      "t": "Pfizer in-licenses three preclinical in vivo CAR-T programs from Starna, with $330M upfront",
+      "m": "$330M upfront",
+      "ms": "$330 million upfront, plus up to $2.3 billion in milestones and royalties on net sales.",
+      "why": "On November 18, 2026, Pfizer obtained exclusive rights to develop, manufacture and commercialize three of Starna's preclinical in vivo CAR-T programs for autoimmune disease outside Greater China, together with rights to apply the technology in inflammation, immunology and oncology, and an option to expand the licensed territory into Greater China. Pfizer will lead clinical development outside Greater China and plans to manufacture initial clinical trial material at a U.S. site.",
+      "src": "Pfizer press release (2026-11-18)",
+      "url": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-enters-exclusive-licensing-agreement-starna",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "harbour-spruce-adrenyx-crhx101",
+      "date": "2026-11-17",
+      "kinds": [
+        "newco"
+      ],
+      "china": true,
+      "t": "Spruce splits Harbour-originated CRHX-101 into Adrenyx, targeting a first-half 2027 Nasdaq listing",
+      "m": "$5M initial convertible note",
+      "ms": "Adrenyx has received an initial $5 million convertible note with a potential principal cap of $10 million, and plans a private placement at spin-out in which that investor may provide up to $50 million, including conversion. The 2025 license has a potential total value of up to $395 million.",
+      "why": "On November 17, 2026, Harbour BioMed said partner Spruce Biosciences is separating the Harbour-originated antibody CRHX-101 (also known as SPR-202 / HBM9013) into a new wholly owned subsidiary, Adrenyx, which plans a Nasdaq listing in the first half of 2027. CRHX-101 is an anti-CRH monoclonal antibody in development for classic congenital adrenal hyperplasia. Near-term work includes IND-enabling studies and an FDA IND filing. Harbour expects to hold equity in both Spruce and Adrenyx after a pro rata distribution of Adrenyx shares to Spruce shareholders. The asset was licensed by Harbour incubator HBMAT to Spruce in 2025 for territories outside Greater China.",
+      "src": "Harbour BioMed press release via PR Newswire (2026-11-17)",
+      "url": "https://www.prnewswire.com/news-releases/harbour-biomeds-partner-spruce-biosciences-separates-crhx-101-program-into-adrenyx-biosciences-advancing-development-of-harbour-biomed-originated-antibody-through-a-standalone-company-302942976.html",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "marrow-therapeutics-173m-launch",
+      "date": "2026-11-17",
+      "kinds": [
+        "inv"
+      ],
+      "china": false,
+      "t": "Marrow Therapeutics launches with $173M in Series A and B financing",
+      "m": "$173M",
+      "ms": "A $53 million Series A was co-led by Scion Life Sciences and venBio; a $120 million Series B was led by OrbiMed, with RTW, Surveyor, KKR and others participating.",
+      "why": "On November 17, 2026, Watertown-based Marrow Therapeutics launched with a transferrin-receptor (TfR1)–directed antibody-conjugate platform aimed at the bone marrow. Its lead candidate, MAR-101, is in IND-enabling preparation and is designed to lower BCL11a and reactivate fetal hemoglobin for sickle cell disease and beta-thalassemia.",
+      "src": "Marrow Therapeutics press release (2026-11-17)",
+      "url": "https://www.marrowtx.com/news/marrow-therapeutics-launches-with-173-million-to-develop-genetic-medicines-for-bone-marrow-disorders/",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "fda-global-reliance-disclosure-program",
+      "date": "2026-11-17",
+      "kinds": [
+        "policy"
+      ],
+      "china": false,
+      "t": "FDA launches Global Reliance Disclosure Program to share redacted approval reviews with foreign regulators",
+      "m": "No deal value",
+      "ms": "The program began on October 30 with a temporary PEPFAR-related approval of lenacapavir and is currently limited in scope. FDA intends to expand it in January 2027 to all new-molecular-entity NDAs and 351(a) biologics license applications.",
+      "why": "On November 17, 2026, the U.S. Food and Drug Administration announced the Global Reliance Disclosure Program (GRDP), which lets applicants, after approval, request minimally redacted FDA review materials for submission to foreign regulators, so those agencies can take FDA's review into account and reduce duplicative evaluation. No deal value was disclosed.",
+      "src": "U.S. FDA press announcement (2026-11-17)",
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "jnj-ollin-acquisition",
+      "date": "2026-11-16",
+      "kinds": [
+        "acq"
+      ],
+      "china": true,
+      "t": "Johnson & Johnson to acquire Ollin Biosciences; lead asset is Innovent-originated IBI324",
+      "m": "$2.2B upfront",
+      "ms": "$2.2 billion upfront, plus up to about $1.125 billion in regulatory and sales milestones; closing is expected before the end of 2026, subject to approvals and customary conditions. Innovent's verified release does not disclose what share of proceeds it would receive as licensor.",
+      "why": "On November 16, 2026, Johnson & Johnson agreed to acquire Ollin Biosciences. Ollin's lead candidate, OLN324, is the VEGF/Ang2 bispecific antibody IBI324, which Innovent invented and licensed to Ollin; global Phase 3 enrollment is underway in diabetic macular edema and wet age-related macular degeneration. After closing, Blackstone Life Sciences will pay Johnson & Johnson a total of $750 million in installments to fully fund OLN324's Phase 3 development, in return for certain milestones and a single-digit royalty.",
+      "src": "Johnson & Johnson press release (2026-11-16); Innovent press release (2026-11-16)",
+      "url": "https://www.jnj.com/media-center/press-releases/johnson-johnson-to-acquire-ollin-biosciences-and-late-stage-bispecific-antibody-with-best-in-class-potential-in-ophthalmology",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "lilly-calytrix-acquisition",
+      "date": "2026-11-16",
+      "kinds": [
+        "acq"
+      ],
+      "china": false,
+      "t": "Lilly agrees to acquire Calytrix Bio for up to $1.5B in cash; upfront not separately disclosed",
+      "m": "Up to $1.5B cash",
+      "ms": "Calytrix shareholders may receive up to $1.5 billion in cash, including an upfront payment and later clinical and regulatory milestones. The upfront amount was not separately disclosed.",
+      "why": "On November 16, 2026, privately held Calytrix Bio announced an agreement to be acquired by Eli Lilly. Its lead program is a biparatopic antibody directed at mutant calreticulin (mCALR)–driven essential thrombocythemia and myelofibrosis, and is still preclinical.",
+      "src": "Calytrix Bio press release via PR Newswire (2026-11-16)",
+      "url": "https://www.prnewswire.com/news-releases/calytrix-bio-enters-an-agreement-to-be-acquired-by-lilly-to-advance-outcomes-for-patients-living-with-essential-thrombocythemia-and-myelofibrosis-302940325.html",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "seawolf-100m-sanofi-collaboration",
+      "date": "2026-11-16",
+      "kinds": [
+        "inv",
+        "lic"
+      ],
+      "china": false,
+      "t": "Seawolf Therapeutics debuts with $100M in financing and a Sanofi collaboration",
+      "m": "$100M financing",
+      "ms": "Combined seed and Series A financing of $100 million. A multi-target research collaboration and exclusive license with Sanofi, covering bleeding disorders and other undisclosed indications, includes up to $1.2 billion in milestones plus tiered royalties; the upfront was not disclosed.",
+      "why": "On November 16, 2026, San Diego-based Seawolf Therapeutics launched. Investors include Versant, MPM BioImpact, Novartis Venture Fund, Lilly and CRISPR Therapeutics. Its platform is TRIDENT, a redosable LNP DNA delivery system.",
+      "src": "Seawolf Therapeutics press release (2026-11-16)",
+      "url": "https://seawolftx.com/seawolf-therapeutics-debuts-with-100-million-to-advance-dna-based-therapeutics/",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "sinotau-hk-ipo",
+      "date": "2026-11-16",
+      "kinds": [
+        "inv"
+      ],
+      "china": true,
+      "t": "Sinotau-B (09941.HK) opens Hong Kong IPO; trading expected November 24",
+      "m": "About HK$341M–$446M",
+      "ms": "The company plans a global offering of 6.561 million H shares at HK$52.0–68.0, for total proceeds of about HK$341.17 million to HK$446.15 million, excluding any greenshoe. The offer runs November 16–19, with trading expected to start at 9:00 a.m. on November 24.",
+      "why": "Beijing Sinotau is a radiopharmaceutical company. Its core products include XTR008, a late-stage 177Lu-labeled SSTR radioligand, and XTR004, a myocardial perfusion imaging agent already in Phase 3.",
+      "src": "Cailian Press report (2026-11-16)",
+      "url": "https://www.cls.cn/detail/2534931",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "phrontline-series-a-40m",
+      "date": "2026-11-16",
+      "kinds": [
+        "inv"
+      ],
+      "china": true,
+      "t": "Phrontline Biopharma raises about $40M in a Series A",
+      "m": "About $40M",
+      "ms": "The round was jointly led by YuanBio Venture Capital and Decheng Capital. The company says this follows a $60 million Pre-A+ in November 2025, bringing the two rounds to nearly $100 million in a year.",
+      "why": "Proceeds will support clinical work and INDs for bispecific and dual-payload ADC programs, including EGFR×B7-H3 ADC TJ101, which reported Phase 1a data at ESMO 2026, and FRα×CDH6 dual-payload ADC TJ102, which the company describes as the first of its kind to enter the clinic.",
+      "src": "Phrontline Biopharma press release (2026-11-16)",
+      "url": "https://www.phrontlinebio.com/cn-news/148.html",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
     {
       "slug": "ivonescimab-fda-crl",
       "d": "2026-11",
@@ -19,6 +173,57 @@
       "v2": true,
       "date": "2026-11-15",
       "author": "InLight Editorial"
+    },
+    {
+      "slug": "nhsa-2026-nrddl-commercial-catalog",
+      "date": "2026-11-14",
+      "kinds": [
+        "policy"
+      ],
+      "china": true,
+      "t": "China releases the 2026 NRDL and commercial innovative-drug list, effective January 1, 2027",
+      "m": "No deal value",
+      "ms": "The basic medical-insurance list adds 107 drugs, including 51 Class 1 innovative drugs, and removes 34. The commercial innovative-drug list adds 12 products, bringing the total to 28; two 2025 commercial-list products move into the basic list.",
+      "why": "The notice is dated November 13, 2026, and was posted on the National Healthcare Security Administration website on November 14. A State Council digest said that lymphoma CAR-T and non-factor hemophilia therapies that previously cost more than RMB 1 million have been added to the basic list. Products on the commercial innovative-drug list are not paid from the basic pooling fund; placement in hospitals is, in principle, to follow the rules used for negotiated drugs.",
+      "src": "National Healthcare Security Administration notice (2026-11-14); gov.cn digest (2026-11-16)",
+      "url": "https://www.nhsa.gov.cn/art/2026/11/14/art_53_23387.html",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "remegen-vor-rc298-license",
+      "date": "2026-11-13",
+      "kinds": [
+        "lic"
+      ],
+      "china": true,
+      "t": "RemeGen amends its Vor Bio license to add RC298, with about $56M in upfront value",
+      "m": "About $56M upfront",
+      "ms": "RemeGen will receive about $56 million in upfront value ($10 million cash plus warrants to buy 2.3 million Vor Bio shares, valued at about $46 million on the November 11 close, with an exercise price of $0.0001 a share) and up to $300 million in development milestones, including $20 million tied to early clinical development and tech transfer.",
+      "why": "The agreement was signed on November 12 and announced on November 13. Vor Bio receives exclusive rights to develop and commercialize the long-acting BAFF/APRIL inhibitor RC298 outside Greater China; RemeGen keeps Greater China rights and will continue to lead preclinical and Phase 1 work in China. Sales milestones and royalties follow the original telitacicept license, calculated on aggregate net sales of all licensed products. RC298 is still preclinical and being prepared for an IND.",
+      "src": "RemeGen company announcement, via Shanghai Securities News / Sina Finance (2026-11-13)",
+      "url": "https://finance.sina.com.cn/roll/2026-11-13/doc-iniypkst3688029.shtml",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "windward-bio-nasdaq-ipo",
+      "date": "2026-11-13",
+      "kinds": [
+        "inv"
+      ],
+      "china": true,
+      "t": "Windward Bio lists on Nasdaq (WWB); IPO and concurrent Sanofi placement expected to raise $225M",
+      "m": "About $225M expected",
+      "ms": "The company priced 10,294,117 shares at $17.00 each and placed $50 million privately with Sanofi. It said the IPO and concurrent private placement are expected to raise $225 million in total, excluding any underwriter option.",
+      "why": "The offering was priced on November 12, with trading beginning November 13. Basel-based Windward's lead program, WIN378, a long-acting anti-TSLP antibody, originated in a Harbour BioMed–Kelun-Biotech collaboration; WIN027 originated at Yumab. Both licenses cover territories outside Greater China and certain other Asian markets. A November 16 release from investor Pivotal bioVenture Partners China said the shares rose 68% on the first day, implying a market value of about $1.69 billion.",
+      "src": "Windward Bio pricing announcement, GlobeNewswire (2026-11-12); Pivotal bioVenture Partners China press release (2026-11-16)",
+      "url": "https://www.globenewswire.com/news-release/2026/11/12/3402338/0/en/windward-bio-announces-pricing-of-initial-public-offering.html",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
     },
     {
       "slug": "wuxi-apptec-1260h-delisting",
@@ -55,6 +260,40 @@
       "v2": true,
       "date": "2026-11-10",
       "author": "InLight Editorial"
+    },
+    {
+      "slug": "brel-medicine-2026-equity-financing",
+      "date": "2026-11-09",
+      "kinds": [
+        "inv"
+      ],
+      "china": true,
+      "t": "BRL Medicine completes another equity round, saying 2026 rounds now exceed RMB 700M",
+      "m": "Two 2026 rounds, over RMB 700M combined",
+      "ms": "The company said that after this round, its two 2026 equity financings together exceed RMB 700 million. The release does not state this round's amount or name the investors.",
+      "why": "Proceeds will support clinical development, regulatory filings and industrialization of core products, including BRL-101, a gene-edited hematopoietic stem-cell product that has met the primary endpoint in a pivotal study in transfusion-dependent beta-thalassemia, and allogeneic CD19 CAR-T BRL-303 (Phase 1 in SLE ongoing; SSc has received implied CDE clearance).",
+      "src": "BRL Medicine press release (2026-11-09)",
+      "url": "https://www.brlmed.com/newsinfo/279.html",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
+    },
+    {
+      "slug": "alphana-series-a-50m-first-close",
+      "date": "2026-11-06",
+      "kinds": [
+        "inv"
+      ],
+      "china": true,
+      "t": "Alphana Therapeutics completes the first close of a $50M Series A",
+      "m": "$50M Series A (first close)",
+      "ms": "The $50 million round's first close was led by Guozhong Capital, with participation from the Hefei industrial-investment system and others.",
+      "why": "The report is dated November 6, 2026. Proceeds will support in vivo CAR-T, cancer-vaccine and other pipeline programs, as well as the TALENT platform.",
+      "src": "Pedaily report (2026-11-06)",
+      "url": "https://news.pedaily.cn/202611/571425.shtml",
+      "d": "2026-11",
+      "author": "InLight Editorial",
+      "v2": true
     },
     {
       "slug": "sinobiopharm-boehringer-option-license",
