@@ -931,38 +931,45 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://inlightbio.cn/#website", "name": "启光生物科技资讯", "alternateName": ["启光生物前沿", "InLight"], "url": "https://inlightbio.cn/", "description": "中文生物医药前沿资讯，每周整理九个领域的研究进展与经济动态。类器官、AI药物设计、肿瘤免疫、细胞治疗、疫苗、自身免疫病、小核酸与LNP、疾病模型、抗体工程。", "inLanguage": "zh-Hans", "publisher": {"@id": "https://inlightbio.cn/#organization"}}, {"@type": "Organization", "@id": "https://inlightbio.cn/#organization", "name": "启光生物前沿", "alternateName": ["InLight", "InLight Bio", "启光生物科技资讯"], "url": "https://inlightbio.cn/", "logo": {"@type": "ImageObject", "url": "https://inlightbio.cn/img/logo_v2_512.png", "width": 512, "height": 512}, "sameAs": ["https://inlightbio.com/", "https://www.linkedin.com/company/inlightbio"]}]}</script>
 <link rel="stylesheet" href="assets/talent/talent_fund.css?v=20261119d">
 <script>/* 图片加载：同站与 jsDelivr 镜像（固定提交，文件逐一 sha256 一致）互为备用。
-   中国大陆时区先走同站，其余地区先走 CDN；出错或 4 秒仍未加载完则换下一个来源；全部失败才退回原占位。 */
+   默认：中国大陆时区先走同站，其余地区先走 CDN；加载出错就换下一个来源，全部失败才退回原占位。
+   另外用一个 1KB 小图同时探测两边：若当前首选明显更慢（>1.5 秒且慢 3 倍以上），本次会话改用另一边，
+   并把尚未加载完的图片切过去。不按固定超时切换，免得访客自己网速慢时反复重下浪费流量。 */
 (function(w){
-  var PIN="e0226d143fb17fa3dff17351a0986bac8a7a1ca4", B=function(h){return "https://"+h+"/gh/jhuang7908/inlightbio-en@"+PIN+"/"};
+  var PIN="bed52835e24b24d47e547350512bb40122fc0b8e", B=function(h){return "https://"+h+"/gh/jhuang7908/inlightbio-en@"+PIN+"/"};
   var tz=""; try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||""}catch(e){}
   var CN=/^(Asia\/(Shanghai|Chongqing|Chungking|Harbin|Urumqi|Kashgar)|PRC)$/.test(tz);
-  var T=4000;
+  var C1=B(CN?"gcore.jsdelivr.net":"cdn.jsdelivr.net"), C2=B("fastly.jsdelivr.net");
+  var ORD=CN?"o":"c"; try{var s=sessionStorage.getItem("ixo"); if(s==="o"||s==="c") ORD=s;}catch(e){}
   function list(p){
     var q=String(p||"").split("?")[0];
-    if(!/^(img|content)\//.test(q)) return [p];
-    return CN ? [p, B("gcore.jsdelivr.net")+q, B("fastly.jsdelivr.net")+q]
-              : [B("cdn.jsdelivr.net")+q, p, B("fastly.jsdelivr.net")+q];
+    if(!/^(img|content|assets\/(sources|brand))\//.test(q)) return [p];
+    return ORD==="o" ? [p, C1+q, C2+q] : [C1+q, p, C2+q];
   }
-  function next(img, onTimeout){
+  function next(img){
     var L=list(img.getAttribute("data-ix")), i=(+img.getAttribute("data-ixi")||0)+1;
-    if(i<L.length){ img.setAttribute("data-ixi",i); img._ixs=0; img.src=L[i]; return; }
-    if(onTimeout) return;               /* 最后一个来源：继续等，不移除 */
+    if(i<L.length){ img.setAttribute("data-ixi",i); img.src=L[i]; return; }
     var fb=img.getAttribute("data-fb");
     if(fb){ img.removeAttribute("data-fb"); img.setAttribute("data-ix",fb); img.setAttribute("data-ixi",-1); next(img); return; }
     var p=img.parentNode; if(p&&p.classList) p.classList.add("ixf");
     img.remove();
   }
-  w.IX={u:function(p){return list(p)[0]}, e:function(img){next(img)}, list:list, cn:CN, pin:PIN};
-  setInterval(function(){
-    if(document.hidden) return;
-    var now=Date.now(), vh=w.innerHeight||800, im=document.querySelectorAll("img[data-ix]");
-    for(var k=0;k<im.length;k++){
-      var g=im[k]; if(g.complete){g._ixs=0; continue;}
-      var r=g.getBoundingClientRect(); if(!r.width||r.bottom<0||r.top>vh*1.5){g._ixs=0; continue;}
-      if(!g._ixs){g._ixs=now; continue;}
-      if((+g.getAttribute("data-ixi")||0)===0 && now-g._ixs>T) next(g,true);
-    }
-  },1000);
+  function use(o){
+    if(o===ORD) return; ORD=o; try{sessionStorage.setItem("ixo",o)}catch(e){}
+    var im=document.querySelectorAll("img[data-ix]");
+    for(var k=0;k<im.length;k++){ var g=im[k];
+      if(!g.complete && !(+g.getAttribute("data-ixi"))){ g.src=list(g.getAttribute("data-ix"))[0]; } }
+  }
+  w.IX={u:function(p){return list(p)[0]}, e:next, list:list, cn:CN, pin:PIN, ord:function(){return ORD}};
+  try{ if(!sessionStorage.getItem("ixo") && w.fetch){
+    var t0=Date.now(), r={}, q="img/favicon_v2_16.png", n="?ixp="+t0;
+    var go=function(k,u){ fetch(u,{cache:"no-store",mode:"cors"}).then(function(x){ if(x.ok) return x.blob().then(function(){ r[k]=Date.now()-t0; dec(); }); }).catch(function(){}); };
+    var dec=function(){
+      var a=r[ORD], b=r[ORD==="o"?"c":"o"];
+      if(b!=null && (a==null ? Date.now()-t0>1500 : (a>1500 && b*3<a))) use(ORD==="o"?"c":"o");
+    };
+    go("o",q+n); go("c",C1+q+n);
+    setTimeout(dec,1600); setTimeout(dec,4000);
+  } }catch(e){}
 })(window);</script>
 </head>
 <body>
@@ -998,19 +1005,19 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
 <aside class="rail rail-l" aria-label="左侧信息来源"><div class="railin">
 <div class="railhead">交易动态来源</div>
 <a class="srcard" href="https://www.biopharmadive.com" target="_blank" rel="noopener">
-  <div class="srcbanner"><img src="assets/sources/biopharmadive_banner.jpg" alt="BioPharma Dive"></div>
+  <div class="srcbanner"><img data-ixs="assets/sources/biopharmadive_banner.jpg" alt="BioPharma Dive"></div>
   <div class="srcbody"><b>BioPharma Dive</b><em>生物制药交易、监管和临床新闻</em></div>
 </a>
 <a class="srcard" href="https://www.biospace.com" target="_blank" rel="noopener">
-  <div class="srcbanner"><img src="assets/sources/biospace_banner_web.webp" alt="BioSpace"></div>
+  <div class="srcbanner"><img data-ixs="assets/sources/biospace_banner_web.webp" alt="BioSpace"></div>
   <div class="srcbody"><b>BioSpace</b><em>生命科学招聘与新闻平台</em></div>
 </a>
 <a class="srcard" href="https://www.fiercebiotech.com" target="_blank" rel="noopener">
-  <div class="srcbanner"><img src="assets/sources/fiercebiotech_banner_web.webp" alt="Fierce Biotech"></div>
+  <div class="srcbanner"><img data-ixs="assets/sources/fiercebiotech_banner_web.webp" alt="Fierce Biotech"></div>
   <div class="srcbody"><b>Fierce Biotech</b><em>生物技术研发、融资和监管</em></div>
 </a>
 <a class="srcard" href="https://www.fda.gov" target="_blank" rel="noopener">
-  <div class="srcbanner"><img decoding="async" loading="lazy" src="assets/sources/fda_logo.svg" alt="FDA"></div>
+  <div class="srcbanner"><img decoding="async" loading="lazy" data-ixs="assets/sources/fda_logo.svg" alt="FDA"></div>
   <div class="srcbody"><b>FDA</b><em>美国食品药品监督管理局</em></div>
 </a>
 <!-- 文字链 -->
@@ -1065,7 +1072,7 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
           <circle cx="792" cy="196" r="3"/><circle cx="1160" cy="352" r="4"/>
         </g>
       </svg>
-      <img decoding="async" loading="lazy" src="img/pal/hero_v6_web.webp?v=1" alt="" onerror="this.remove()">
+      <img decoding="async" loading="lazy" data-ixs="img/pal/hero_v6_web.webp?v=1" alt="" onerror="this.remove()">
     </div>
     <div class="hb-text">
       <span class="hb-kicker">中文 · 每周更新</span>
@@ -1204,11 +1211,11 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
     <div class="sechead"><h2>常用来源</h2></div>
     <div class="srcrow">
       <a class="srcard" href="https://www.biopharmadive.com" target="_blank" rel="noopener">
-        <div class="srcbanner"><img decoding="async" loading="lazy" src="assets/sources/biopharmadive_banner.jpg" alt="BioPharma Dive"></div>
+        <div class="srcbanner"><img decoding="async" loading="lazy" data-ixs="assets/sources/biopharmadive_banner.jpg" alt="BioPharma Dive"></div>
         <div class="srcbody"><b>BioPharma Dive</b><em>生物制药交易、监管和临床新闻</em></div>
       </a>
       <a class="srcard" href="https://www.fiercebiotech.com" target="_blank" rel="noopener">
-        <div class="srcbanner"><img decoding="async" loading="lazy" src="assets/sources/fiercebiotech_banner_web.webp" alt="Fierce Biotech"></div>
+        <div class="srcbanner"><img decoding="async" loading="lazy" data-ixs="assets/sources/fiercebiotech_banner_web.webp" alt="Fierce Biotech"></div>
         <div class="srcbody"><b>Fierce Biotech</b><em>生物技术研发、融资和监管动态</em></div>
       </a>
       <a class="srcard" href="https://endpts.com" target="_blank" rel="noopener">
@@ -1216,7 +1223,7 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
         <div class="srcbody"><b>Endpoints News</b><em>生物制药行业深度报道</em></div>
       </a>
       <a class="srcard" href="https://www.nature.com" target="_blank" rel="noopener">
-        <div class="srcbanner coverbanner"><img decoding="async" src="assets/sources/nature_cover_v658i8135_web.webp" alt="Nature 2026年10月8日期封面" loading="lazy"></div>
+        <div class="srcbanner coverbanner"><img decoding="async" data-ixs="assets/sources/nature_cover_v658i8135_web.webp" alt="Nature 2026年10月8日期封面" loading="lazy"></div>
         <div class="srcbody"><b>Nature</b><em>多学科科学期刊</em></div>
       </a>
     </div>
@@ -5323,7 +5330,7 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
   <section class="panel qrpanel">
     <h2>微信公众号</h2>
     <div class="wxqr wxqr-page">
-      <img decoding="async" src="img/wechat_oa_qr_430.jpg" alt="微信公众号「启光生物前沿」二维码" width="160" height="160" loading="lazy">
+      <img decoding="async" data-ixs="img/wechat_oa_qr_430.jpg" alt="微信公众号「启光生物前沿」二维码" width="160" height="160" loading="lazy">
       <div class="wxtxt">
         <p class="wxname">微信公众号：<b>启光生物前沿</b></p>
         <p class="wxcap"><span class="wxcap-d">微信扫码关注</span><span class="wxcap-m">在微信中打开本页可长按识别二维码</span></p>
@@ -5378,7 +5385,7 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
   <section class="panel coblock">
     <h2>出品方</h2>
     <div class="corow">
-      <img class="colockup" src="assets/brand/inlight_logo_v2_web.webp" alt="启光生物 InLight Bio" width="40" height="40" style="border-radius:22%">
+      <img class="colockup" data-ixs="assets/brand/inlight_logo_v2_web.webp" alt="启光生物 InLight Bio" width="40" height="40" style="border-radius:22%">
       <p>启光生物科技资讯由启光生物出品和维护。</p>
     </div>
   </section>
@@ -5398,7 +5405,7 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
 <div class="wrap view textpage" id="v-services" hidden>
   <header class="hero">
     <h1>服务与合作</h1>
-    <p style="display:flex;align-items:center;gap:8px"><img decoding="async" loading="lazy" src="assets/brand/inlight_logo_v2_web.webp" alt="" aria-hidden="true" width="26" height="26" style="display:block;height:24px;width:auto;flex:none;border-radius:22%"><span>启光生物的内容与建站服务，以及创新药项目合作与 BP 投递。</span></p>
+    <p style="display:flex;align-items:center;gap:8px"><img decoding="async" loading="lazy" data-ixs="assets/brand/inlight_logo_v2_web.webp" alt="" aria-hidden="true" width="26" height="26" style="display:block;height:24px;width:auto;flex:none;border-radius:22%"><span>启光生物的内容与建站服务，以及创新药项目合作与 BP 投递。</span></p>
   </header>
   <section class="panel">
     <h2>我们提供的服务</h2>
@@ -5498,24 +5505,24 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
 <aside class="rail rail-r" aria-label="右侧信息来源"><div class="railin">
 <section class="ackcard ack-rail" aria-label="关注我们与鸣谢">
 <div class="ackhead">关注我们</div>
-<div class="ackself"><img decoding="async" src="img/wechat_oa_qr_430.jpg" alt="微信公众号「启光生物前沿」二维码" width="120" height="120" loading="lazy"><b>启光生物前沿</b><span>微信扫码关注</span></div>
+<div class="ackself"><img decoding="async" data-ixs="img/wechat_oa_qr_430.jpg" alt="微信公众号「启光生物前沿」二维码" width="120" height="120" loading="lazy"><b>启光生物前沿</b><span>微信扫码关注</span></div>
 <div class="ackhead">鸣谢 · 友情合作伙伴</div>
 <div class="ackgrid">
-<div class="ackp"><img decoding="async" src="img/partner_wlms_qr_v1_430_web.webp" alt="微信服务号「未来模式生物」二维码" width="110" height="110" loading="lazy"><b>未来模式生物</b><span>感谢人源化小鼠模型解读</span></div>
+<div class="ackp"><img decoding="async" data-ixs="img/partner_wlms_qr_v1_430_web.webp" alt="微信服务号「未来模式生物」二维码" width="110" height="110" loading="lazy"><b>未来模式生物</b><span>感谢人源化小鼠模型解读</span></div>
 </div>
 <p class="acknote">友情互推 · 扫码关注</p>
 </section>
 <div class="railhead">学术期刊来源</div>
 <a class="srcard" href="https://www.nature.com" target="_blank" rel="noopener">
-  <div class="srcbanner coverbanner"><img decoding="async" src="assets/sources/nature_cover_v658i8135_web.webp" alt="Nature 2026年10月8日期封面" loading="lazy"></div>
+  <div class="srcbanner coverbanner"><img decoding="async" data-ixs="assets/sources/nature_cover_v658i8135_web.webp" alt="Nature 2026年10月8日期封面" loading="lazy"></div>
   <div class="srcbody"><b>Nature</b><em>Springer Nature多学科科学期刊</em></div>
 </a>
 <a class="srcard" href="https://www.nature.com/nm" target="_blank" rel="noopener">
-  <div class="srcbanner coverbanner"><img decoding="async" src="assets/sources/naturemedicine_cover_v32i9_web.webp" alt="Nature Medicine 2026年9月刊封面" loading="lazy"></div>
+  <div class="srcbanner coverbanner"><img decoding="async" data-ixs="assets/sources/naturemedicine_cover_v32i9_web.webp" alt="Nature Medicine 2026年9月刊封面" loading="lazy"></div>
   <div class="srcbody"><b>Nature Medicine</b><em>Nature旗下医学研究期刊</em></div>
 </a>
 <a class="srcard" href="https://www.biorxiv.org" target="_blank" rel="noopener">
-  <div class="srcbanner logobanner"><img decoding="async" loading="lazy" src="assets/sources/biorxiv_logo.png" alt="bioRxiv"></div>
+  <div class="srcbanner logobanner"><img decoding="async" loading="lazy" data-ixs="assets/sources/biorxiv_logo.png" alt="bioRxiv"></div>
   <div class="srcbody"><b>bioRxiv</b><em>CSHL生物学预印本服务器</em></div>
 </a>
 <!-- 文字链 -->
@@ -5530,10 +5537,10 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
 <!-- Mobile QR block (shown <1280px, hidden on desktop where ack-rail shows in sidebar) -->
 <section class="ackcard ack-m" aria-label="关注我们与鸣谢">
 <div class="ackhead">关注我们</div>
-<div class="ackself"><img decoding="async" src="img/wechat_oa_qr_430.jpg" alt="微信公众号「启光生物前沿」二维码" width="100" height="100" loading="lazy"><b>启光生物前沿</b><span>微信扫码关注</span></div>
+<div class="ackself"><img decoding="async" data-ixs="img/wechat_oa_qr_430.jpg" alt="微信公众号「启光生物前沿」二维码" width="100" height="100" loading="lazy"><b>启光生物前沿</b><span>微信扫码关注</span></div>
 <div class="ackhead">鸣谢 · 友情合作伙伴</div>
 <div class="ackgrid">
-<div class="ackp"><img decoding="async" src="img/partner_wlms_qr_v1_430_web.webp" alt="微信服务号「未来模式生物」二维码" width="100" height="100" loading="lazy"><b>未来模式生物</b><span>感谢人源化小鼠模型解读</span></div>
+<div class="ackp"><img decoding="async" data-ixs="img/partner_wlms_qr_v1_430_web.webp" alt="微信服务号「未来模式生物」二维码" width="100" height="100" loading="lazy"><b>未来模式生物</b><span>感谢人源化小鼠模型解读</span></div>
 </div>
 <p class="acknote">友情互推 · 扫码关注</p>
 </section>
@@ -5542,7 +5549,7 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
   <div class="footwide">
   <div class="foot-grid">
     <div class="fcol fbrand">
-      <p class="fco"><img decoding="async" loading="lazy" src="assets/brand/inlight_logo_v2_web.webp" alt="" aria-hidden="true" width="28" height="28"><b>启光生物科技资讯</b></p>
+      <p class="fco"><img decoding="async" loading="lazy" data-ixs="assets/brand/inlight_logo_v2_web.webp" alt="" aria-hidden="true" width="28" height="28"><b>启光生物科技资讯</b></p>
       <p>启光生物 出品。九个领域的前沿进展与经济动态，中文整理。</p>
       <p class="footmail">广告、赞助、纠错都写 <a href="mailto:contact@inlightbio.com">contact@inlightbio.com</a></p>
       <p class="footmail">英文站面向海外合作方：<a href="https://inlightbio.com" lang="en" hreflang="en" target="_blank" rel="noopener">inlightbio.com</a></p>
@@ -5554,6 +5561,7 @@ footer .icp{max-width:none;width:100%;margin-top:8px}
   </div>
 </footer>
 
+<script>(function(){var im=document.querySelectorAll("img[data-ixs]");for(var k=0;k<im.length;k++){var g=im[k],p=g.getAttribute("data-ixs");g.setAttribute("data-ix",p);g.removeAttribute("data-ixs");g.onerror=function(){IX.e(this)};g.src=IX.u(p);}})();</script>
 <script src="content/site_articles.js?v=b16c8caf8b"></script>
 <script src="content/weekly_deals.js?v=20261118b"></script>
 <script>
