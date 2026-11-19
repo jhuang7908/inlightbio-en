@@ -1,0 +1,5686 @@
+{
+ "meta": {
+  "section": "启光资方",
+  "as_of": "2026-11-18",
+  "count": 141,
+  "medical_ai_chip": "单列",
+  "medical_ai_investors_in_selection": 31,
+  "note": "活跃度依据启光数据库收录的融资事件计算，可能少计；递交窗口依据公开基金备案信息推断，仅供参考。",
+  "count_note": "出手次数仅统计启光数据库收录的融资事件，可能少计"
+ },
+ "investors": [
+  {
+   "code": "VC-001",
+   "descriptor": "某双币基金",
+   "type": "双币基金",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后",
+    "A轮",
+    "种子/天使",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后",
+    "A轮",
+    "种子/天使",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "医疗器械",
+    "核酸/RNA",
+    "神经",
+    "自免/炎症",
+    "CXO"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "医疗器械",
+    "核酸/RNA",
+    "其他",
+    "CXO",
+    "细胞与基因治疗"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 11,
+   "n24": 19,
+   "n24_by_sector": {
+    "创新药": 13,
+    "CXO": 2,
+    "医疗器械": 4
+   }
+  },
+  {
+   "code": "VC-002",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "小分子",
+    "ADC",
+    "双抗/多抗/TCE",
+    "核酸/RNA",
+    "抗体/蛋白",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "小分子",
+    "ADC",
+    "抗体/双抗",
+    "核酸/RNA",
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 11,
+   "n24": 14,
+   "n24_by_sector": {
+    "创新药": 13,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-003",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "directions": [
+    "AI药物发现",
+    "医疗器械",
+    "小分子",
+    "基因治疗/编辑",
+    "神经",
+    "抗体/蛋白"
+   ],
+   "direction_groups": [
+    "AI药物发现",
+    "医疗器械",
+    "小分子",
+    "细胞与基因治疗",
+    "其他",
+    "抗体/双抗",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 11,
+   "n24": 13,
+   "n24_by_sector": {
+    "创新药": 9,
+    "医疗器械": 4
+   }
+  },
+  {
+   "code": "VC-004",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "ADC",
+    "双抗/多抗/TCE",
+    "医疗器械",
+    "抗体/蛋白",
+    "AI药物发现",
+    "核酸/RNA"
+   ],
+   "direction_groups": [
+    "ADC",
+    "抗体/双抗",
+    "医疗器械",
+    "AI药物发现",
+    "核酸/RNA",
+    "其他",
+    "细胞与基因治疗",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "基金处于投资期后段，近一年仍有出手（推断）",
+   "n12": 10,
+   "n24": 15,
+   "n24_by_sector": {
+    "创新药": 10,
+    "CXO": 1,
+    "医疗器械": 4
+   }
+  },
+  {
+   "code": "VC-005",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使",
+    "B轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使",
+    "B轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "医疗器械",
+    "放射性药物",
+    "小分子",
+    "AI药物发现",
+    "ADC",
+    "双抗/多抗/TCE"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "其他",
+    "小分子",
+    "AI药物发现",
+    "ADC",
+    "抗体/双抗",
+    "细胞与基因治疗"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 8,
+   "n24": 11,
+   "n24_by_sector": {
+    "创新药": 8,
+    "医疗器械": 3
+   }
+  },
+  {
+   "code": "VC-006",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后",
+    "种子/天使",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后",
+    "种子/天使",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "细胞治疗",
+    "核酸/RNA",
+    "CXO",
+    "双抗/多抗/TCE",
+    "小分子"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "CXO",
+    "抗体/双抗",
+    "小分子",
+    "AI药物发现",
+    "其他"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 8,
+   "n24": 11,
+   "n24_by_sector": {
+    "创新药": 7,
+    "CXO": 1,
+    "医疗器械": 3
+   }
+  },
+  {
+   "code": "VC-007",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "种子/天使",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "种子/天使",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "自免/炎症",
+    "小分子",
+    "抗体/蛋白",
+    "多肽/GLP-1/代谢",
+    "AI药物发现",
+    "双抗/多抗/TCE"
+   ],
+   "direction_groups": [
+    "其他",
+    "小分子",
+    "抗体/双抗",
+    "多肽/代谢",
+    "AI药物发现",
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 8,
+   "n24": 9,
+   "n24_by_sector": {
+    "创新药": 8,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-008",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "医疗器械",
+    "小分子",
+    "神经",
+    "核酸/RNA",
+    "抗体/蛋白",
+    "多肽/GLP-1/代谢"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "小分子",
+    "其他",
+    "核酸/RNA",
+    "抗体/双抗",
+    "多肽/代谢",
+    "细胞与基因治疗",
+    "AI药物发现"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 7,
+   "n24": 13,
+   "n24_by_sector": {
+    "创新药": 10,
+    "医疗器械": 3
+   }
+  },
+  {
+   "code": "VC-009",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后",
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后",
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械",
+    "ADC",
+    "AI药物发现",
+    "双抗/多抗/TCE",
+    "CXO",
+    "细胞治疗"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "ADC",
+    "AI药物发现",
+    "抗体/双抗",
+    "CXO",
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "其他",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 7,
+   "n24": 10,
+   "n24_by_sector": {
+    "创新药": 6,
+    "CXO": 1,
+    "医疗器械": 2,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-010",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "AI药物发现",
+    "小分子",
+    "多肽/GLP-1/代谢",
+    "抗体/蛋白",
+    "自免/炎症",
+    "核酸/RNA"
+   ],
+   "direction_groups": [
+    "AI药物发现",
+    "小分子",
+    "多肽/代谢",
+    "抗体/双抗",
+    "其他",
+    "核酸/RNA",
+    "ADC"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 7,
+   "n24": 8,
+   "n24_by_sector": {
+    "创新药": 8
+   }
+  },
+  {
+   "code": "VC-011",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "核酸/RNA",
+    "疫苗",
+    "ADC",
+    "小分子",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "核酸/RNA",
+    "其他",
+    "ADC",
+    "小分子",
+    "医疗AI",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 6,
+   "n24": 9,
+   "n24_by_sector": {
+    "创新药": 4,
+    "CXO": 1,
+    "医疗器械": 4
+   }
+  },
+  {
+   "code": "VC-012",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后",
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后",
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "细胞治疗",
+    "小分子",
+    "医疗器械",
+    "合成生物",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "细胞与基因治疗",
+    "小分子",
+    "医疗器械",
+    "其他",
+    "核酸/RNA",
+    "AI药物发现",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 6,
+   "n24": 8,
+   "n24_by_sector": {
+    "创新药": 6,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-013",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "医疗器械",
+    "基因治疗/编辑",
+    "核酸/RNA",
+    "细胞治疗",
+    "神经",
+    "CXO"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "其他",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 6,
+   "n24": 8,
+   "n24_by_sector": {
+    "创新药": 6,
+    "CXO": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-014",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "A轮",
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "A轮",
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械",
+    "抗体/蛋白",
+    "小分子",
+    "自免/炎症",
+    "神经",
+    "放射性药物"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "抗体/双抗",
+    "小分子",
+    "其他",
+    "多肽/代谢",
+    "AI药物发现",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 6,
+   "n24": 8,
+   "n24_by_sector": {
+    "创新药": 5,
+    "医疗器械": 2,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-015",
+   "descriptor": "某双币基金",
+   "type": "双币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮",
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮",
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "细胞治疗",
+    "核酸/RNA",
+    "小分子",
+    "医疗器械",
+    "多肽/GLP-1/代谢",
+    "ADC"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "小分子",
+    "医疗器械",
+    "多肽/代谢",
+    "ADC",
+    "抗体/双抗",
+    "AI药物发现"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 6,
+   "n24": 8,
+   "n24_by_sector": {
+    "创新药": 6,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-016",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使",
+    "B轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使",
+    "B轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "AI药物发现",
+    "多肽/GLP-1/代谢",
+    "小分子",
+    "细胞治疗",
+    "医疗AI",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "AI药物发现",
+    "多肽/代谢",
+    "小分子",
+    "细胞与基因治疗",
+    "医疗AI",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 6,
+   "n24": 7,
+   "n24_by_sector": {
+    "创新药": 5,
+    "医疗器械": 1,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-017",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "B轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "核酸/RNA",
+    "医疗器械",
+    "基因治疗/编辑",
+    "小分子",
+    "神经"
+   ],
+   "direction_groups": [
+    "核酸/RNA",
+    "医疗器械",
+    "细胞与基因治疗",
+    "小分子",
+    "其他"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 6,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 4,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-018",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "CXO",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "CXO",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 5,
+   "n24": 7,
+   "n24_by_sector": {
+    "医疗器械": 7
+   }
+  },
+  {
+   "code": "VC-019",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "AI药物发现",
+    "多肽/GLP-1/代谢",
+    "基因治疗/编辑",
+    "ADC",
+    "核酸/RNA"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "AI药物发现",
+    "多肽/代谢",
+    "细胞与基因治疗",
+    "ADC",
+    "核酸/RNA"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 5,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 6
+   }
+  },
+  {
+   "code": "VC-020",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "B轮",
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "医疗器械",
+    "疫苗",
+    "小分子",
+    "放射性药物",
+    "核酸/RNA",
+    "AI药物发现"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "其他",
+    "小分子",
+    "核酸/RNA",
+    "AI药物发现",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "基金处于投资期后段，近一年仍有出手（推断）",
+   "n12": 5,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 4,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-021",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后",
+    "种子/天使",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后",
+    "种子/天使",
+    "B轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "医疗器械",
+    "核酸/RNA",
+    "ADC",
+    "自免/炎症",
+    "抗体/蛋白"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "医疗器械",
+    "核酸/RNA",
+    "ADC",
+    "其他",
+    "抗体/双抗",
+    "多肽/代谢"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 5,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 5,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-022",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "小分子",
+    "抗体/蛋白",
+    "神经",
+    "AI药物发现",
+    "医疗器械",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "小分子",
+    "抗体/双抗",
+    "其他",
+    "AI药物发现",
+    "医疗器械",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "基金处于投资期后段，近一年仍有出手（推断）",
+   "n12": 5,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 4,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-023",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "ADC",
+    "双抗/多抗/TCE",
+    "多肽/GLP-1/代谢",
+    "抗体/蛋白",
+    "小分子",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "ADC",
+    "抗体/双抗",
+    "多肽/代谢",
+    "小分子",
+    "其他"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 4,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 6
+   }
+  },
+  {
+   "code": "VC-024",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "核酸/RNA",
+    "多肽/GLP-1/代谢",
+    "AI药物发现",
+    "自免/炎症",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "多肽/代谢",
+    "AI药物发现",
+    "其他",
+    "医疗器械",
+    "CXO",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 4,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 2,
+    "CXO": 1,
+    "医疗器械": 1,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-025",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "CXO",
+    "抗体/蛋白",
+    "多肽/GLP-1/代谢",
+    "AI药物发现",
+    "医疗AI",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "CXO",
+    "抗体/双抗",
+    "多肽/代谢",
+    "AI药物发现",
+    "医疗AI",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 4,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 2,
+    "CXO": 1,
+    "医疗器械": 1,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-026",
+   "descriptor": "某双币基金",
+   "type": "双币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "基因治疗/编辑",
+    "抗体/蛋白",
+    "AI药物发现",
+    "放射性药物",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "抗体/双抗",
+    "AI药物发现",
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "基金处于投资期后段，近一年仍有出手（推断）",
+   "n12": 4,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 4,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-027",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械",
+    "ADC",
+    "AI药物发现",
+    "小分子"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "ADC",
+    "AI药物发现",
+    "小分子"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 4,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 3,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-028",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "双抗/多抗/TCE",
+    "AI药物发现",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "AI药物发现",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 4,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 3,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-029",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "小分子",
+    "多肽/GLP-1/代谢",
+    "医疗器械",
+    "抗体/蛋白",
+    "双抗/多抗/TCE",
+    "ADC"
+   ],
+   "direction_groups": [
+    "小分子",
+    "多肽/代谢",
+    "医疗器械",
+    "抗体/双抗",
+    "ADC"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 8,
+   "n24_by_sector": {
+    "创新药": 7,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-030",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "自免/炎症",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "其他",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 3,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-031",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "多肽/GLP-1/代谢",
+    "AI药物发现",
+    "小分子"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "多肽/代谢",
+    "AI药物发现",
+    "小分子"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 5
+   }
+  },
+  {
+   "code": "VC-032",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "小分子",
+    "放射性药物",
+    "ADC",
+    "自免/炎症",
+    "细胞治疗",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "小分子",
+    "其他",
+    "ADC",
+    "细胞与基因治疗",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 4,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-033",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "小分子",
+    "抗体/蛋白",
+    "自免/炎症",
+    "神经",
+    "ADC",
+    "核酸/RNA"
+   ],
+   "direction_groups": [
+    "小分子",
+    "抗体/双抗",
+    "其他",
+    "ADC",
+    "核酸/RNA",
+    "AI药物发现"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 5
+   }
+  },
+  {
+   "code": "VC-034",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后",
+    "种子/天使",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后",
+    "种子/天使",
+    "B轮"
+   ],
+   "directions": [
+    "小分子",
+    "核酸/RNA",
+    "自免/炎症",
+    "疫苗",
+    "抗体/蛋白"
+   ],
+   "direction_groups": [
+    "小分子",
+    "核酸/RNA",
+    "其他",
+    "抗体/双抗"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 4
+   }
+  },
+  {
+   "code": "VC-035",
+   "descriptor": "某双币基金",
+   "type": "双币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "小分子",
+    "多肽/GLP-1/代谢",
+    "自免/炎症",
+    "基因治疗/编辑",
+    "双抗/多抗/TCE"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "小分子",
+    "多肽/代谢",
+    "其他",
+    "细胞与基因治疗"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 4
+   }
+  },
+  {
+   "code": "VC-036",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "小分子",
+    "自免/炎症",
+    "神经"
+   ],
+   "direction_groups": [
+    "小分子",
+    "其他"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 4
+   }
+  },
+  {
+   "code": "VC-037",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "多肽/GLP-1/代谢",
+    "自免/炎症",
+    "核酸/RNA",
+    "小分子",
+    "神经",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "多肽/代谢",
+    "其他",
+    "核酸/RNA",
+    "小分子",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 3,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-038",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使"
+   ],
+   "directions": [
+    "核酸/RNA",
+    "基因治疗/编辑",
+    "细胞治疗"
+   ],
+   "direction_groups": [
+    "核酸/RNA",
+    "细胞与基因治疗"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 4
+   }
+  },
+  {
+   "code": "VC-039",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "核酸/RNA",
+    "细胞治疗",
+    "神经",
+    "AI药物发现",
+    "CXO"
+   ],
+   "direction_groups": [
+    "核酸/RNA",
+    "细胞与基因治疗",
+    "其他",
+    "AI药物发现",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "基金处于投资期后段，近一年仍有出手（推断）",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-040",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "ADC",
+    "多肽/GLP-1/代谢",
+    "AI药物发现",
+    "医疗器械",
+    "CXO"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "ADC",
+    "多肽/代谢",
+    "AI药物发现",
+    "医疗器械",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-041",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "ADC",
+    "双抗/多抗/TCE",
+    "基因治疗/编辑",
+    "多肽/GLP-1/代谢",
+    "AI药物发现",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "ADC",
+    "抗体/双抗",
+    "细胞与基因治疗",
+    "多肽/代谢",
+    "AI药物发现",
+    "其他"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-042",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "B轮",
+    "A轮"
+   ],
+   "stage_groups": [
+    "B轮",
+    "A轮"
+   ],
+   "directions": [
+    "小分子",
+    "AI药物发现",
+    "自免/炎症",
+    "核酸/RNA",
+    "抗体/蛋白",
+    "多肽/GLP-1/代谢"
+   ],
+   "direction_groups": [
+    "小分子",
+    "AI药物发现",
+    "其他",
+    "核酸/RNA",
+    "抗体/双抗",
+    "多肽/代谢"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-043",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "多肽/GLP-1/代谢",
+    "AI药物发现",
+    "自免/炎症",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "多肽/代谢",
+    "AI药物发现",
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-044",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "A轮"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "A轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "多肽/GLP-1/代谢",
+    "基因治疗/编辑",
+    "神经"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "多肽/代谢",
+    "其他"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "基金处于投资期后段，近一年仍有出手（推断）",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-045",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "B轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "核酸/RNA",
+    "细胞治疗",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "核酸/RNA",
+    "细胞与基因治疗",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-046",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "CXO",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "CXO",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 1,
+    "CXO": 1,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-047",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "B轮",
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "细胞治疗",
+    "医疗器械",
+    "CXO"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "医疗器械",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 2,
+    "CXO": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-048",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "小分子",
+    "细胞治疗",
+    "医疗AI",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "小分子",
+    "细胞与基因治疗",
+    "医疗AI",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "基金处于投资期后段，近一年仍有出手（推断）",
+   "n12": 2,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 1,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-049",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "基因治疗/编辑",
+    "神经",
+    "CXO",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "其他",
+    "CXO",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 1,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 2,
+    "CXO": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-050",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "CXO",
+    "细胞治疗",
+    "多肽/GLP-1/代谢",
+    "核酸/RNA",
+    "AI药物发现"
+   ],
+   "direction_groups": [
+    "CXO",
+    "细胞与基因治疗",
+    "多肽/代谢",
+    "核酸/RNA",
+    "AI药物发现"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "CXO": 2
+   }
+  },
+  {
+   "code": "VC-051",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "CXO",
+    "核酸/RNA",
+    "AI药物发现",
+    "小分子"
+   ],
+   "direction_groups": [
+    "CXO",
+    "核酸/RNA",
+    "AI药物发现",
+    "小分子"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "CXO": 3
+   }
+  },
+  {
+   "code": "VC-052",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "细胞治疗",
+    "多肽/GLP-1/代谢"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "细胞与基因治疗",
+    "多肽/代谢"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-053",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "ADC",
+    "自免/炎症",
+    "核酸/RNA",
+    "小分子",
+    "CXO"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "ADC",
+    "其他",
+    "核酸/RNA",
+    "小分子",
+    "CXO"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-054",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "多肽/GLP-1/代谢",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "多肽/代谢",
+    "其他"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-055",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使"
+   ],
+   "directions": [
+    "ADC",
+    "双抗/多抗/TCE",
+    "细胞治疗",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "ADC",
+    "抗体/双抗",
+    "细胞与基因治疗",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-056",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "医疗AI"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "医疗器械": 2,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-057",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "多肽/GLP-1/代谢",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "多肽/代谢",
+    "其他"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-058",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "小分子",
+    "多肽/GLP-1/代谢"
+   ],
+   "direction_groups": [
+    "小分子",
+    "多肽/代谢"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-059",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "ADC",
+    "双抗/多抗/TCE",
+    "小分子",
+    "自免/炎症",
+    "神经"
+   ],
+   "direction_groups": [
+    "ADC",
+    "抗体/双抗",
+    "小分子",
+    "其他"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-060",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "医疗器械",
+    "医疗AI",
+    "CXO"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "医疗器械",
+    "医疗AI",
+    "CXO"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "CXO": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-061",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "CXO",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "CXO",
+    "医疗AI"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "CXO": 1,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-062",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "自免/炎症",
+    "CXO"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "其他",
+    "CXO"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-063",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "核酸/RNA"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "核酸/RNA"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-064",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "基因治疗/编辑",
+    "核酸/RNA",
+    "CXO"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "CXO"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "CXO": 1
+   }
+  },
+  {
+   "code": "VC-065",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "疫苗",
+    "核酸/RNA",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "其他",
+    "核酸/RNA",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-066",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "基因治疗/编辑",
+    "神经",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-067",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械",
+    "ADC",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "ADC",
+    "其他"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-068",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "AI药物发现",
+    "CXO"
+   ],
+   "direction_groups": [
+    "AI药物发现",
+    "CXO"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "CXO": 1
+   }
+  },
+  {
+   "code": "VC-069",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "小分子",
+    "基因治疗/编辑",
+    "神经",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "小分子",
+    "细胞与基因治疗",
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-070",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-071",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "ADC",
+    "双抗/多抗/TCE",
+    "小分子"
+   ],
+   "direction_groups": [
+    "ADC",
+    "抗体/双抗",
+    "小分子"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "基金处于投资期后段，近一年仍有出手（推断）",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-072",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "ADC",
+    "双抗/多抗/TCE"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "ADC",
+    "抗体/双抗"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 1,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-073",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "stages_observed": [
+    "B轮",
+    "Pre-IPO/战略",
+    "A轮"
+   ],
+   "stage_groups": [
+    "B轮",
+    "Pre-IPO/战略",
+    "A轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "细胞治疗",
+    "小分子",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "细胞与基因治疗",
+    "小分子",
+    "医疗AI"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "基金处于投资期后段，近一年仍有出手（推断）",
+   "n12": 1,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-074",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "A轮"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "A轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "ADC",
+    "小分子",
+    "基因治疗/编辑",
+    "核酸/RNA"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "ADC",
+    "小分子",
+    "细胞与基因治疗",
+    "核酸/RNA"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 1,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-075",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "B轮"
+   ],
+   "stages_observed": [
+    "B轮",
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "B轮",
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械",
+    "核酸/RNA",
+    "CXO"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "核酸/RNA",
+    "CXO"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 0,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "CXO": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-076",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "C轮及以后"
+   ],
+   "directions": [],
+   "direction_groups": [],
+   "activity": "低",
+   "activity_note": "本库收录的近期交易较少",
+   "fund_term": "未公开",
+   "window": "开放",
+   "window_basis": "新基金仍在投资期（推断）",
+   "n12": 1,
+   "n24": 1,
+   "n24_by_sector": {
+    "创新药": 1
+   }
+  },
+  {
+   "code": "VC-077",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "B轮",
+    "A轮"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "B轮",
+    "A轮"
+   ],
+   "directions": [
+    "CXO",
+    "医疗器械",
+    "疫苗",
+    "小分子",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "CXO",
+    "医疗器械",
+    "其他",
+    "小分子",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 10,
+   "n24": 12,
+   "n24_by_sector": {
+    "创新药": 5,
+    "CXO": 3,
+    "医疗器械": 3,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-078",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "种子/天使",
+    "A轮",
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "种子/天使",
+    "A轮",
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "医疗器械",
+    "基因治疗/编辑",
+    "核酸/RNA",
+    "多肽/GLP-1/代谢",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "多肽/代谢",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 6,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 3,
+    "医疗器械": 2,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-079",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "种子/天使"
+   ],
+   "directions": [
+    "小分子",
+    "抗体/蛋白",
+    "AI药物发现",
+    "核酸/RNA",
+    "双抗/多抗/TCE",
+    "多肽/GLP-1/代谢"
+   ],
+   "direction_groups": [
+    "小分子",
+    "抗体/双抗",
+    "AI药物发现",
+    "核酸/RNA",
+    "多肽/代谢",
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 5,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 6
+   }
+  },
+  {
+   "code": "VC-080",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "C轮及以后",
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "C轮及以后",
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "AI药物发现",
+    "医疗器械",
+    "ADC",
+    "双抗/多抗/TCE",
+    "放射性药物",
+    "细胞治疗"
+   ],
+   "direction_groups": [
+    "AI药物发现",
+    "医疗器械",
+    "ADC",
+    "抗体/双抗",
+    "其他",
+    "细胞与基因治疗"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 4,
+   "n24": 9,
+   "n24_by_sector": {
+    "创新药": 7,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-081",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "细胞治疗",
+    "核酸/RNA",
+    "CXO",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "CXO",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 4,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 2,
+    "CXO": 1,
+    "医疗器械": 3
+   }
+  },
+  {
+   "code": "VC-082",
+   "descriptor": "某美元基金",
+   "type": "美元基金",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "directions": [
+    "AI药物发现",
+    "医疗器械",
+    "医疗AI",
+    "CXO"
+   ],
+   "direction_groups": [
+    "AI药物发现",
+    "医疗器械",
+    "医疗AI",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 4,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 3,
+    "CXO": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-083",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "神经",
+    "多肽/GLP-1/代谢",
+    "核酸/RNA",
+    "小分子",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "其他",
+    "多肽/代谢",
+    "核酸/RNA",
+    "小分子",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 4,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 4,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-084",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后",
+    "B轮"
+   ],
+   "directions": [
+    "CXO",
+    "细胞治疗",
+    "神经",
+    "AI药物发现",
+    "小分子",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "CXO",
+    "细胞与基因治疗",
+    "其他",
+    "AI药物发现",
+    "小分子",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 4,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 2,
+    "CXO": 2,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-085",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 4,
+   "n24": 4,
+   "n24_by_sector": {
+    "医疗器械": 4
+   }
+  },
+  {
+   "code": "VC-086",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "医疗器械",
+    "抗体/蛋白",
+    "自免/炎症",
+    "细胞治疗",
+    "CXO",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "抗体/双抗",
+    "其他",
+    "细胞与基因治疗",
+    "CXO",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 6,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 3,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-087",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "A轮",
+    "种子/天使",
+    "B轮"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "A轮",
+    "种子/天使",
+    "B轮"
+   ],
+   "directions": [
+    "神经",
+    "疫苗",
+    "细胞治疗",
+    "核酸/RNA",
+    "小分子",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "其他",
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "小分子",
+    "CXO",
+    "医疗AI",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 5,
+   "n24_by_sector": {
+    "创新药": 3,
+    "医疗器械": 1,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-088",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "细胞治疗",
+    "多肽/GLP-1/代谢",
+    "AI药物发现",
+    "CXO",
+    "核酸/RNA",
+    "小分子"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "多肽/代谢",
+    "AI药物发现",
+    "CXO",
+    "核酸/RNA",
+    "小分子"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 2,
+    "CXO": 2
+   }
+  },
+  {
+   "code": "VC-089",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "双抗/多抗/TCE"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "抗体/双抗"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-090",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "ADC",
+    "CXO",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "ADC",
+    "CXO",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "CXO": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-091",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "核酸/RNA",
+    "细胞治疗",
+    "疫苗",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "核酸/RNA",
+    "细胞与基因治疗",
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-092",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮",
+    "Pre-IPO/战略"
+   ],
+   "stages_observed": [
+    "Pre-IPO/战略",
+    "B轮"
+   ],
+   "stage_groups": [
+    "Pre-IPO/战略",
+    "B轮"
+   ],
+   "directions": [
+    "小分子"
+   ],
+   "direction_groups": [
+    "小分子"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-093",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "细胞治疗",
+    "AI药物发现",
+    "CXO"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "AI药物发现",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 2,
+    "CXO": 1
+   }
+  },
+  {
+   "code": "VC-094",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "A轮"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "A轮"
+   ],
+   "directions": [
+    "疫苗",
+    "核酸/RNA",
+    "细胞治疗",
+    "神经",
+    "AI药物发现"
+   ],
+   "direction_groups": [
+    "其他",
+    "核酸/RNA",
+    "细胞与基因治疗",
+    "AI药物发现"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-095",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "核酸/RNA",
+    "小分子",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "核酸/RNA",
+    "小分子",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-096",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "核酸/RNA",
+    "医疗器械",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "核酸/RNA",
+    "医疗器械",
+    "医疗AI"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 3,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-097",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后",
+    "B轮"
+   ],
+   "directions": [
+    "AI药物发现",
+    "医疗器械",
+    "抗体/蛋白",
+    "ADC",
+    "细胞治疗",
+    "神经"
+   ],
+   "direction_groups": [
+    "AI药物发现",
+    "医疗器械",
+    "抗体/双抗",
+    "ADC",
+    "细胞与基因治疗",
+    "其他",
+    "CXO"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 3,
+    "CXO": 1
+   }
+  },
+  {
+   "code": "VC-098",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "B轮"
+   ],
+   "stages_observed": [
+    "B轮",
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "B轮",
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "核酸/RNA",
+    "小分子",
+    "双抗/多抗/TCE",
+    "抗体/蛋白"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "核酸/RNA",
+    "小分子",
+    "抗体/双抗"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 4
+   }
+  },
+  {
+   "code": "VC-099",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "ADC",
+    "双抗/多抗/TCE",
+    "抗体/蛋白"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "ADC",
+    "抗体/双抗"
+   ],
+   "activity": "高",
+   "activity_note": "近12个月出手较多",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 4,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 3
+   }
+  },
+  {
+   "code": "VC-100",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "Pre-IPO/战略"
+   ],
+   "stages_observed": [
+    "A轮",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "A轮",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "多肽/GLP-1/代谢",
+    "基因治疗/编辑"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "多肽/代谢",
+    "细胞与基因治疗"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 3
+   }
+  },
+  {
+   "code": "VC-101",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "多肽/GLP-1/代谢",
+    "小分子",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "多肽/代谢",
+    "小分子",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-102",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "双抗/多抗/TCE",
+    "抗体/蛋白",
+    "AI药物发现",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "AI药物发现",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 2,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-103",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "医疗器械",
+    "核酸/RNA"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "核酸/RNA"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-104",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "B轮"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "医疗AI"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 3,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-105",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后",
+    "B轮"
+   ],
+   "directions": [
+    "神经",
+    "医疗器械",
+    "基因治疗/编辑",
+    "抗体/蛋白",
+    "ADC",
+    "双抗/多抗/TCE"
+   ],
+   "direction_groups": [
+    "其他",
+    "医疗器械",
+    "细胞与基因治疗",
+    "抗体/双抗",
+    "ADC"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-106",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "种子/天使",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "种子/天使",
+    "B轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "多肽/GLP-1/代谢",
+    "抗体/蛋白"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "多肽/代谢",
+    "抗体/双抗"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-107",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "神经",
+    "多肽/GLP-1/代谢",
+    "自免/炎症",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "其他",
+    "多肽/代谢",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-108",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "小分子"
+   ],
+   "direction_groups": [
+    "小分子"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-109",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "核酸/RNA",
+    "抗体/蛋白",
+    "多肽/GLP-1/代谢"
+   ],
+   "direction_groups": [
+    "核酸/RNA",
+    "抗体/双抗",
+    "多肽/代谢"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-110",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "AI药物发现",
+    "ADC",
+    "双抗/多抗/TCE",
+    "核酸/RNA"
+   ],
+   "direction_groups": [
+    "AI药物发现",
+    "ADC",
+    "抗体/双抗",
+    "核酸/RNA"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-111",
+   "descriptor": "某人民币基金",
+   "type": "人民币基金",
+   "stages_preferred": [
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "疫苗",
+    "细胞治疗",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "其他",
+    "细胞与基因治疗",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-112",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "A轮"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "A轮"
+   ],
+   "directions": [
+    "小分子",
+    "基因治疗/编辑",
+    "CXO"
+   ],
+   "direction_groups": [
+    "小分子",
+    "细胞与基因治疗",
+    "CXO"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-113",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮"
+   ],
+   "stages_observed": [
+    "B轮"
+   ],
+   "stage_groups": [
+    "B轮"
+   ],
+   "directions": [
+    "双抗/多抗/TCE",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "其他"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-114",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "小分子",
+    "自免/炎症",
+    "神经"
+   ],
+   "direction_groups": [
+    "小分子",
+    "其他"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-115",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "小分子",
+    "核酸/RNA",
+    "AI药物发现"
+   ],
+   "direction_groups": [
+    "小分子",
+    "核酸/RNA",
+    "AI药物发现"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-116",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [],
+   "stages_observed": [],
+   "stage_groups": [],
+   "directions": [
+    "小分子",
+    "自免/炎症",
+    "神经"
+   ],
+   "direction_groups": [
+    "小分子",
+    "其他"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-117",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "ADC",
+    "双抗/多抗/TCE",
+    "小分子"
+   ],
+   "direction_groups": [
+    "ADC",
+    "抗体/双抗",
+    "小分子"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-118",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "多肽/GLP-1/代谢",
+    "AI药物发现",
+    "自免/炎症"
+   ],
+   "direction_groups": [
+    "多肽/代谢",
+    "AI药物发现",
+    "其他"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-119",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "B轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "B轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "B轮"
+   ],
+   "directions": [
+    "双抗/多抗/TCE",
+    "抗体/蛋白",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-120",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "自免/炎症",
+    "小分子",
+    "神经",
+    "多肽/GLP-1/代谢",
+    "AI药物发现"
+   ],
+   "direction_groups": [
+    "其他",
+    "小分子",
+    "多肽/代谢",
+    "AI药物发现"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-121",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "神经",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-122",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "A轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "A轮"
+   ],
+   "directions": [
+    "AI药物发现",
+    "多肽/GLP-1/代谢"
+   ],
+   "direction_groups": [
+    "AI药物发现",
+    "多肽/代谢"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-123",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "细胞治疗",
+    "疫苗"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "其他"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-124",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "directions": [
+    "细胞治疗",
+    "神经",
+    "AI药物发现"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "其他",
+    "AI药物发现"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-125",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "B轮"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "B轮"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "B轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-126",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "细胞治疗",
+    "多肽/GLP-1/代谢"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "多肽/代谢"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-127",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使"
+   ],
+   "stages_observed": [
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "种子/天使"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "细胞治疗"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "细胞与基因治疗"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-128",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "抗体/蛋白",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "抗体/双抗",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-129",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮"
+   ],
+   "stages_observed": [
+    "B轮"
+   ],
+   "stage_groups": [
+    "B轮"
+   ],
+   "directions": [
+    "细胞治疗",
+    "核酸/RNA",
+    "AI药物发现"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "核酸/RNA",
+    "AI药物发现"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-130",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "小分子"
+   ],
+   "direction_groups": [
+    "小分子"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-131",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stages_observed": [
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "stage_groups": [
+    "C轮及以后",
+    "Pre-IPO/战略"
+   ],
+   "directions": [
+    "放射性药物",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-132",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "B轮",
+    "C轮及以后"
+   ],
+   "directions": [],
+   "direction_groups": [],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-133",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮"
+   ],
+   "stages_observed": [
+    "A轮"
+   ],
+   "stage_groups": [
+    "A轮"
+   ],
+   "directions": [
+    "基因治疗/编辑"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 2
+   }
+  },
+  {
+   "code": "VC-134",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "种子/天使",
+    "C轮及以后"
+   ],
+   "directions": [
+    "小分子",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "小分子",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-135",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "基因治疗/编辑",
+    "神经",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "细胞与基因治疗",
+    "其他",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "创新药": 1,
+    "医疗器械": 1
+   }
+  },
+  {
+   "code": "VC-136",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "B轮"
+   ],
+   "stages_observed": [
+    "A轮",
+    "B轮"
+   ],
+   "stage_groups": [
+    "A轮",
+    "B轮"
+   ],
+   "directions": [
+    "医疗器械",
+    "医疗AI"
+   ],
+   "direction_groups": [
+    "医疗器械",
+    "医疗AI"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-137",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使"
+   ],
+   "stages_observed": [
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-138",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使"
+   ],
+   "stages_observed": [
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-139",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stages_observed": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "stage_groups": [
+    "A轮",
+    "C轮及以后"
+   ],
+   "directions": [
+    "医疗AI",
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "医疗AI",
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "医疗器械": 1,
+    "医疗AI": 1
+   }
+  },
+  {
+   "code": "VC-140",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使"
+   ],
+   "stages_observed": [
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "医疗器械": 2
+   }
+  },
+  {
+   "code": "VC-141",
+   "descriptor": "某活跃机构",
+   "type": "未核实",
+   "stages_preferred": [
+    "种子/天使"
+   ],
+   "stages_observed": [
+    "种子/天使"
+   ],
+   "stage_groups": [
+    "种子/天使"
+   ],
+   "directions": [
+    "医疗器械"
+   ],
+   "direction_groups": [
+    "医疗器械"
+   ],
+   "activity": "中",
+   "activity_note": "近两年有持续出手",
+   "fund_term": "未公开",
+   "window": "未知",
+   "window_basis": "暂未查到可引用的近期基金公示",
+   "n12": 2,
+   "n24": 2,
+   "n24_by_sector": {
+    "医疗器械": 2
+   }
+  }
+ ]
+}
