@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -uo pipefail
 # InLightBio CN deploy homefix v2 - 2026-11-19 images: same-origin <-> pinned jsDelivr mirror fallback, 目标职位 grid, full-width notes
-# (therasik-inlight PR #126, commit 98c5cc7). Web-only: no API / systemd / nginx-location change.
+# (therasik-inlight PR #126, commit 1bb4914). Web-only: no API / systemd / nginx-location change.
 #  * stages a FRESH release root (aborts if it already exists; never reuses or overwrites a root);
 #  * copies the current live root (…_9f63548_fund) and overlays 3 changed files, each sha256-verified
 #    (and each replaced file must first match its known live sha);
@@ -9,16 +9,16 @@ set -uo pipefail
 #  * backs up the nginx vhost, switches `root`, `nginx -t`, reload, verifies homepage + asset shas;
 #  * on any failure after the switch, restores the vhost backup and reloads.
 # Deletes nothing. Old roots, backups and caches are kept. Env vars override defaults for a sandbox dry run only.
-ASSET_PIN="${ASSET_PIN:-886524162a3831cfe976ca4be18aa8dc2abfb962}"
+ASSET_PIN="${ASSET_PIN:-53d3dc9bd7bcbd58f8b5ec725c804166734c8dfa}"
 MIRRORS="${MIRRORS:-cdn.jsdelivr.net fastly.jsdelivr.net gcore.jsdelivr.net testingcf.jsdelivr.net quantil.jsdelivr.net}"
 URL_BASE_FMT="${URL_BASE_FMT:-https://%s/gh/jhuang7908/inlightbio-en@%s}"
 CACHE_DIR="${CACHE_DIR:-/root/inlight_dl_cache_20261119_homefix_v2}"
 LIVE_PAGE_SHA="6a4ad61280c6145cbee5321080524a50d4e4673b8e34280212c8552715508d7e"
-NEW_PAGE_SHA="1259874fc1ffa1d3b03765d4aa3275c783357570f7ca6eb194d8ca728c529b5f"
+NEW_PAGE_SHA="0f9513f9cfdd356faa20227fb7550d23c145a9f236fc5adfa42519882eb9467c"
 JOBS_SHA="1f7e1158d44299cf58f85ee57d3763fafd7da4a307bc43ee7c3a97af4020249b"   # 启光英才 jobs: must stay unchanged
 VHOST_CONF="${VHOST_CONF:-/www/server/panel/vhost/nginx/inlightbio.cn.conf}"
 EXPECTED_OLD_ROOT="${EXPECTED_OLD_ROOT:-/www/wwwroot/inlightbio_cn_rel_20261119_9f63548_fund}"
-NEW_REL_DIR="${NEW_REL_DIR:-/www/wwwroot/inlightbio_cn_rel_20261119_98c5cc7_homefix_v2}"
+NEW_REL_DIR="${NEW_REL_DIR:-/www/wwwroot/inlightbio_cn_rel_20261119_1bb4914_homefix_v2}"
 BACKUP_BASE="${BACKUP_BASE:-/root/inlight_backups_20261119_homefix_v2}"
 LOG="${LOG:-/var/log/inlightbio_cn_deploy_20261119_homefix_v2.log}"
 SITE_ORIGIN="${SITE_ORIGIN:-https://inlightbio.cn}"
@@ -27,7 +27,7 @@ if [[ "${CURL_RESOLVE-__unset__}" == "__unset__" ]]; then CURL_RESOLVE="inlightb
 curl_resolve=(); [[ -n "$CURL_RESOLVE" ]] && curl_resolve=(--resolve "$CURL_RESOLVE")
 # path  new_sha  live_sha(expected in the 9f63548_fund root)
 OVERLAY_FILES="
-  index.html 1259874fc1ffa1d3b03765d4aa3275c783357570f7ca6eb194d8ca728c529b5f 6a4ad61280c6145cbee5321080524a50d4e4673b8e34280212c8552715508d7e
+  index.html 0f9513f9cfdd356faa20227fb7550d23c145a9f236fc5adfa42519882eb9467c 6a4ad61280c6145cbee5321080524a50d4e4673b8e34280212c8552715508d7e
   assets/talent/talent_fund.css 2b50de1a95b014c360b7aa549ae591e353c0a295ab5f43df29f41e67b8676e81 3a3aa8eac31aa7817b7c3e11a9f9b809453f1a54fe692fb78a5e8bb0abb45fdc
   assets/talent/talent_fund.js 7cfa272ea944b7af392d28448a52cc233fd5e8a806578e85e507ccc4326fe6c5 df784814d4cea9618ea7588f6ec9530a90bd49457fc56712a2146526595e396a
 "
@@ -97,7 +97,7 @@ done < <(ov)
 D=$(diff -rq "$CURRENT_ROOT" "$NEW_REL_DIR" 2>&1 | grep -vE "^Files $CURRENT_ROOT/(index\.html|assets/talent/talent_fund\.(css|js)) and $NEW_REL_DIR/[^ ]+ differ$|^Only in $CURRENT_ROOT: rollback\.sh$")
 [[ -z "$D" ]] || abort "new root differs from live root beyond the overlay: $(echo "$D" | head -3)" STAGE_DIFF
 I="$NEW_REL_DIR/index.html"
-for pat in 'id="v-talent"' 'id="v-fund"' 'id="home-talent"' 'id="home-fund"' 'assets/talent/talent_fund.js' '投资机构' '启光英才' 'fund-disclaimer' 'mailto:bd@inlightbio.com' 'id="newco-report-feature"' 'id="talent-cv-target"' 'class="cvt-grid"' 'IX.e(this)' 'inlightbio-en@"+PIN' 'e0226d143fb17fa3dff17351a0986bac8a7a1ca4' 'talent_fund.css?v=20261119d' 'talent_fund.js?v=20261119d'; do
+for pat in 'id="v-talent"' 'id="v-fund"' 'id="home-talent"' 'id="home-fund"' 'assets/talent/talent_fund.js' '投资机构' '启光英才' 'fund-disclaimer' 'mailto:bd@inlightbio.com' 'id="newco-report-feature"' 'id="talent-cv-target"' 'class="cvt-grid"' 'IX.e(this)' 'inlightbio-en@"+PIN' 'bed52835e24b24d47e547350512bb40122fc0b8e' 'data-ixs=' 'talent_fund.css?v=20261119d' 'talent_fund.js?v=20261119d'; do
   grep -qF "$pat" "$I" || abort "staged index missing: $pat" STAGE
 done
 grep -qE 'preview-ribbon|此页为未上线预览|勿合并' "$I" && abort "preview text in staged index" STAGE
