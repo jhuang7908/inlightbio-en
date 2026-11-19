@@ -1,0 +1,588 @@
+/* 启光英才 / 投资机构 频道样式 */
+/* 启光英才：板块背景随首页模块，不铺实心深绿；按钮保持 --accent #2E6B4F；
+   边框用主页浅绿 #cfe0d4。全国/城市均为无分组标题的扁平网格：桌面三列、手机一列，按日期由新到旧。 */
+
+.talent-sec{
+  background:transparent;
+  color:var(--fg);
+  border:0;
+  border-radius:0;
+  padding:0;
+  display:grid;
+  gap:14px;
+  min-width:0;
+}
+.talent-sec *{box-sizing:border-box}
+
+.talent-head{display:grid;gap:6px;min-width:0}
+.talent-kicker{
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+}
+.talent-head h2{
+  margin:0;
+  font-family:var(--display, inherit);
+  font-size:22px;
+  font-weight:800;
+  color:var(--fg);
+  line-height:1.25;
+  letter-spacing:.04em;
+}
+.talent-lead{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+  color:var(--muted);
+  max-width:none;
+}
+.talent-note{
+  margin:0;
+  font-size:12.5px;
+  line-height:1.6;
+  color:var(--muted);
+  background:var(--surface);
+  border:1px solid #cfe0d4;
+  border-left:4px solid var(--accent);
+  border-radius:8px;
+  padding:8px 12px;
+}
+
+.talent-tabs{margin:0;}
+.talent-group{display:grid;gap:8px;min-width:0}
+.talent-group[hidden]{display:none}
+.talent-cityhead{margin-bottom:0}
+.talent-cityhead h2{font-size:17px;color:var(--fg)}
+
+/* 桌面三列、手机一列的扁平网格。展开时 align-items:start，避免同行被撑高对齐。 */
+.talent-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  align-items:start;
+  min-width:0;
+}
+@media (min-width:769px){
+  .talent-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+.talent-card{
+  background:var(--surface);
+  border:1px solid #cfe0d4;
+  border-radius:10px;
+  color:var(--fg);
+  min-width:0;
+  overflow:hidden;
+}
+.talent-card[open]{border-color:color-mix(in srgb,var(--accent) 45%,#cfe0d4)}
+.talent-card>summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding:12px 12px 11px;
+  min-width:0;
+}
+.talent-card>summary::-webkit-details-marker{display:none}
+.talent-card>summary:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:-2px;
+}
+.talent-sum{display:grid;gap:5px;min-width:0;flex:1}
+.talent-co{
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+  letter-spacing:.02em;
+}
+
+.talent-co-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  min-width:0;
+}
+.talent-co-row .talent-co{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+.talent-code{
+  flex:none;
+  display:inline-block;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.04em;
+  font-variant-numeric:tabular-nums;
+  color:var(--accent);
+  background:#eef4ef;
+  border:1px solid #cfe0d4;
+  border-radius:6px;
+  padding:1px 7px;
+  line-height:1.4;
+  white-space:nowrap;
+}
+.talent-sum h3,
+.talent-card h3{
+  margin:0;
+  font-size:15px;
+  font-weight:700;
+  line-height:1.4;
+  color:var(--fg);
+  overflow-wrap:anywhere;
+}
+.talent-summeta{
+  margin:0;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px 8px;
+  font-size:12.5px;
+  color:var(--muted);
+}
+.talent-level{
+  display:inline-block;
+  padding:1px 8px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  background:#eef4ef;
+  color:var(--accent);
+  border:1px solid #cfe0d4;
+}
+.talent-chev{
+  flex:none;
+  width:10px;
+  height:10px;
+  margin-top:6px;
+  border-right:2px solid var(--muted);
+  border-bottom:2px solid var(--muted);
+  transform:rotate(45deg);
+  transition:transform .15s;
+}
+.talent-card[open] .talent-chev{transform:rotate(-135deg);margin-top:8px}
+
+.talent-panel{
+  padding:0 12px 14px;
+  display:grid;
+  gap:8px;
+  border-top:1px solid #cfe0d4;
+  padding-top:10px;
+  margin:0 0 2px;
+}
+.talent-panel p{
+  margin:0;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--fg);
+}
+.talent-panel p b{color:var(--fg);font-weight:700}
+.talent-panel ul{
+  margin:0;
+  padding:0 0 0 1.2em;
+  display:grid;
+  gap:4px;
+  font-size:13px;
+  line-height:1.55;
+  color:var(--fg);
+}
+.talent-panel li{overflow-wrap:anywhere}
+.talent-checked{
+  font-size:12px;
+  color:var(--muted);
+}
+.talent-card[hidden]{display:none !important}
+.talent-date{
+  margin-left:auto;
+  font-size:12px;
+  color:var(--muted);
+  white-space:nowrap;
+}
+.talent-summeta .talent-date{margin-left:auto}
+
+.talent-panel .talent-apply{
+  justify-self:start;
+  margin-top:4px;
+  cursor:pointer;
+  font-family:inherit;
+  border:0;
+}
+
+.talent-form-wrap{
+  background:var(--surface);
+  border:1px solid #cfe0d4;
+  border-radius:10px;
+  padding:14px 14px 16px;
+  display:grid;
+  gap:8px;
+  min-width:0;
+  color:var(--fg);
+}
+.talent-form-wrap h3{
+  margin:0;
+  font-size:17px;
+  font-weight:800;
+  color:var(--fg);
+  font-family:var(--display, inherit);
+}
+.talent-form-lead{
+  margin:0;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--muted);
+}
+.talent-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px 16px;
+  margin-top:6px;
+  position:relative;
+}
+.talent-form label{
+  display:grid;
+  gap:4px;
+  font-size:13.5px;
+  font-weight:600;
+  color:var(--fg);
+  min-width:0;
+}
+.talent-form em{color:var(--accent);font-style:normal;margin-left:2px}
+.talent-form input:not([type=checkbox]),
+.talent-form select,
+.talent-form textarea{
+  font:inherit;
+  font-size:14px;
+  font-weight:400;
+  padding:8px 10px;
+  border:1px solid #cfe0d4;
+  border-radius:8px;
+  background:var(--bg);
+  color:var(--fg);
+  width:100%;
+  box-sizing:border-box;
+  max-width:100%;
+}
+.talent-form input:focus,
+.talent-form select:focus,
+.talent-form textarea:focus{
+  outline:2px solid var(--accent);
+  outline-offset:0;
+  border-color:var(--accent);
+}
+.talent-form .full{grid-column:1/-1}
+.talent-form label.ck{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  font-weight:500;
+  font-size:13px;
+  line-height:1.5;
+}
+.talent-form label.ck input{
+  margin-top:2px;
+  flex:none;
+  accent-color:var(--accent);
+}
+.talent-act{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.talent-form button.btn{
+  border:0;
+  cursor:pointer;
+  font-family:inherit;
+  margin-left:0;
+}
+.talent-msg{font-size:13px;color:var(--accent);font-weight:600}
+.talent-msg[hidden]{display:none}
+.talent-form-foot{
+  margin:0;
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.55;
+}
+#talent-cv{scroll-margin-top:84px}
+
+
+@media (max-width:768px){
+  .talent-head h2{font-size:20px}
+  .talent-form{grid-template-columns:1fr}
+}
+
+
+/* 单行简历选择，不再使用大面积拖放区 */
+.talent-file-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+.talent-file-row input[type=file]{
+  position:absolute;
+  width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);border:0;
+}
+.talent-file-btn{
+  flex:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 12px;
+  border:1px solid #cfe0d4;
+  border-radius:8px;
+  background:var(--bg);
+  color:var(--fg);
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  white-space:nowrap;
+  line-height:1.3;
+}
+.talent-file:hover .talent-file-btn,
+.talent-file:focus-within .talent-file-btn{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+.talent-file:focus-within .talent-file-btn{
+  outline:2px solid var(--accent);
+  outline-offset:0;
+}
+.talent-file-name{
+  font-size:13px;
+  font-weight:500;
+  color:var(--muted);
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  min-width:0;
+}
+
+.talent-field-hint{
+  margin:0;
+  font-size:12px;
+  font-weight:500;
+  color:var(--muted);
+  line-height:1.45;
+}
+
+
+/* ===== 投资机构：沿用启光英才卡片语言（#2E6B4F / #cfe0d4） ===== */
+.fund-sec{margin-top:22px}
+#fund{scroll-margin-top:84px}
+.fund-filter-row{display:flex;align-items:flex-end;gap:10px;min-width:0}
+.fund-filter-label{flex:none;font-size:12.5px;font-weight:700;color:var(--muted);padding-bottom:9px;min-width:2.6em}
+.fund-filter-row .ftabs{flex:1;min-width:0;margin:0}
+.fund-status{margin:0;font-size:12.5px;color:var(--muted)}
+.fund-win{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid #cfe0d4}
+.fund-win-open{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.fund-win-unk{background:var(--surface);color:var(--muted)}
+.fund-card .talent-panel .fund-apply{display:inline-flex;text-decoration:none}
+.fund-empty{margin:0;font-size:13px;color:var(--muted)}
+.fund-empty[hidden],.fund-more[hidden]{display:none}
+.fund-more{justify-self:center;font:inherit;font-size:14px;font-weight:700;color:var(--accent);background:var(--surface);border:1px solid #cfe0d4;border-radius:999px;padding:8px 18px;cursor:pointer}
+.fund-more:hover{border-color:var(--accent)}
+
+
+
+.hub-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.hub-tab{font:inherit;font-size:15px;font-weight:700;padding:8px 18px;border-radius:999px;border:1px solid #cfe0d4;background:var(--surface);color:var(--fg);cursor:pointer}
+.hub-tab em{font-style:normal;font-size:12px;margin-left:6px;padding:1px 7px;border-radius:999px;background:#eef4ef;color:var(--accent)}
+.hub-tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.hub-tab[aria-selected="true"] em{background:var(--bg);color:var(--accent)}
+.hub-pane{display:grid;gap:12px;min-width:0}
+.hub-pane[hidden]{display:none}
+.hub-pane-title{margin:0;display:flex;align-items:baseline;gap:8px}
+.hub-pane-title b{font-size:17px;font-weight:800;color:var(--fg);letter-spacing:.04em}
+.hub-pane-title span{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--accent);text-transform:uppercase}
+.hub-pane .talent-tabs{margin:0}
+
+/* 等宽：网格列 minmax(0,1fr)；等高：收起态摘要固定为「1 行机构 + 2 行标题 + 1 行标签」 */
+.hub-sec .talent-card{width:100%}
+.hub-sec .talent-card>summary{height:118px;align-items:flex-start;overflow:hidden}
+.hub-sec .talent-sum{grid-template-rows:auto calc(2 * 1.4em) auto;align-content:start}
+.hub-sec .talent-sum h3{font-size:15px;line-height:1.4;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;min-height:calc(2 * 1.4em)}
+.hub-sec .talent-co-row .talent-co{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hub-sec .talent-summeta{flex-wrap:nowrap;overflow:hidden;white-space:nowrap}
+.hub-sec .talent-summeta>*{flex:none}
+.hub-sec .talent-summeta .talent-date{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}
+
+/* 桌面：方向/阶段筛选换行显示，不再隐藏横向滚动 */
+@media (min-width:769px){
+  .fund-tabs{flex-wrap:wrap;overflow:visible;row-gap:2px}
+}
+
+/* 联系入口：与「上传简历」同样紧凑，一行按钮，点击后在下方展开小表单 */
+.hub-contact{background:var(--surface);border:1px solid #cfe0d4;border-radius:10px;min-width:0}
+.hub-contact>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:10px 12px;flex-wrap:wrap}
+.hub-contact>summary::-webkit-details-marker{display:none}
+.hub-contact-btn{flex:none;display:inline-flex;align-items:center;padding:8px 12px;border:1px solid #cfe0d4;border-radius:8px;background:var(--bg);color:var(--accent);font-size:14px;font-weight:700;white-space:nowrap}
+.hub-contact[open] .hub-contact-btn,.hub-contact>summary:hover .hub-contact-btn{border-color:var(--accent)}
+.hub-contact-hint{font-size:13px;color:var(--muted);min-width:0}
+.hub-contact-form{padding:0 12px 12px;margin-top:0}
+
+
+
+.hub-home .talent-grid{margin:0}
+.hub-link{display:block;text-decoration:none;color:var(--fg)}
+.hub-link:hover{border-color:var(--accent)}
+.hub-link-in{display:flex;height:118px;padding:12px 12px 11px;overflow:hidden}
+.hub-link-in .talent-sum{flex:1}
+.hub-sec .hub-link .talent-sum{grid-template-rows:auto calc(2 * 1.4em) auto;align-content:start}
+.hub-sec .hub-link h3{font-size:15px;line-height:1.4;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;min-height:calc(2 * 1.4em)}
+@media (max-width:768px){.hub-preview .hub-link:nth-child(n+4){display:none}}
+.view .hub-sec{margin-top:4px}
+.hub-home,.hub-home *{box-sizing:border-box}
+
+/* 顶栏多了两个一级入口：≥1440 让顶栏占「正文 + 右栏」两列，8 个入口全部可见；
+   641–1439 收窄入口内边距（1280 起全部可见）；≤640 沿用现有站点的横向滑动顶栏（站点本身没有汉堡菜单） */
+@media (min-width:1440px){
+  .navshell>.nav-in{grid-column:2 / -1}
+}
+@media (min-width:641px) and (max-width:1439px){
+  .nav-in .nav-tabs a{padding:0 8px}
+}
+/* 筛选行：标签与第一行对齐（桌面换行后不再沉到底部） */
+.fund-filter-row{align-items:flex-start}
+.fund-filter-label{padding-top:9px;padding-bottom:0}
+
+/* 赛道标签（创新药 / CXO / 医疗器械）：浅绿描边，与级别标签区分 */
+.talent-sector{display:inline-block;padding:1px 8px;border-radius:6px;font-size:12px;font-weight:700;color:var(--accent);background:var(--surface);border:1px solid #cfe0d4}
+
+.channel-title-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-width:0}
+.channel-title-row h1{margin:0;min-width:0}
+.channel-logo{display:block;flex:none;object-fit:contain;width:88px;height:88px;border-radius:12px}
+.channel-hero{gap:4px}
+.channel-hero>p{margin:0;max-width:none}
+.channel-notes,.home-notes{margin:8px 0 0;font-size:12px;line-height:1.7;color:var(--muted);font-weight:400;background:none;border:0;padding:0}
+.channel-notes p{margin:0 0 4px}
+.hub-sec .talent-sum{grid-template-rows:auto 42px auto}
+.hub-sec .talent-sum h3,.hub-sec .hub-link h3{height:42px;min-height:42px}
+@media(max-width:768px){.channel-logo{width:62px;height:62px;border-radius:9px}.channel-title-row{gap:10px}}
+
+.hp-field{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;pointer-events:none}
+.talent-msg.is-err{color:#b3261e}
+.talent-msg.is-ok{color:var(--accent)}
+.talent-form button[disabled]{opacity:.6;cursor:progress}
+
+/* ===== 投资机构：阶段 / 方向 下拉筛选（单笔交易匹配） ===== */
+.fund-fbar{display:flex;align-items:center;gap:8px;flex-wrap:nowrap;min-width:0}
+.fdd{position:relative;min-width:0}
+.fdd-btn{display:inline-flex;align-items:center;gap:6px;max-width:100%;font:inherit;font-size:13.5px;color:var(--fg);background:var(--surface);border:1px solid #cfe0d4;border-radius:999px;padding:7px 14px;min-height:36px;cursor:pointer;white-space:nowrap}
+.fdd-btn:hover,.fdd-btn[aria-expanded="true"]{border-color:var(--accent)}
+.fdd-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.fdd-l{font-weight:700}
+.fdd-v{color:var(--accent);font-weight:700;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.fdd-v:empty{display:none}
+.fdd-v:not(:empty)::before{content:"：";color:var(--fg);font-weight:700}
+.fdd-c{flex:none;color:var(--muted);transition:transform .15s}
+.fdd-btn[aria-expanded="true"] .fdd-c{transform:rotate(180deg)}
+.fdd.on .fdd-btn{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,var(--surface))}
+.fdd-menu{position:absolute;z-index:30;top:calc(100% + 6px);left:0;min-width:220px;max-height:min(60vh,420px);overflow:auto;margin:0;padding:6px;list-style:none;background:var(--surface);border:1px solid #cfe0d4;border-radius:12px;box-shadow:0 10px 28px rgba(20,40,30,.14)}
+.fdd-menu[hidden]{display:none}
+.fdd-opt{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 10px;border-radius:8px;font-size:13.5px;cursor:pointer;color:var(--fg)}
+.fdd-opt em{font-style:normal;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.fdd-opt:hover,.fdd-opt:focus{background:color-mix(in srgb,var(--accent) 10%,var(--surface));outline:none}
+.fdd-opt[aria-selected="true"]{color:var(--accent);font-weight:700}
+.fdd-opt[aria-selected="true"] em{color:var(--accent)}
+.fdd-opt[aria-disabled="true"]{color:var(--muted);opacity:.55;cursor:default;background:none}
+.fund-clear{font:inherit;font-size:13px;color:var(--accent);background:none;border:0;padding:6px 4px;cursor:pointer;white-space:nowrap}
+.fund-clear[hidden]{display:none}
+.fund-hit{margin:0;font-size:12.5px;line-height:1.4;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#fund-list .fund-card>summary{height:142px}
+#fund-list .fund-card .talent-sum{grid-template-rows:auto 42px auto auto}
+.fund-hit.on{color:var(--accent);font-weight:700}
+.channel-notes .fund-disclaimer{font-size:11.5px;color:var(--muted);opacity:.9}
+@media (max-width:640px){
+  .fund-fbar{gap:6px}
+  .fdd{flex:1 1 0}
+  .fdd-btn{width:100%;justify-content:space-between;font-size:13px;padding:7px 12px}
+  .fdd-v{flex:1;text-align:left}
+  .fdd[data-dim="dir"] .fdd-menu{left:auto;right:0}
+  .fdd-menu{min-width:min(240px,calc(100vw - 40px))}
+}
+
+/* bottom notes span the full content column (global p has max-width:66ch) */
+.channel-notes,.channel-notes p,p.home-notes{max-width:none;width:100%}
+/* field/kind tiles: hide the line-art placeholder while the illustration loads; show it only if every source failed */
+.ixw>.ic{visibility:hidden}
+.ixw.ixf>.ic{visibility:visible}
+
+/* 卡片「添加」：放在编号芯片旁，避免底行在三列网格里溢出 */
+.talent-co-actions{flex:none;display:inline-flex;align-items:center;gap:6px}
+.talent-add{
+  flex:none;
+  font:inherit;
+  font-size:11.5px;
+  font-weight:700;
+  letter-spacing:.02em;
+  line-height:1.2;
+  padding:2px 8px;
+  border-radius:999px;
+  border:1px solid var(--accent);
+  background:transparent;
+  color:var(--accent);
+  cursor:pointer;
+  white-space:nowrap;
+}
+.talent-add:hover{background:#eef4ef}
+.talent-add.is-on{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.talent-add:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+
+/* 目标职位：一行芯片 + 两种登记方式，具体职位由卡片「添加」写入隐藏域 */
+.cvt-row{display:grid;gap:6px;min-width:0}
+.cvt-line{display:flex;align-items:center;flex-wrap:wrap;gap:8px 10px;min-width:0}
+.cvt-lg{font-size:13.5px;font-weight:600;color:var(--fg);flex:none}
+.cvt-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  max-width:min(100%,360px);
+  min-width:0;
+  font-size:13px;
+  font-weight:600;
+  line-height:1.3;
+  padding:3px 9px;
+  border-radius:999px;
+  border:1px solid #cfe0d4;
+  background:#eef4ef;
+  color:var(--accent);
+}
+.cvt-chip[data-state="none"]{font-weight:500;color:var(--muted);background:var(--bg)}
+.cvt-chip[data-state="job"]{background:var(--accent);border-color:var(--accent);color:var(--bg);max-width:min(100%,420px)}
+.cvt-chip-t{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cvt-x{
+  flex:none;
+  width:18px;height:18px;padding:0;
+  border:0;border-radius:50%;
+  background:rgba(255,255,255,.22);
+  color:inherit;font:inherit;font-size:14px;line-height:18px;
+  cursor:pointer;
+}
+.cvt-x:hover{background:rgba(255,255,255,.36)}
+.cvt-x:focus-visible{outline:2px solid var(--bg);outline-offset:1px}
+.cvt-pills{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;min-width:0}
+.cvt-pill{
+  font:inherit;
+  font-size:12.5px;
+  font-weight:600;
+  line-height:1.2;
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid #cfe0d4;
+  background:var(--bg);
+  color:var(--fg);
+  cursor:pointer;
+  white-space:nowrap;
+}
+.cvt-pill:hover{border-color:var(--accent);color:var(--accent)}
+.cvt-pill.is-on{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.cvt-pill:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.cvt-hint{margin:0;font-size:12px;line-height:1.5;color:var(--muted)}
+.cvt-row.cvt-flash{animation:cvt-flash .9s ease}
+@keyframes cvt-flash{
+  0%{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 35%,transparent);background:color-mix(in srgb,var(--accent) 10%,transparent);border-radius:8px}
+  100%{box-shadow:0 0 0 3px transparent;background:transparent}
+}
+@media (max-width:390px){
+  .cvt-chip{max-width:100%}
+}
