@@ -55,7 +55,7 @@ MP4_1080_SHA="${MP4_1080_SHA:-1ee6af4a09cdaa7a40ee22370d3fc071416a5fdaffc184c5a6
 MP4_720_SHA="${MP4_720_SHA:-806afc6172a55e01f4019f4e32cae8aa299393da7ead647b1fe58e859c9cb445}"
 # ffmpeg -vn -acodec copy -f md5  (same on both renditions)
 AUDIO_MD5_COPY="e86cc6214c834dba0238356f45f926ad"
-OVERLAY_NFILES=4
+OVERLAY_NFILES=65
 NEW_THUMB_SHA="${NEW_THUMB_SHA:-528763de74c09be5db3aad0370ee0caee8a3cc22feaf75da61ee12f3559db7dc}"
 THUMB_REL="theramab/assets/img/theramab_card_thumb_v34e.png"
 SRC_COMMIT="3cbbb69"
@@ -309,15 +309,18 @@ NFOUND=$(find "$TMPD/overlay" -type f | wc -l)
 [[ "$(sha "$TMPD/overlay/index.html")" == "$NEW_INDEX_SHA" ]] || abort "overlay index.html sha mismatch" EXTRACT
 [[ "$(sha "$TMPD/overlay/theramab/index.html")" == "$NEW_THERAMAB_INDEX_SHA" ]] || abort "overlay theramab/index.html sha mismatch" EXTRACT
 [[ "$(sha "$TMPD/overlay/theramab/assets/css/style.css")" == "$NEW_TM_STYLE_SHA" ]] || abort "overlay theramab style.css sha mismatch" EXTRACT
-[[ "$(sha "$TMPD/overlay/$PDF_REL")" == "$PDF_SHA" ]] || abort "overlay PDF sha mismatch" EXTRACT
+# PDF is unchanged and is not in this overlay; it must already exist on the copied root.
+[[ -f "$NEW_REL_DIR/$PDF_REL" ]] || abort "copied root missing whitepaper PDF" EXTRACT
+[[ "$(sha "$NEW_REL_DIR/$PDF_REL")" == "$PDF_SHA" ]] || abort "copied-root PDF sha mismatch" EXTRACT
 if find "$TMPD/overlay" -iname '*.mp4' | grep -q .; then abort "overlay tarball unexpectedly contains mp4s" EXTRACT; fi
 if find "$TMPD/overlay" \( -iname 'README*.txt' -o -iname 'README*.md' -o -iname '*.md' \) | grep -q .; then
   abort "overlay unexpectedly contains README or markdown under the pack" EXTRACT
 fi
 # Never ship a replacement for the existing video poster, molecule.png, or card thumb.
-if find "$TMPD/overlay" \( -name 'theramab_demo_poster.jpg' -o -name 'molecule.png' -o -name 'theramab_card_thumb_v34e.png' -o -name 'site.css' \) | grep -q .; then
-  abort "overlay unexpectedly contains poster, molecule.png, card thumb, or homepage site.css" EXTRACT
+if find "$TMPD/overlay" \( -name 'theramab_demo_poster.jpg' -o -name 'molecule.png' -o -name 'theramab_card_thumb_v34e.png' \) | grep -q .; then
+  abort "overlay unexpectedly contains poster, molecule.png, or card thumb" EXTRACT
 fi
+[[ "$(sha "$TMPD/overlay/site.css")" == "$NEW_SITE_CSS_SHA" ]] || abort "overlay site.css sha mismatch" EXTRACT
 
 while IFS= read -r -d '' f; do
   rel="${f#./}"
