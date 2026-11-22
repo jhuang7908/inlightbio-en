@@ -680,3 +680,120 @@ done
 [[ "$ok" == "1" ]] || fail_restored "site.css HTTP $C sha_got=${GOT:-empty} sha_expected=$NEW_SITE_CSS_SHA" VERIFY_SITECSS
 echo "VERIFY_SITECSS_OK HTTP=$C sha=$GOT expected=$NEW_SITE_CSS_SHA" | tee -a "$LOG"
 
+# /theramab/
+ok=0
+C="000"; GOT=""
+for try in 1 2 3 4 5; do
+  C=$(verify_curl "/theramab/" "$TMPD/tm.html" "$TMPD/tm.hdr")
+  GOT=$(sha "$TMPD/tm.html")
+  CE=$(grep -i '^content-encoding:' "$TMPD/tm.hdr" 2>/dev/null | tr -d '\r' | head -1 || true)
+  echo "VERIFY_THERAMAB_TRY $try HTTP=$C sha_got=${GOT:-empty} sha_expected=$EXPECTED_TM_SHA ${CE:-Content-Encoding: (none)}" | tee -a "$LOG"
+  log_hdr "GET /theramab/ try $try" "$TMPD/tm.hdr"
+  if [[ "$C" == "200" && "$GOT" == "$EXPECTED_TM_SHA" ]]; then
+    ok=1
+    break
+  fi
+  sleep 2
+done
+[[ "$ok" == "1" ]] || fail_restored "/theramab/ HTTP $C sha_got=${GOT:-empty} sha_expected=$EXPECTED_TM_SHA" VERIFY_THERAMAB
+grep -qF 'theramab_demo_1080p.mp4' "$TMPD/tm.html" || fail_restored "live /theramab/ missing 1080p source" VERIFY_THERAMAB
+grep -qF 'AI 药物研发平台' "$TMPD/tm.html" || fail_restored "live /theramab/ lacks AI 药物研发平台 rec block" VERIFY_THERAMAB
+grep -qF 'plat-rec' "$TMPD/tm.html" || fail_restored "live /theramab/ lacks plat-rec block" VERIFY_THERAMAB
+grep -qF 'TheraSik SaaS' "$TMPD/tm.html" || fail_restored "live /theramab/ lacks TheraSik SaaS card" VERIFY_THERAMAB
+grep -qF 'https://www.therasik.com/' "$TMPD/tm.html" || fail_restored "live /theramab/ lacks TheraSik public URL" VERIFY_THERAMAB
+grep -qF '/theramab/assets/TheraMab_Whitepaper_2026.pdf' "$TMPD/tm.html" || fail_restored "live /theramab/ missing PDF href" VERIFY_THERAMAB
+grep -qF 'download="TheraMab_Whitepaper_2026.pdf"' "$TMPD/tm.html" || fail_restored "live /theramab/ missing PDF download attribute" VERIFY_THERAMAB
+grep -qF '本白皮书可直接下载' "$TMPD/tm.html" || fail_restored "live /theramab/ missing PDF download wording" VERIFY_THERAMAB
+grep -qF '数据在本机处理' "$TMPD/tm.html" || fail_restored "live /theramab/ missing 数据在本机处理" VERIFY_THERAMAB
+grep -qF '待确认' "$TMPD/tm.html" && fail_restored "live /theramab/ still contains 待确认" VERIFY_THERAMAB
+grep -qF '合作推广">TheraMab' "$TMPD/tm.html" && fail_restored "live /theramab/ chrome nav still has TheraMab as a site column" VERIFY_THERAMAB
+grep -qF 'class="tmab-nav"' "$TMPD/tm.html" && fail_restored "live /theramab/ still has TheraMab top-nav item" VERIFY_THERAMAB
+echo "VERIFY_THERAMAB_OK HTTP=$C sha=$GOT expected=$EXPECTED_TM_SHA" | tee -a "$LOG"
+
+# PDF (inherited from the copied live root; not in the overlay)
+ok=0
+C="000"; GOT=""; CT=""
+for try in 1 2 3 4 5; do
+  C=$(verify_curl "/theramab/assets/TheraMab_Whitepaper_2026.pdf" "$TMPD/wp.pdf" "$TMPD/wp.hdr")
+  GOT=$(sha "$TMPD/wp.pdf")
+  CT=$(grep -i '^content-type:' "$TMPD/wp.hdr" 2>/dev/null | tr -d '\r' | head -1 || true)
+  echo "VERIFY_PDF_TRY $try HTTP=$C sha_got=${GOT:-empty} sha_expected=$PDF_SHA ${CT:-Content-Type: (none)}" | tee -a "$LOG"
+  log_hdr "GET /theramab/assets/TheraMab_Whitepaper_2026.pdf try $try" "$TMPD/wp.hdr"
+  if [[ "$C" == "200" && "$GOT" == "$PDF_SHA" ]] && echo "$CT" | grep -qi 'application/pdf'; then
+    ok=1
+    break
+  fi
+  sleep 2
+done
+[[ "$ok" == "1" ]] || fail_restored "PDF HTTP $C sha_got=${GOT:-empty} sha_expected=$PDF_SHA ctype=${CT:-none}" VERIFY_PDF
+echo "VERIFY_PDF_OK HTTP=$C sha=$GOT ctype=$CT" | tee -a "$LOG"
+
+# README must remain 404 (vhost rule intact). File on disk must be unchanged.
+README_DISK="$CURRENT_ROOT/theramab/README.txt"
+if [[ -f "$NEW_REL_DIR/theramab/README.txt" ]]; then
+  README_DISK="$NEW_REL_DIR/theramab/README.txt"
+fi
+README_DISK_SHA=$(sha "$README_DISK")
+ok=0
+C="000"
+for try in 1 2 3 4 5; do
+  C=$(verify_curl "/theramab/README.txt" "$TMPD/readme.txt" "$TMPD/readme.hdr")
+  echo "VERIFY_README_TRY $try HTTP=$C sha_got=$(sha "$TMPD/readme.txt" || echo empty) (expect HTTP 404; file on disk sha=$README_DISK_SHA)" | tee -a "$LOG"
+  log_hdr "GET /theramab/README.txt try $try" "$TMPD/readme.hdr"
+  if [[ "$C" == "404" ]]; then
+    if [[ -s "$TMPD/readme.txt" && "$(sha "$TMPD/readme.txt")" == "$README_DISK_SHA" ]]; then
+      echo "ERR: 404 body is still the on-disk README" | tee -a "$LOG"
+    else
+      ok=1
+      break
+    fi
+  fi
+  sleep 2
+done
+[[ "$ok" == "1" ]] || fail_restored "README HTTP $C (expected 404); file still on disk sha=$README_DISK_SHA" VERIFY_README
+echo "VERIFY_README_OK HTTP=$C (blocked); disk unchanged sha=$README_DISK_SHA" | tee -a "$LOG"
+[[ -f "$README_DISK" && "$(sha "$README_DISK")" == "$README_DISK_SHA" ]] || fail_restored "README.txt on disk changed during verify" README_DISK
+echo "VERIFY_README_DISK_OK $README_DISK sha=$README_DISK_SHA" | tee -a "$LOG"
+
+C=$(verify_curl "/theramab/assets/video/theramab_demo_poster.jpg" "$TMPD/poster.jpg" "$TMPD/poster.hdr")
+GOT=$(sha "$TMPD/poster.jpg")
+echo "VERIFY_POSTER HTTP=$C sha_got=${GOT:-empty} sha_expected=$POSTER_SHA" | tee -a "$LOG"
+log_hdr "GET poster" "$TMPD/poster.hdr"
+[[ "$C" == "200" && "$GOT" == "$POSTER_SHA" ]] || fail_restored "poster HTTP $C sha_got=${GOT:-empty} sha_expected=$POSTER_SHA" VERIFY_POSTER
+echo "VERIFY_POSTER_OK HTTP=$C sha=$GOT" | tee -a "$LOG"
+
+C=$(verify_curl "/theramab/assets/img/theramab_card_thumb_v34e.png" "$TMPD/thumb.png" "$TMPD/thumb.hdr")
+GOT=$(sha "$TMPD/thumb.png")
+echo "VERIFY_THUMB HTTP=$C sha_got=${GOT:-empty} sha_expected=$NEW_THUMB_SHA" | tee -a "$LOG"
+log_hdr "GET card thumb" "$TMPD/thumb.hdr"
+[[ "$C" == "200" && "$GOT" == "$NEW_THUMB_SHA" ]] || fail_restored "thumb HTTP $C sha_got=${GOT:-empty} sha_expected=$NEW_THUMB_SHA" VERIFY_THUMB
+echo "VERIFY_THUMB_OK HTTP=$C sha=$GOT" | tee -a "$LOG"
+
+verify_range() {
+  local path="$1"
+  local hdr="$TMPD/hdr" body="$TMPD/range.body"
+  local code
+  code=$(curl -sS --retry 2 --connect-timeout 10 --max-time 60 "${curl_resolve[@]}" \
+    -H "Accept-Encoding: identity" \
+    -D "$hdr" -o "$body" -w '%{http_code}' -H "Range: bytes=0-1023" "$SITE_ORIGIN$path" || echo "000")
+  echo "VERIFY_RANGE_TRY $path HTTP=$code" | tee -a "$LOG"
+  if [[ "$code" != "206" ]]; then
+    echo "ERR: $path Range expected 206 got $code" | tee -a "$LOG"
+    head -n 20 "$hdr" | tee -a "$LOG"
+    return 1
+  fi
+  local n
+  n=$(wc -c < "$body")
+  [[ "$n" -eq 1024 ]] || { echo "ERR: $path Range body $n bytes, expected 1024" | tee -a "$LOG"; return 1; }
+  echo "VERIFY_RANGE_OK $path HTTP 206 (1024 bytes)" | tee -a "$LOG"
+  return 0
+}
+verify_range "/theramab/assets/video/theramab_demo_1080p.mp4" || fail_restored "1080p Range/206 failed" VERIFY_RANGE
+verify_range "/theramab/assets/video/theramab_demo_720p.mp4"  || fail_restored "720p Range/206 failed" VERIFY_RANGE
+
+H=$(curl -s -m 10 "${curl_resolve[@]}" "$SITE_ORIGIN/api/talent/health" || true)
+[[ "$H" == *talent-v* ]] && echo "TALENT_API_OK (unchanged) $(printf %s "${H:0:60}" | tr -d '\r\n')" | tee -a "$LOG" || echo "WARN: talent API health did not answer (API untouched by this deploy): $(printf %s "${H:0:80}" | tr -d '\r\n')" | tee -a "$LOG"
+
+FINISHED=1
+summary "DEPLOY_OK" | tee -a "$LOG"
+exit 0
