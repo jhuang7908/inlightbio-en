@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://inlightbio.com/</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://inlightbio.com/</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://inlightbio.com/news/pfizer-starna-invivo-cart/</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://inlightbio.com/news/ivonescimab-fda-crl/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://inlightbio.com/science/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://inlightbio.com/science/w-neovax-ovarian/</loc><lastmod>2026-11-15</lastmod></url>
@@ -70,4 +71,8 @@
   <url><loc>https://inlightbio.com/science/c3-io-2/</loc><lastmod>2026-10-11</lastmod></url>
   <url><loc>https://inlightbio.com/science/c6-ab-5/</loc><lastmod>2026-10-11</lastmod></url>
   <url><loc>https://inlightbio.com/science/c4-ai-5/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://inlightbio.com/science/w-iec-ec-cilta-cel-multicenter/</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://inlightbio.com/science/w-iec-ec-mucosal-car/</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://inlightbio.com/science/w-openscientist/</loc><lastmod>2026-11-23</lastmod></url>
+  <url><loc>https://inlightbio.com/science/w-herpesvirus-autoantigen-reactome/</loc><lastmod>2026-11-23</lastmod></url>
 </urlset>

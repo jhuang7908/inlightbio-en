@@ -1331,3 +1331,61 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 #homefeed>.item:nth-child(n+9){display:none!important}
 @media (max-width:1023px){#homefeed>.item:nth-child(n+7){display:none!important}}
 @media (max-width:768px){#homefeed>.item:nth-child(n+5){display:none!important}}
+
+
+/* InLight 2026-11-23: lang switch + datacard typography */
+/* Keep About and 中文 from colliding (390) or clipping About to “Abo” (1440).
+   Rules apply only when a live .langsw is present, so the homepage (switch commented out) is unchanged. */
+.nav-in > a.langsw{
+  flex: 0 0 auto;
+  margin-left: 8px;
+}
+@media (max-width: 640px){
+  .nav-in:has(> a.langsw){
+    gap: 6px;
+  }
+  .nav-in:has(> a.langsw) .nav-tabs{
+    overflow-x: auto;
+    min-width: 0;
+    margin-right: 0;
+    justify-content: flex-start;
+    gap: 0;
+  }
+  .nav-in:has(> a.langsw) .nav-tabs a{
+    padding: 0 4px;
+    font-size: 11.5px;
+    flex-shrink: 1;
+  }
+  .nav-in:has(> a.langsw) .nav-tabs a[data-v="about"]{
+    flex-shrink: 0;
+  }
+  .nav-in > a.langsw{
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 8px;
+    border-left: 1px solid var(--line);
+    border-radius: 0 18px 18px 0;
+    z-index: 1;
+    background: var(--bg, #fbfaf7);
+    font-size: 11.5px;
+  }
+}
+@media (max-width: 1599px){
+  .nav-in:has(> a.langsw) .nav-tabs .nl{ display: none; }
+}
+.nav-in:has(> a.langsw) .nav-tabs a[data-v="about"]{
+  flex-shrink: 0;
+}
+
+/* Key data card: do not justify list rows (uneven letter-spacing at 390). Body copy stays justified. */
+.spage .saside .datacard li,
+.spage .sgrid .datacard li,
+.spage .datacard.pv-card li,
+.saside .datacard li{
+  text-align: left;
+  text-justify: auto;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
