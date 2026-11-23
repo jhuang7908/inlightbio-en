@@ -68,7 +68,9 @@ ns = sub(ns, r'(href="/conferences/" style="--dc:var\(--accent\)"><span class="a
 # ---- home: science sources
 GROUP = {'Nature': 'Nature', 'bioRxiv': 'bioRxiv', 'mAbs': 'Taylor &amp; Francis', 'J Clin Invest': 'JCI',
          'Dis Model Mech': 'Company of Biologists', 'New England Journal of Medicine': 'NEJM',
-         'Immunity': 'Cell Press', 'Cell Reports Medicine': 'Cell Press', 'Cell': 'Cell Press'}
+         'Immunity': 'Cell Press', 'Cell Reports Medicine': 'Cell Press', 'Cell': 'Cell Press',
+         'Frontiers in Immunology': 'Frontiers',
+         'Journal of Biomedical Science': 'BMC'}
 sci = re.findall(r'class="sj">([^<]+)<', (R / 'science/index.html').read_text())
 def grp(j):
     if j in GROUP: return GROUP[j]
