@@ -1147,6 +1147,36 @@
       "url": "https://congress.eular.org/",
       "verified": true,
       "logo_src": "https://congress.eular.org/web/image/74246-332cbd65/eular-logo%20(1).svg (official EULAR wordmark; original SVG fill was #FFFFFF, recolored to #1A1A1A for a light card. Same drawing, contrast only.)"
+    },
+    {
+      "id": "sapa-ct-2026",
+      "logo": "/img/conf/sapa-logo.png",
+      "name": "SAPA-CT 2026 Annual Conference (13th)",
+      "dates": "2026-12-13",
+      "city": "New Haven, CT, USA",
+      "venue": "TAC Auditorium, Yale University",
+      "organizer": "Sino-American Pharmaceutical Professionals Association (SAPA) — Connecticut Chapter",
+      "kind": "Scientific",
+      "region": "United States",
+      "sum": "Connecticut chapter annual conference of the Sino-American Pharmaceutical Professionals Association; theme: From code to cure, transforming drug development.",
+      "url": "http://www.sapa-ct.org/sapa-ct-2026-annual-conference-register",
+      "verified": true,
+      "logo_src": "Official SAPA logo from https://static.wixstatic.com/media/588a27_b83fc40015b348f6b5306a21354d189e~mv2.jpeg"
+    },
+    {
+      "id": "sapa-investment-forum-jpm-2027",
+      "logo": "/img/conf/sapa-logo.png",
+      "name": "2027 SAPA Investment Forum @JPM",
+      "dates": "2027-01-10",
+      "city": "San Francisco, CA, USA",
+      "venue": "PwC San Francisco Office",
+      "organizer": "Sino-American Pharmaceutical Professionals Association (SAPA)",
+      "kind": "Investor",
+      "region": "United States",
+      "sum": "SAPA investment forum held during JPM week; theme: From Deal to Delivery — Proving the Value of Global Innovation. Networking event for industry leaders, innovators and investors.",
+      "url": "https://www.sapaweb.org/event-details/2027-sapa-investment-forum-jpm",
+      "verified": true,
+      "logo_src": "Official SAPA logo from https://static.wixstatic.com/media/588a27_b83fc40015b348f6b5306a21354d189e~mv2.jpeg"
     }
   ]
 }
