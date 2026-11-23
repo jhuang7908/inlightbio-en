@@ -81,15 +81,18 @@ if(feed){
 const CONF_WIN=(()=>{const f=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');const n=new Date(),a=new Date(n),b=new Date(n);a.setDate(a.getDate()+7);b.setMonth(b.getMonth()+7);return [f(a),f(b)];})();
 const CONFS=(window.CONFS||[]).filter(x=>{if(!x.dates||x.dates==='TBA')return false;const s=x.dates.split(' to ')[0];return s>=CONF_WIN[0]&&s<=CONF_WIN[1];});
 if(CONFS&&$('#conflist')){
-  let kind='all',order='asc',range='all',region='all',cexp=false;
+  let kind='all',order='asc',range='all',region='all',cexp=false,searchQuery='';
   /* region filter (compact dropdown next to the calendar button); ?region=us|canada|europe|japan|apac */
   const REGIONS=[['all','All regions'],['us','United States','United States'],['canada','Canada','Canada'],['europe','Europe','Europe'],['japan','Japan','Japan'],['apac','Asia-Pacific','Asia-Pacific']];
   const regOf=k=>(REGIONS.find(z=>z[0]===k)||REGIONS[0]);
   /* v9: type filter moved to its own compact pill dropdown (same style) left of the region pill; ?type=<slug> */
   const KINDS2=[['all','All types'],['partnering','Partnering'],['investor','Investor'],['scientific','Scientific'],['cro','CRO & outsourcing'],['regulatory','Regulatory'],['cmc','Manufacturing & CMC'],['digital','Digital Health & AI'],['access','Market Access & HEOR']];
   const kindOf=k=>(KINDS2.find(z=>z[1]===k)||KINDS2[0]);
-  {const u=new URLSearchParams(location.search),q=u.get('region'),t=u.get('type'); if(q&&REGIONS.some(z=>z[0]===q)) region=q; const kk=KINDS2.find(z=>z[0]===t); if(kk&&kk[0]!=='all') kind=kk[1];}
-  const syncUrl=()=>{const u=new URLSearchParams(); if(kind!=='all') u.set('type',kindOf(kind)[0]); if(region!=='all') u.set('region',region); const q=u.toString(); history.replaceState(null,'',q?'?'+q:location.pathname);};
+  {const u=new URLSearchParams(location.search),q=u.get('region'),t=u.get('type'),sq=u.get('q'); if(q&&REGIONS.some(z=>z[0]===q)) region=q; const kk=KINDS2.find(z=>z[0]===t); if(kk&&kk[0]!=='all') kind=kk[1]; if(sq) searchQuery=sq.trim();}
+  const syncUrl=()=>{const u=new URLSearchParams(); if(kind!=='all') u.set('type',kindOf(kind)[0]); if(region!=='all') u.set('region',region); if(searchQuery) u.set('q',searchQuery); const q=u.toString(); history.replaceState(null,'',q?'?'+q:location.pathname);};
+  /* search: case-insensitive multi-word AND across name, organizer, city, venue, region, kind, sum */
+  const matchSearch=(x,terms)=>{if(!terms.length)return true;const haystack=[x.name,x.organizer,x.city,x.venue,x.region,x.kind,x.sum].filter(Boolean).join(' ').toLowerCase();return terms.every(t=>haystack.includes(t));};
+  const parseSearch=q=>q.toLowerCase().split(/\s+/).filter(Boolean);
   const pad=n=>String(n).padStart(2,'0'), ymd=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
   const isTbd=x=>!x.dates||x.dates==='TBA';
   const endOf=x=>{const p=x.dates.split(' to ');return p[1]||p[0];};
@@ -108,10 +111,12 @@ if(CONFS&&$('#conflist')){
     const inRange=(x,r)=>{if(r==='all')return true; if(isTbd(x))return false; return x.dates.split(' to ')[0]<=limit(RANGES.find(z=>z[0]===r)[2]);};
     const byKind=x=>kind==='all'||x.kind===kind;
     const byReg=(x,r)=>r==='all'||x.region===regOf(r)[2];
-    $('#confrange').innerHTML=RANGES.map(([k,l])=>`<button type="button" data-r="${k}"${range===k?' aria-pressed="true"':''}><span>${l}</span><em>${upcoming.filter(x=>inRange(x,k)&&byKind(x)&&byReg(x,region)).length}</em></button>`).join('');
-    $('#confkind').innerHTML=KINDS2.map(([,k])=>{k=k==='All types'?'all':k;return `<button type="button" data-k="${k}"${kind===k?' aria-pressed="true"':''}><span>${k==='all'?'All types':k}</span><em>${upcoming.filter(x=>inRange(x,range)&&(k==='all'||x.kind===k)&&byReg(x,region)).length}</em></button>`;}).join('');
+    const searchTerms=parseSearch(searchQuery);
+    const bySearch=x=>matchSearch(x,searchTerms);
+    $('#confrange').innerHTML=RANGES.map(([k,l])=>`<button type="button" data-r="${k}"${range===k?' aria-pressed="true"':''}><span>${l}</span><em>${upcoming.filter(x=>inRange(x,k)&&byKind(x)&&byReg(x,region)&&bySearch(x)).length}</em></button>`).join('');
+    $('#confkind').innerHTML=KINDS2.map(([,k])=>{k=k==='All types'?'all':k;return `<button type="button" data-k="${k}"${kind===k?' aria-pressed="true"':''}><span>${k==='all'?'All types':k}</span><em>${upcoming.filter(x=>inRange(x,range)&&(k==='all'||x.kind===k)&&byReg(x,region)&&bySearch(x)).length}</em></button>`;}).join('');
     $('#confsort').innerHTML=[['asc','Soonest first'],['desc','Latest first']].map(([k,l])=>`<button type="button" data-o="${k}"${order===k?' aria-pressed="true"':''}><span>${l}</span></button>`).join('');
-    $('#confregion').innerHTML=REGIONS.map(([k,l])=>`<button type="button" data-g="${k}"${region===k?' aria-pressed="true"':''}><span>${l}</span><em>${upcoming.filter(x=>inRange(x,range)&&byKind(x)&&byReg(x,k)).length}</em></button>`).join('');
+    $('#confregion').innerHTML=REGIONS.map(([k,l])=>`<button type="button" data-g="${k}"${region===k?' aria-pressed="true"':''}><span>${l}</span><em>${upcoming.filter(x=>inRange(x,range)&&byKind(x)&&byReg(x,k)&&bySearch(x)).length}</em></button>`).join('');
     $$('#confregion button').forEach(b=>b.onclick=()=>{region=b.dataset.g;cexp=false;$('#confreg').open=false;syncUrl();render();});
     $('#confreglabel').textContent=regOf(region)[1];
     $$('#confrange button').forEach(b=>b.onclick=()=>{range=b.dataset.r;cexp=false;$('#confcal').open=false;render();});
@@ -121,13 +126,15 @@ if(CONFS&&$('#conflist')){
      $('#conftypelabel').textContent=kind==='all'?'All types':(narrow&&SHORT[kind])||kind; $('#conftype summary').title=kind==='all'?'All types':kind;}
     $$('#confsort button').forEach(b=>b.onclick=()=>{order=b.dataset.o;$('#confcal').open=false;render();});
     $('#confcallabel').textContent=RANGES.find(z=>z[0]===range)[1];
-    const list=upcoming.filter(x=>inRange(x,range)&&byKind(x)&&byReg(x,region));
+    /* update search input if present */
+    const searchInput=$('#confsearch'); if(searchInput&&searchInput.value!==searchQuery) searchInput.value=searchQuery;
+    const list=upcoming.filter(x=>inRange(x,range)&&byKind(x)&&byReg(x,region)&&bySearch(x));
     const dated=list.filter(x=>!isTbd(x)).sort((a,b)=>a.dates<b.dates?-1:a.dates>b.dates?1:0); if(order==='desc') dated.reverse();
     const rows=[...dated,...list.filter(isTbd)];
     $('#confcount').textContent=`${rows.length} event${rows.length===1?'':'s'}`;
     /* v12: type tiles mirror the type filter; counts follow the current time range + region */
     /* v13: each tile also shows the next upcoming event of its type; the "All conferences" tile (data-k=all) resets the type */
-    $$('#ctiles .ctile').forEach(t=>{const k=t.dataset.k,xs=upcoming.filter(x=>inRange(x,range)&&(k==='all'||x.kind===k)&&byReg(x,region)),n=xs.length;
+    $$('#ctiles .ctile').forEach(t=>{const k=t.dataset.k,xs=upcoming.filter(x=>inRange(x,range)&&(k==='all'||x.kind===k)&&byReg(x,region)&&bySearch(x)),n=xs.length;
       t.setAttribute('aria-current',String(kind===k)); t.classList.toggle('nil',!n); const em=t.querySelector('em'); if(em) em.textContent=`${n} event${n===1?'':'s'}`;
       const nx=xs.filter(x=>!isTbd(x)).sort((a,b)=>a.dates<b.dates?-1:1)[0], el=t.querySelector('.nx');
       if(el){ if(nx){const p=nx.dates.split(' to ')[0].split('-'); el.textContent=`Next: ${abbrName(nx)} · ${MON[+p[1]-1]} ${+p[2]}`;} else el.textContent='No upcoming event in this view'; }});
@@ -141,7 +148,9 @@ if(CONFS&&$('#conflist')){
         <div class="confmeta">${[place,x.organizer?'Organizer: '+esc(x.organizer):''].filter(Boolean).join(' · ')}</div></div>
         <p class="confsum" lang="en">${esc(x.sum)}</p>
         <div class="conftags"><span class="tag">${esc(x.kind)}</span>${x.region?`<span class="tag reg">${esc(x.region)}</span>`:''}<a href="${esc(x.url)}" target="_blank" rel="noopener">Official site</a></div></div></article>`;
-    }).join('')||'<div class="empty">No events match these filters.</div>';
+    }).join('')||(searchQuery?`<div class="empty">No conferences match "${esc(searchQuery)}". <button type="button" class="clearsearch">Clear search</button></div>`:'<div class="empty">No events match these filters.</div>');
+    /* clear search button in empty state */
+    const clearBtn=$('#conflist .clearsearch'); if(clearBtn) clearBtn.onclick=()=>{searchQuery='';syncUrl();render();const si=$('#confsearch');if(si)si.value='';si&&si.focus();};
     applyCap($('#conflist'),$$('#conflist .confrow'),$('#confmore'),cexp,'events');
   }
   /* v7: one-line date for the card body, e.g. "Oct 23–27, 2026" */
@@ -172,6 +181,17 @@ if(CONFS&&$('#conflist')){
   const _r=render; render=function(){_r.apply(this,arguments);$$('#conflist .conflogo img').forEach(im=>{if(im.complete)markWide(im);});};
   $$('#ctiles .ctile').forEach(t=>t.addEventListener('click',ev=>{ev.preventDefault();kind=kind===t.dataset.k?'all':t.dataset.k;cexp=false;syncUrl();render();$('#confsec').scrollIntoView({block:'start'});}));
   $('#confmore').addEventListener('click',()=>{cexp=!cexp;render();if(!cexp)$('#confsec').scrollIntoView({block:'start'});});
+  /* search input: debounced instant filtering */
+  const searchEl=$('#confsearch');
+  if(searchEl){
+    let debounceTimer=null;
+    searchEl.value=searchQuery;
+    searchEl.addEventListener('input',()=>{clearTimeout(debounceTimer);debounceTimer=setTimeout(()=>{searchQuery=searchEl.value.trim();cexp=false;syncUrl();render();},180);});
+    searchEl.addEventListener('keydown',e=>{if(e.key==='Escape'){searchEl.value='';searchQuery='';syncUrl();render();}});
+  }
+  /* clear search button */
+  const clearEl=$('#confsearch-clear');
+  if(clearEl){clearEl.addEventListener('click',()=>{searchQuery='';if(searchEl)searchEl.value='';syncUrl();render();searchEl&&searchEl.focus();});}
   let cw=innerWidth; addEventListener('resize',()=>{if(innerWidth!==cw){cw=innerWidth;render();}});
   render();
 }
