@@ -118,11 +118,11 @@ CHUNKS=(
 chunk_urls() {
   local file="$1"
   local path="${CHUNK_DIR}/${file}"
+  echo "https://ghfast.top/https://github.com/${REPO}/raw/${PIN}/${path}"
+  echo "https://gh-proxy.com/https://github.com/${REPO}/raw/${PIN}/${path}"
   echo "https://fastly.jsdelivr.net/gh/${REPO}@${PIN}/${path}"
   echo "https://testingcf.jsdelivr.net/gh/${REPO}@${PIN}/${path}"
   echo "https://gcore.jsdelivr.net/gh/${REPO}@${PIN}/${path}"
-  echo "https://ghfast.top/https://github.com/${REPO}/raw/${PIN}/${path}"
-  echo "https://gh-proxy.com/https://github.com/${REPO}/raw/${PIN}/${path}"
   echo "https://cdn.jsdelivr.net/gh/${REPO}@${PIN}/${path}"
 }
 
