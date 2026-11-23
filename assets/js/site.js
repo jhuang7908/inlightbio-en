@@ -78,12 +78,12 @@ if(feed){
 }
 
 /* ---------- Conferences (sort toggle, time range in calendar button, region dropdown beside it, ended hidden) ---------- */
-const CONF_WIN=(()=>{const f=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');const n=new Date(),a=new Date(n),b=new Date(n);a.setDate(a.getDate()+7);b.setMonth(b.getMonth()+6);return [f(a),f(b)];})();
+const CONF_WIN=(()=>{const f=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');const n=new Date(),a=new Date(n),b=new Date(n);a.setDate(a.getDate()+7);b.setMonth(b.getMonth()+7);return [f(a),f(b)];})();
 const CONFS=(window.CONFS||[]).filter(x=>{if(!x.dates||x.dates==='TBA')return false;const s=x.dates.split(' to ')[0];return s>=CONF_WIN[0]&&s<=CONF_WIN[1];});
 if(CONFS&&$('#conflist')){
   let kind='all',order='asc',range='all',region='all',cexp=false;
-  /* v8: region filter (compact dropdown next to the calendar button); ?region=us|europe|japan|apac */
-  const REGIONS=[['all','All regions'],['us','United States','United States'],['europe','Europe','Europe'],['japan','Japan','Japan'],['apac','Asia-Pacific','Asia-Pacific']];
+  /* region filter (compact dropdown next to the calendar button); ?region=us|canada|europe|japan|apac */
+  const REGIONS=[['all','All regions'],['us','United States','United States'],['canada','Canada','Canada'],['europe','Europe','Europe'],['japan','Japan','Japan'],['apac','Asia-Pacific','Asia-Pacific']];
   const regOf=k=>(REGIONS.find(z=>z[0]===k)||REGIONS[0]);
   /* v9: type filter moved to its own compact pill dropdown (same style) left of the region pill; ?type=<slug> */
   const KINDS2=[['all','All types'],['partnering','Partnering'],['investor','Investor'],['scientific','Scientific'],['cro','CRO & outsourcing'],['regulatory','Regulatory'],['cmc','Manufacturing & CMC'],['digital','Digital Health & AI'],['access','Market Access & HEOR']];
@@ -104,7 +104,7 @@ if(CONFS&&$('#conflist')){
     const now=new Date(), today=ymd(now);
     const limit=m=>{const d=new Date(now);d.setMonth(d.getMonth()+m);return ymd(d);};
     const upcoming=CONFS.filter(x=>isTbd(x)||endOf(x)>=today);
-    const RANGES=[['1','Next month',1],['3','Next 3 months',3],['all','Next 6 months',0]];
+    const RANGES=[['1','Next month',1],['3','Next 3 months',3],['all','Next 7 months',0]];
     const inRange=(x,r)=>{if(r==='all')return true; if(isTbd(x))return false; return x.dates.split(' to ')[0]<=limit(RANGES.find(z=>z[0]===r)[2]);};
     const byKind=x=>kind==='all'||x.kind===kind;
     const byReg=(x,r)=>r==='all'||x.region===regOf(r)[2];
@@ -200,7 +200,7 @@ if(sgrid){
 /* ---------- Home info cards: only full rows (no orphan card on the last row) ----------
    For each card grid (#miniconf + any [data-fullrows]) hide the trailing visible cards so the visible
    count is a multiple of the current column count. Content stays in the HTML; re-evaluated on resize. */
-/* 2026-11-03: Conferences / NewCo tile counts computed from data files (same CONF_WIN filter as the /conferences/ list: start date between today+7d and today+6 months, TBA excluded) */
+/* 2026-11-03: Conferences / NewCo tile counts computed from data files (same CONF_WIN filter as the /conferences/ list: start date between today+7d and today+7 months, TBA excluded) */
 {const ec=$$('[data-confcount]'), en=$$('[data-newcocount]');
  if(ec.length) fetch('/data/conferences.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{const now=new Date(),p=n=>String(n).padStart(2,'0'),ymd=d=>`${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`,today=ymd(now),l=new Date(now);l.setMonth(l.getMonth()+6);const lim=ymd(l);
    const n=(j.events||[]).filter(x=>{if(!x.dates||x.dates==='TBA')return false;const st=x.dates.split(' to ')[0];return st>=CONF_WIN[0]&&st<=CONF_WIN[1];}).length; ec.forEach(e=>e.textContent=`${n} event${n===1?'':'s'}`);}).catch(()=>{});
