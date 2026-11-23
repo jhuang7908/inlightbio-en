@@ -59,7 +59,7 @@ SITE_ORIGIN="${SITE_ORIGIN:-https://inlightbio.cn}"
 ALLOW_NON_ROOT="${ALLOW_NON_ROOT:-}"
 PUB_TAG="${PUB_TAG:-cn-deploy-2026-11-22-therasik-wp-zh-v2-r4}"
 PUB_REPO="${PUB_REPO:-jhuang7908/inlightbio-en}"
-PIN_SHA="${PIN_SHA:-__PIN_SHA__}"
+PIN_SHA="${PIN_SHA:-f24c9b6e1f0e1a9346c67e1cdbc096e765bdafe1}"
 if [[ "${CURL_RESOLVE-__unset__}" == "__unset__" ]]; then CURL_RESOLVE="inlightbio.cn:443:127.0.0.1"; fi
 curl_resolve=(); [[ -n "$CURL_RESOLVE" ]] && curl_resolve=(--resolve "$CURL_RESOLVE")
 
