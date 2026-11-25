@@ -1177,6 +1177,21 @@
       "url": "https://www.sapaweb.org/event-details/2027-sapa-investment-forum-jpm",
       "verified": true,
       "logo_src": "Official SAPA logo from https://static.wixstatic.com/media/588a27_b83fc40015b348f6b5306a21354d189e~mv2.jpeg"
+    },
+    {
+      "id": "china-fic-summit-2027",
+      "logo": "/img/conf/fic-summit-2027.png",
+      "name": "2027 China FIC Innovation & Collaboration Summit",
+      "dates": "2027-01-10",
+      "city": "San Francisco, CA, USA",
+      "venue": "Hyatt Regency San Francisco Downtown SOMA",
+      "organizer": "The FIC Innovative Drug Strategic Development Alliance (ZFIC)",
+      "kind": "Partnering",
+      "region": "United States",
+      "sum": "The second China FIC Innovation & Collaboration Summit, held during JPM week. Free to attend, with keynotes, panels, project roadshows and complimentary 1:1 partnering through the Nova BD platform.",
+      "url": "https://www.ficpharma.org/summit",
+      "verified": true,
+      "logo_src": "Official ZFIC wordmark from https://vcdn.pharmcube.com/images/fic/logo.png"
     }
   ]
 }
