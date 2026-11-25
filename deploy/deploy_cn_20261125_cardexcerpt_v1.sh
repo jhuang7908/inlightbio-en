@@ -7,7 +7,7 @@
 # Approved by Jing: 上 (2026-11-25 3:03 PM America/New_York). PR #152 merged as 7b15b57.
 set -euo pipefail
 
-ASSET_PIN="${ASSET_PIN:-__ASSET_PIN__}"
+ASSET_PIN="${ASSET_PIN:-f67af90ee6633563e184c36c452b6ebabde52679}"
 MIRRORS="${MIRRORS:-cdn.jsdelivr.net fastly.jsdelivr.net gcore.jsdelivr.net testingcf.jsdelivr.net quantil.jsdelivr.net}"
 URL_BASE_FMT="${URL_BASE_FMT:-https://%s/gh/jhuang7908/inlightbio-en@%s}"
 CACHE_DIR="${CACHE_DIR:-/root/inlight_dl_cache_20261125_cardexcerpt_v1}"
