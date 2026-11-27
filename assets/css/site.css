@@ -1335,8 +1335,8 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .rail-r .plat-card img.plat-logo{
     grid-column:1;
     grid-row:auto;
-    width:72px;
-    height:72px;
+    width:64px;
+    height:64px;
     padding:8px;
     object-fit:contain;
     object-position:center;
@@ -1547,7 +1547,7 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 .plat-card img{
   grid-column:1;
   grid-row:auto;
-  width:64px;height:50px;
+  width:64px;height:64px;
   object-fit:cover;object-position:center;
   border-radius:6px;display:block;background:#eef4f2;
 }
@@ -1651,8 +1651,8 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .plat-card img.plat-logo{
     grid-column:1;
     grid-row:auto;
-    width:72px;
-    height:72px;
+    width:64px;
+    height:64px;
   }
   .plat-name,
   .plat-desc{grid-column:1;max-width:100%;text-align:center}
@@ -1673,8 +1673,8 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .rail-r .plat-rec-side .plat-card img.plat-logo{
     grid-column:1;
     grid-row:auto;
-    width:72px;
-    height:72px;
+    width:64px;
+    height:64px;
     padding:8px;
     object-fit:contain;
     object-position:center;
@@ -1697,8 +1697,8 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   .plat-rec .plat-card img.plat-logo{
     grid-column:1;
     grid-row:auto;
-    width:72px;
-    height:72px;
+    width:64px;
+    height:64px;
   }
   .plat-rec-side .plat-name,
   .plat-rec-side .plat-desc,
