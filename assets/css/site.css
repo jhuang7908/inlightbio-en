@@ -1310,15 +1310,39 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 .sbox,.sec,.meta{grid-template-columns:minmax(0,1fr)}
 .spage .sbox p,.spage .sbox li,.citebox .cite,.amain p,.amain li,.sec p,.sec li,.meta p,.side2 .sbox p,.side2 .small,.pv-card li,.sgrid a,.abody a{overflow-wrap:anywhere}
 @media (max-width:860px){.sgrid,.pv-art .abody{grid-template-columns:minmax(0,1fr)}}
-/* 2026-10-31: show side rails from 1280px (narrower rails at 1280-1439); 1440+ unchanged */
+/* 2026-11-27: keep side rails from 1280px, but never narrower than 240px.
+   The previous 160px tracks left ~15px for the TheraSik title and broke it letter-by-letter
+   on common laptop widths (1280 / 1366, or 1920@150%). Stack the platform card in this
+   range; hide the mid-page duplicate. 1440+ rail widths stay as set above. */
 @media (min-width:1280px) and (max-width:1439px){
-  .shell{display:grid;grid-template-columns:160px minmax(0,1fr) 160px;gap:14px;max-width:1440px;padding:0 10px;align-items:start}
+  .shell{display:grid;grid-template-columns:240px minmax(0,1fr) 240px;gap:16px;max-width:1440px;padding:0 12px;align-items:start}
   .shell>.col{min-width:0}
-  .rail{display:block;position:static;height:auto;max-height:none;overflow:visible;margin-top:16px;background:color-mix(in srgb,var(--surface) 60%,var(--bg));border-radius:12px;padding:8px;box-sizing:border-box}
+  .rail{display:block;position:static;height:auto;max-height:none;overflow:visible;margin-top:16px;background:color-mix(in srgb,var(--surface) 60%,var(--bg));border-radius:12px;padding:10px;box-sizing:border-box}
   .railin{display:grid;gap:10px;align-content:start}
   .rail-l{border-right:1px solid var(--line)}
   .rail-r{border-left:1px solid var(--line)}
   .ad-tall{min-height:330px}.ad-med{min-height:165px}
+  .plat-rec-home-m{display:none}
+  .rail-r .plat-card{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    justify-items:start;
+    column-gap:0;
+    row-gap:4px;
+    padding:10px;
+  }
+  .rail-r .plat-card img,
+  .rail-r .plat-card img.plat-logo{
+    grid-column:1;
+    grid-row:auto;
+    width:72px;
+    height:72px;
+    padding:8px;
+    object-fit:contain;
+    object-position:center;
+  }
+  .rail-r .plat-name,
+  .rail-r .plat-desc{grid-column:1;max-width:100%}
 }
 
 /* Home layout 2026-11-01: smaller titles, shorter science cards (3 rows), deals 2 rows */
@@ -1532,8 +1556,8 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
   width:64px;
   height:64px;
 }
-.plat-name{grid-column:2;font-size:13.5px;font-weight:750;line-height:1.3;color:var(--fg,#1d2a27);min-width:0;hyphens:none;-webkit-hyphens:none;overflow-wrap:break-word;word-break:normal;text-wrap:pretty}
-.plat-desc{grid-column:2;font-size:12px;line-height:1.4;color:var(--muted,#5c6b67);min-width:0;hyphens:none;-webkit-hyphens:none;overflow-wrap:break-word;word-break:normal;text-wrap:pretty}
+.plat-name{grid-column:2;font-size:13.5px;font-weight:750;line-height:1.3;color:var(--fg,#1d2a27);min-width:0;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;word-wrap:normal;text-wrap:pretty}
+.plat-desc{grid-column:2;font-size:12px;line-height:1.4;color:var(--muted,#5c6b67);min-width:0;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal;word-break:normal;word-wrap:normal;text-wrap:pretty}
 .plat-rec-m,.plat-rec-home-m{margin:16px 0 0}
 .plat-rec-side{display:none}
 @media (min-width:861px){
@@ -1569,7 +1593,118 @@ a.ftag:hover{background:color-mix(in srgb,var(--fc) 16%,#fff)}
 .plat-rec .plat-title,.plat-rec .plat-name,.plat-rec .plat-desc{
   hyphens:none;
   -webkit-hyphens:none;
+  overflow-wrap:normal;
+  word-break:normal;
+  word-wrap:normal;
+  text-wrap:pretty;
+}
+
+/* 2026-11-27: never break platform (or rail) copy mid-word / letter-by-letter.
+   Also stack the platform card if its container is under 240px, as a fallback
+   if a later rule narrows the rail again. */
+.plat-rec{container-type:inline-size;container-name:platrec}
+.plat-rec .plat-title,
+.plat-rec .plat-name,
+.plat-rec .plat-desc,
+.sgrid a.plat-card,
+.sgrid .plat-rec a,
+.sgrid .plat-rec span,
+.sgrid .plat-rec h2,
+.abody a.plat-card{
+  overflow-wrap:normal;
+  word-break:normal;
+  word-wrap:normal;
+  hyphens:none;
+  -webkit-hyphens:none;
+}
+.rail .wm,
+.rail a,
+.rail span,
+.rail b,
+.rail em,
+.rail i,
+.rail .d,
+.rail .n,
+.rail .tx,
+.rail .srcard2,
+.rail .srline{
   overflow-wrap:break-word;
   word-break:normal;
-  text-wrap:pretty;
+  word-wrap:break-word;
+  hyphens:none;
+  -webkit-hyphens:none;
+}
+@container platrec (max-width:210px){
+  .plat-card{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    justify-items:start;
+    column-gap:0;
+    row-gap:4px;
+  }
+  .plat-card img,
+  .plat-card img.plat-logo{
+    grid-column:1;
+    grid-row:auto;
+    width:72px;
+    height:72px;
+  }
+  .plat-name,
+  .plat-desc{grid-column:1;max-width:100%}
+}
+
+/* 2026-11-27 cascade fix: these must come last so they win over
+   .plat-rec-side .plat-card { 72px minmax(0,1fr) } from the 861px rule. */
+@media (min-width:1280px) and (max-width:1439px){
+  .rail-r .plat-rec-side .plat-card{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    justify-items:start;
+    column-gap:0;
+    row-gap:4px;
+    padding:10px;
+  }
+  .rail-r .plat-rec-side .plat-card img,
+  .rail-r .plat-rec-side .plat-card img.plat-logo{
+    grid-column:1;
+    grid-row:auto;
+    width:72px;
+    height:72px;
+    padding:8px;
+    object-fit:contain;
+    object-position:center;
+  }
+  .rail-r .plat-rec-side .plat-name,
+  .rail-r .plat-rec-side .plat-desc{grid-column:1;max-width:100%}
+}
+@container platrec (max-width:210px){
+  .plat-rec-side .plat-card,
+  .plat-rec .plat-card{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    justify-items:start;
+    column-gap:0;
+    row-gap:4px;
+  }
+  .plat-rec-side .plat-card img,
+  .plat-rec-side .plat-card img.plat-logo,
+  .plat-rec .plat-card img,
+  .plat-rec .plat-card img.plat-logo{
+    grid-column:1;
+    grid-row:auto;
+    width:72px;
+    height:72px;
+  }
+  .plat-rec-side .plat-name,
+  .plat-rec-side .plat-desc,
+  .plat-rec .plat-name,
+  .plat-rec .plat-desc{grid-column:1;max-width:100%}
+}
+.rail .n,
+.rail .srline .n,
+.rail .srlogo .n{
+  white-space:nowrap;
+  min-width:max-content;
+  overflow-wrap:normal;
+  word-break:normal;
 }
