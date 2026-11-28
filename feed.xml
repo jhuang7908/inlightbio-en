@@ -3,7 +3,25 @@
 <channel>
   <title>InLight Bio</title><link>https://inlightbio.com/</link><description>New biomedical science briefs, plus biopharma out-licensing, NewCo and clinical-data briefs.</description><language>en</language>
   <atom:link href="https://inlightbio.com/feed.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 23 Nov 2026 10:30:00 -0500</lastBuildDate>
+  <lastBuildDate>Sat, 28 Nov 2026 07:05:00 -0500</lastBuildDate>
+    <item>
+    <title>Treasury's COINS proposal would bar U.S. investment in Chinese drug developers. Pure licenses look safe; NewCos should worry about two words: "joint venture"</title>
+    <link>https://inlightbio.com/news/us-coins-biotech-outbound-rule/</link>
+    <guid isPermaLink="true">https://inlightbio.com/news/us-coins-biotech-outbound-rule/</guid>
+    <pubDate>Sat, 28 Nov 2026 07:00:00 -0500</pubDate>
+    <category>Regulatory</category>
+    <description>On October 22, 2026, Treasury issued a proposed outbound investment rule implementing the COINS Act and adding biotechnology as a prohibited technology. A pure license is not a covered transaction; the NewCo risk is the joint-venture test. Written comments are due December 7, 2026.</description>
+    <author>Rocky Huang</author>
+  </item>
+    <item>
+    <title>This week's deals: Sanofi pays $41 billion for Insmed, while upfront cash is just 4.6% of the headline in a Chinese ADC license</title>
+    <link>https://inlightbio.com/news/deals-weekly-20261128/</link>
+    <guid isPermaLink="true">https://inlightbio.com/news/deals-weekly-20261128/</guid>
+    <pubDate>Sat, 28 Nov 2026 07:05:00 -0500</pubDate>
+    <category>M&amp;A, Licensing, Financing</category>
+    <description>Sanofi buys Insmed for about $41 billion in cash; Hansoh licenses an EGFR/c-Met bispecific ADC to Bayer for $150 million upfront and up to $3.1 billion in milestones, about 4.6% upfront; Lilly acquires LoQus23 for up to $725 million. Plus an addendum on Isomorphic Labs’ $5 billion Series C (November 17).</description>
+    <author>Rocky Huang</author>
+  </item>
     <item>
     <title>Pfizer in-licenses three preclinical in vivo CAR-T programs from Starna, with $330 million upfront</title>
     <link>https://inlightbio.com/news/pfizer-starna-invivo-cart/</link>
