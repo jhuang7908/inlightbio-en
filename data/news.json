@@ -1,6 +1,46 @@
 {
-  "built": "2026-11-18",
+  "built": "2026-11-28",
   "items": [
+    {
+      "slug": "us-coins-biotech-outbound-rule",
+      "date": "2026-11-28",
+      "kinds": [
+        "policy"
+      ],
+      "china": true,
+      "t": "Treasury's COINS proposal would bar U.S. investment in Chinese drug developers. Pure licenses look safe; NewCos should worry about two words: \"joint venture\"",
+      "m": "No deal value",
+      "ms": "Proposed rule, not in force; comments due December 7, 2026. Pure licenses are outside covered transactions; joint ventures are inside.",
+      "why": "On October 22, 2026, Treasury issued a proposed outbound investment rule implementing the COINS Act and adding biotechnology as a prohibited technology: using a biological system to produce or control pharmaceutical compounds, including small molecules, antibodies and cell and gene therapies. A pure license is not a covered transaction; the NewCo risk is the joint-venture test. Written comments are due December 7, 2026.",
+      "src": "U.S. Treasury press release (2026-10-22)",
+      "url": "https://home.treasury.gov/news/press-releases/sb0667",
+      "d": "2026-11",
+      "author": "Rocky Huang (黄菁)",
+      "v2": true,
+      "img": "deal_73_20261128_v1.png",
+      "page": "/news/us-coins-biotech-outbound-rule/"
+    },
+    {
+      "slug": "deals-weekly-20261128",
+      "date": "2026-11-28",
+      "kinds": [
+        "acq",
+        "lic",
+        "inv"
+      ],
+      "china": true,
+      "t": "This week's deals: Sanofi pays $41 billion for Insmed, while upfront cash is just 4.6% of the headline in a Chinese ADC license",
+      "m": "Sanofi–Insmed, about $41B",
+      "ms": "Sanofi buys Insmed for about $41 billion in cash; Hansoh–Bayer carries $150M upfront and up to $3.1B in milestones; Lilly buys LoQus23 for up to $725M.",
+      "why": "Four deals this week: Sanofi acquires Insmed for about $41 billion in cash; Hansoh licenses an EGFR/c-Met bispecific ADC to Bayer with $150 million upfront and up to $3.1 billion in milestones, about 4.6% upfront; Lilly acquires LoQus23 for up to $725 million with the upfront undisclosed; plus an addendum on Isomorphic Labs’ $5 billion Series C of November 17.",
+      "src": "Sanofi, Bayer, Hansoh and LoQus23 announcements",
+      "url": "https://www.sanofi.com/en/media-room/press-releases/2026/2026-11-24-06-30-00-3409002",
+      "d": "2026-11",
+      "author": "Rocky Huang (黄菁)",
+      "v2": true,
+      "img": "deal_74_20261128_v1.png",
+      "page": "/news/deals-weekly-20261128/"
+    },
     {
       "slug": "pfizer-starna-invivo-cart",
       "date": "2026-11-18",
